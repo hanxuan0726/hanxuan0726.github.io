@@ -1,0 +1,19 @@
+---
+import type { Publication } from '../data/site';
+import ResourceLink from './ResourceLink.astro';
+interface Props { publications: Publication[]; name: string }
+const { publications, name } = Astro.props;
+---
+<ol class="publication-list">
+  {publications.map((paper) => (
+    <li>
+      <div class="publication-year">{paper.year}</div>
+      <div>
+        <h3>{paper.title}</h3>
+        <p class="authors">{paper.authors.map((author, i) => <>{i > 0 && ', '}{author === name ? <strong>{author}</strong> : author}</>)}</p>
+        <p class="venue">{paper.venue}</p>
+        <div class="resource-links">{paper.links.map((link) => <ResourceLink {...link} compact />)}</div>
+      </div>
+    </li>
+  ))}
+</ol>

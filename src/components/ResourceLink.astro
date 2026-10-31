@@ -1,0 +1,17 @@
+---
+import type { ResourceLink } from '../data/site';
+import { safeUrl } from '../utils/links';
+import Icon from './Icon.astro';
+interface Props extends ResourceLink { compact?: boolean }
+const { label, url, placeholder, compact = false } = Astro.props;
+const href = safeUrl(url);
+---
+{href ? (
+  <a class:list={['resource-link', { compact }]} href={href} target={href.startsWith('https:') ? '_blank' : undefined} rel={href.startsWith('https:') ? 'noopener noreferrer' : undefined}>
+    {label}<Icon name="arrow" />
+  </a>
+) : (
+  <span class:list={['resource-placeholder', { compact }]} title={placeholder ?? `${label} not yet provided`}>
+    {label} <span class="pending-label">[to add]</span>
+  </span>
+)}

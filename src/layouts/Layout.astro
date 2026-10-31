@@ -1,0 +1,51 @@
+---
+import { site } from '../data/site';
+import { isConfigured } from '../utils/links';
+import '../styles/global.css';
+interface Props { title?: string; description?: string; noindex?: boolean }
+const { title = site.title, description = site.description, noindex = false } = Astro.props;
+const origin = Astro.site!;
+const canonical = new URL(Astro.url.pathname, origin);
+const ready = origin.hostname !== 'example.invalid' && isConfigured(site.email) && isConfigured(site.githubUsername);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="author" content={site.name} />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#15191f" media="(prefers-color-scheme: dark)" />
+    {(!ready || noindex) && <meta name="robots" content="noindex, nofollow" />}
+    <title>{title}</title>
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL('/images/og.png', origin)} />
+    <meta property="og:image:alt" content={`${site.name} — Embodied AI & Robot Learning`} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL('/images/og.png', origin)} />
+    <script is:inline>
+      // Apply the saved choice before paint. Storage may be blocked; system mode still works.
+      (() => {
+        let theme = 'system';
+        try { theme = localStorage.getItem('theme') || 'system'; } catch {}
+        if (!['light', 'dark', 'system'].includes(theme)) theme = 'system';
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <slot />
+  </body>
+</html>
