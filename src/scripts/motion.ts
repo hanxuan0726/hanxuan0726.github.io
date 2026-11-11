@@ -45,7 +45,7 @@ function initEditorialMotion() {
     animation.addEventListener('cancel', forget, { once: true });
   }
   function reveal(item: Reveal) {
-    if (item.seen) return;
+    if (item.seen || root.dataset.introProjecting === 'true') return;
     item.seen = true;
     item.el.dataset.motionState = 'seen';
     observer?.unobserve(item.el);
@@ -100,7 +100,7 @@ function initEditorialMotion() {
   }
   function drawScroll() {
     scrollFrame = 0;
-    if (!enabled || document.hidden) return;
+    if (!enabled || document.hidden || root.dataset.introProjecting === 'true') return;
     // A fully clipped headline can have a zero intersection in WebKit.
     // Use its layout bounds as a fallback so the entrance cannot hide content.
     for (const item of reveals) {
@@ -121,6 +121,7 @@ function initEditorialMotion() {
       }
     }
   }
+  window.addEventListener('portfolio:layout', () => { if (enabled) drawScroll(); }, { signal });
   const scheduleScroll = () => { if (enabled && !scrollFrame) scrollFrame = requestAnimationFrame(drawScroll); };
   function syncMotion() {
     const next = !reduced.matches && root.dataset.motion !== 'paused';
@@ -135,7 +136,7 @@ function initEditorialMotion() {
   syncMotion();
   for (const item of reveals) {
     const rect = item.el.getBoundingClientRect();
-    const alreadyVisible = rect.top < innerHeight * 1.04;
+    const alreadyVisible = root.dataset.introProjecting !== 'true' && rect.top < innerHeight * 1.04;
     if (!enabled || !observer || alreadyVisible) {
       item.seen = true; item.el.dataset.motionState = 'seen';
     } else {

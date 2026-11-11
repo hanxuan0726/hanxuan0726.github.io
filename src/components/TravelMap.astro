@@ -15,10 +15,12 @@ const chinaPlaces: Place[] = [
   { id: 'tianjin', name: 'Tianjin', zh: '天津', lon: 117.2, lat: 39.13, region: '天津市' },
   { id: 'liaoning', name: 'Liaoning', zh: '辽宁', lon: 122.5, lat: 41.5, region: '辽宁省' },
   { id: 'hangzhou', name: 'Hangzhou', zh: '杭州', lon: 120.16, lat: 30.27, region: '浙江省' },
+  { id: 'jiangsu', name: 'Jiangsu', zh: '江苏', lon: 119.5, lat: 33, region: '江苏省' },
   { id: 'xinjiang', name: 'Xinjiang', zh: '新疆', lon: 85.5, lat: 42, region: '新疆维吾尔自治区' },
   { id: 'tibet', name: 'Tibet', zh: '西藏', lon: 88.5, lat: 31.5, region: '西藏自治区' },
   { id: 'fujian', name: 'Fujian', zh: '福建', lon: 118, lat: 26, region: '福建省' },
   { id: 'guangdong', name: 'Guangdong', zh: '广东', lon: 113.5, lat: 23.5, region: '广东省' },
+  { id: 'hainan', name: 'Hainan', zh: '海南', lon: 109.7, lat: 19.2, region: '海南省' },
   { id: 'hong-kong', name: 'Hong Kong', zh: '香港', lon: 114.17, lat: 22.32, region: '香港特别行政区' },
   { id: 'macao', name: 'Macao', zh: '澳门', lon: 113.54, lat: 22.2, region: '澳门特别行政区' },
   { id: 'guangxi', name: 'Guangxi', zh: '广西', lon: 108.3, lat: 24, region: '广西壮族自治区' },
@@ -101,7 +103,7 @@ const visitedCountries = new Set(['CHN', 'USA', 'CAN', 'THA', 'MYS']);
   </div>
   <div class="travel-map-places">
     <div class="travel-place-group"><h3>Across borders <span>04</span></h3><ul>{worldPlaces.map(p => <li><button type="button" data-place-button={p.id} data-place-view="world" data-place-label={`${p.name} / ${p.zh}`}><span>{p.name}</span><span lang="zh-CN">{p.zh}</span></button></li>)}</ul></div>
-    <div class="travel-place-group travel-place-group-china"><h3>Around China <span>20</span></h3><ul>{chinaPlaces.map(p => <li><button type="button" class:list={{'is-roots':p.roots}} data-place-button={p.id} data-place-view="china" data-place-label={`${p.name} / ${p.zh}`}><span>{p.roots ? '↳ ' : ''}{p.name}</span><span lang="zh-CN">{p.zh}</span></button></li>)}</ul></div>
+    <div class="travel-place-group travel-place-group-china"><h3>Around China <span>{String(chinaPlaces.length).padStart(2, '0')}</span></h3><ul>{chinaPlaces.map(p => <li><button type="button" class:list={{'is-roots':p.roots}} data-place-button={p.id} data-place-view="china" data-place-label={`${p.name} / ${p.zh}`}><span>{p.roots ? '↳ ' : ''}{p.name}</span><span lang="zh-CN">{p.zh}</span></button></li>)}</ul></div>
   </div>
   <footer class="travel-map-notes"><p>Routes connect Shanghai with visited places; they are not recorded flight paths. Countries and provinces use regional anchors, not exact visited cities. <span lang="zh-CN">上海是家，南昌是老家。</span></p><p>Map data: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a> · <a href="https://github.com/apache/echarts/blob/master/test/data/map/js/china.js" target="_blank" rel="noopener noreferrer">Apache ECharts</a></p></footer>
 </section>

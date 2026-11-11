@@ -2,7 +2,7 @@
 
 [主页](https://hanxuan0726.github.io/) · [GitHub 仓库](https://github.com/hanxuan0726/hanxuan0726.github.io)
 
-基于 Astro、TypeScript 和 Tailwind CSS 的静态个人主页，展示具身智能与机器人学习研究兴趣、项目、教育背景、旅行足迹及音乐与游戏爱好。新版采用青柠绿、奶油白与深森林绿，搭配薄荷、淡紫与冰蓝点缀、超大字体、MacBook Air 桌面开场、三维项目轨道和玻璃材质。无后端、数据库、登录或第三方追踪；字体、图片和地图均从本站加载。
+基于 Astro、TypeScript 和 Tailwind CSS 的静态个人主页，展示具身智能与机器人学习研究兴趣、项目、教育背景、旅行足迹及音乐与游戏爱好。新版采用青柠绿、奶油白与深森林绿，搭配薄荷、淡紫与冰蓝点缀、超大字体、14 英寸 M5 MacBook Pro 桌面开场、三维项目轨道和玻璃材质。无后端、数据库、登录或第三方追踪；字体、图片和地图均从本站加载。
 
 ## 本地开发与检查
 
@@ -41,23 +41,23 @@ npm run preview
 
 公开邮箱为 `51295902169@stu.ecnu.edu.cn`，GitHub 用户名为 `hanxuan0726`。姓名和联系邮箱均为构建生成的 HTML 文本。修改身份时，也检查 `src/pages/index.astro` 内用于视觉排版的姓名、中文名、城市和首屏文案。
 
-未填写的 CV、项目 GitHub/Demo 链接和教育日期不在主页显示。添加真实 HTTPS 链接后资源入口会自动出现；将简历放入 `public/files/` 后再配置 `cv`。没有提供头像时，首屏使用生成式线框视觉；保留的 `portrait*` 字段目前不参与首页渲染。
+未填写的 CV 和教育日期不在主页显示；将真实简历放入 `public/files/` 后再配置 `cv`。项目完整描述、技术标签和资源链接保留在 `site.projects` 数据中，当前 WORK 区只展示章节卡片和项目状态，不渲染展开详情或资源入口。没有提供头像时，首屏使用生成式线框视觉；保留的 `portrait*` 字段目前不参与首页渲染。
 
 项目现用图是明确标注的概念插画，并非实验照片。更换真实图片时，同步修改 `image`、`imageAlt`、`imageIsPlaceholder`，并检查首页图注。论文组件 `src/components/PublicationList.astro` 支持标题、作者、会议/期刊、年份及 PDF/Code/Project 资源，自动强调本人姓名。
 
 ## 桌面开场
 
-`src/components/MacbookIntro.astro` 通过 CSS 三维结构绘制桌面与 MacBook Air 示意。原生滚动推进镜头、转正屏幕，再衔接到可操作的真实主页；屏幕来自当前页导航与首屏的 DOM 样式副本，不使用 iframe 或产品照片。副本移除共享选择器并设为 `inert`，不会重复参与键盘操作或辅助阅读。
+`src/components/MacbookIntro.astro` 通过 CSS 三维结构绘制桌面与 14 英寸 M5 MacBook Pro 示意。原生滚动推进镜头并转正屏幕；屏幕中放置的是唯一真实主页 DOM。脚本暂时将 `.site-frame` 移入设备屏幕，并在原位置保留等高占位；镜头达到按实际屏幕矩形计算的 1:1 尺寸时，将同一个节点放回正文位置。屏幕内页面在投影阶段设为 `inert`，完成后恢复操作；没有克隆页面、截图替身或 iframe。
 
-`SKIP INTRO` 直接进入正文，`ENTER WITHOUT MOTION` 同时暂停全站动态效果。初次带有非 `#home` 锚点的访问跳过长开场；暂停、减少动态效果或没有 JavaScript 时显示简短入口和正常正文。镜头与屏幕副本逻辑在 `src/scripts/macbook-intro.ts`，设备与桌面样式在 `src/styles/macbook-intro.css`。调整首屏布局后，应检查屏幕副本到正文的衔接，以及开场中途和正文内切换暂停时的阅读位置。
+`SKIP INTRO` 直接进入正文，`ENTER WITHOUT MOTION` 同时暂停全站动态效果。初次带有非 `#home` 锚点的访问跳过长开场；暂停、减少动态效果或没有 JavaScript 时显示简短入口和正常正文。镜头、DOM 移动与占位逻辑在 `src/scripts/macbook-intro.ts`，设备与桌面样式在 `src/styles/macbook-intro.css`。调整布局后，应检查屏幕与正文在交接前后的坐标、正反滚动、键盘跳过，以及开场中途和正文内切换暂停时的阅读位置。
 
 ## 项目轨道
 
 `src/components/WorkOrbit.astro` 将两个真实项目展开为六个工作流程章节：SO-101 系统、示范采集、ACT，以及远程控制系统、观测传输、身份认证。六张卡片是同一组项目的不同侧面，不代表六个独立项目。
 
-正常动态模式下，原生页面滚动驱动三维卡片轨道和 WORK 字体空间；上一章/下一章按钮定位到对应滚动位置，卡片和阅读入口跳转到静态项目详情。暂停、减少动态效果、视口高度不超过 560px 或禁用 JavaScript 时，卡片以普通网格展示，完整描述、状态、技术标签和已配置资源链接仍可阅读。
+正常动态模式下，原生页面滚动驱动三维卡片轨道和 WORK 字体空间；上一章/下一章按钮定位到对应滚动位置。此区域仅保留环绕卡片，没有可展开详情或卡片跳转。暂停、减少动态效果、视口高度不超过 560px 或禁用 JavaScript 时，同一组卡片以普通网格展示。
 
-章节编排和过程说明位于该组件的 `chapters` / `processes`，项目事实仍来自 `site.projects`。增减或调整项目顺序时，同步修改章节对应关系、过程说明和数量文案。轨道行为在 `src/scripts/work-orbit.ts`，视觉样式在 `src/styles/work-orbit.css`。
+章节编排位于该组件的 `chapters`，项目事实仍来自 `site.projects`。增减或调整项目顺序时，同步修改章节对应关系和数量文案。旧详情锚点保留为 WORK 区的位置标记。轨道行为在 `src/scripts/work-orbit.ts`，视觉样式在 `src/styles/work-orbit.css`。
 
 ## 玻璃与景深
 
@@ -65,7 +65,7 @@ npm run preview
 
 ## 旅行地图
 
-`src/components/TravelMap.astro` 中的 `worldPlaces` 和 `chinaPlaces` 管理地点、经纬度、中文名及 `roots` 标记。当前展示四个海外国家和二十个国内目的地。上海是家（HOME）和每次出发的原点，也是地图的视觉中心；南昌保留为老家（roots）。
+`src/components/TravelMap.astro` 中的 `worldPlaces` 和 `chinaPlaces` 管理地点、经纬度、中文名及 `roots` 标记。当前展示四个海外国家和二十二个国内目的地，合计二十六个到访目的地。上海单独作为家（HOME）和每次出发的原点，不计入这二十六个目的地；南昌保留为老家（roots）。
 
 国家或省级目的地使用区域代表点，不据此推断访问过的具体城市；曲线表示上海与已到访地点的示意关联，不是实际航班轨迹。更新地点时同步检查区域高亮和数量标签。
 
@@ -75,18 +75,18 @@ npm run preview
 
 `src/components/OffHours.astro` 组合 Haerin 粉丝角与游戏装备区。`src/components/GamingRig.astro` 的 `ranks` 数组展示 APEX「大师 / MASTER」、CS:GO「完美黄金 S」、VALORANT「神话」；更新时保留本人使用的称呼，不自动换算其他服务器或赛季的段位。
 
-APEX 使用通用 Master 游戏徽章；VALORANT 使用历史通用 Immortal 图标，不指定 I/II/III 小段位。完美黄金 S 使用原创金色 S 示意徽章，页面已标注。MY SETUP 展示本人提供的 Razer Viper V4 Pro 和 IQUNIX EV63，设备为参照官方产品外形绘制的轮廓示意，颜色不代表实物。素材及来源分别位于 `public/images/ranks/`、`public/images/gear/`。
+APEX 使用通用 Master 游戏徽章；VALORANT 使用历史通用 Immortal 图标，不指定 I/II/III 小段位。完美黄金 S 使用完美电竞官方 CDN 的经典金色图标 `perfect-world-gold-s.png`，不据此推断赛季。MY SETUP 展示本人提供的 Razer Viper V4 Pro 和 IQUNIX EV63 型号，使用品牌官方实物产品图 `viper-v4-pro-official.png`、`iqunix-ev63-official.jpg`；图片中的配色不推断本人设备的真实配色。素材及逐项来源分别位于 `public/images/ranks/`、`public/images/gear/` 的 `sources.json`。
 
 Haerin 照片存于 `public/images/haerin-seoul-fashion-week.jpg`，由 TV10 摄影、以 CC BY 3.0 授权使用，页面保留可见署名。具体来源及许可记录在 `public/images/haerin-photo-credit.json`；替换照片时同步更新图片替代文本、来源和署名。
 
-`src/components/HaerinBurst.astro` 配置原创粉丝贴纸的位置和 [NewJeans《Super Shy》官方 MV](https://www.youtube.com/watch?v=ArmDp-zijuc) 链接。贴纸在首次进入视口时散开，可手动重播；暂停或减少动态效果时静态展示。贴纸是受卡通风格启发的原创同人图，不是官方贴纸或代言素材。MV 在 YouTube 新标签页打开，不自动播放或在本站分发音乐。
+`src/components/HaerinBurst.astro` 配置官方 NewJeans × The Powerpuff Girls 贴纸的位置和 [NewJeans《Super Shy》官方 MV](https://www.youtube.com/watch?v=ArmDp-zijuc) 链接。十四个装饰实例使用十张 LINE 官方透明 PNG，保持原始图片字节；逐图来源与核对记录见 [OFFICIAL-STICKERS.md](public/OFFICIAL-STICKERS.md)。贴纸在首次进入视口时散开，可手动重播；暂停或减少动态效果时静态展示。MV 在 YouTube 新标签页打开，不自动播放或在本站分发音乐。
 
 ## 视觉与交互
 
 - 顶部按钮切换青柠绿/深森林绿对比方案，选择保存在本机。主色变量位于 `src/styles/global.css`；项目轨道、开场和分享封面也有独立配色，调整时同步检查。
 - 首屏 Canvas 响应指针，离开视口或页面隐藏时暂停。标题采用一次性遮罩进入动画，研究方向与游戏徽章依次显现；首屏轻微视差、按钮指针响应和顶部阅读进度保留原生滚动。
 - 顶部与首屏的暂停按钮同步控制动态效果；暂停或启用 `prefers-reduced-motion` 时，正在进入或待进入的内容会立即显示。没有 JavaScript 时内容默认可见，触屏不启用指针倾斜效果。
-- 研究方向使用原生折叠面板，项目过程在详情区直接展示；联系区支持邮件链接及复制邮箱。
+- 研究方向使用原生折叠面板，项目通过 WORK 环绕卡片展示；联系区支持邮件链接及复制邮箱。
 - 保留语义化区块、跳过导航、键盘焦点、图片替代文本和响应式布局。禁用 JavaScript 后仍可阅读主要资料并使用普通链接；地图切换、复制及动态视觉需要 JavaScript。
 - Anton 与 DM Sans 自托管，许可证为 SIL Open Font License 1.1。素材来源及许可证见 `public/ASSETS.md`。
 
@@ -109,14 +109,14 @@ Haerin 照片存于 `public/images/haerin-seoul-fashion-week.jpg`，由 TV10 摄
 src/data/site.ts                个人内容与类型
 src/pages/index.astro           首页布局与组件组合
 src/layouts/Layout.astro        HTML、SEO 与对比方案初始化
-src/components/MacbookIntro.astro MacBook Air 桌面开场与正文入口
+src/components/MacbookIntro.astro M5 MacBook Pro 桌面开场与正文入口
 src/components/TravelMap.astro  旅行地点与静态地图
 src/components/OffHours.astro   音乐爱好与游戏段位
-src/components/WorkOrbit.astro  两个项目、六个轨道章节与详情
+src/components/WorkOrbit.astro  两个项目、六张轨道章节卡片
 src/components/GamingRig.astro  游戏徽章与个人设备
-src/components/HaerinBurst.astro 粉丝贴纸与官方 MV 入口
+src/components/HaerinBurst.astro 官方 LINE 贴纸与官方 MV 入口
 src/scripts/portfolio.ts        对比方案、复制邮箱、导航、Canvas
-src/scripts/macbook-intro.ts    原生滚动镜头、主页副本与开场回退
+src/scripts/macbook-intro.ts    原生滚动镜头、真实 DOM 投影与开场回退
 src/scripts/depth-glass.ts      桌面相机倾斜与玻璃光源响应
 src/scripts/travel-map.ts       地图切换与地点选择
 src/scripts/motion.ts           进入动画、视差、指针响应与阅读进度
@@ -130,10 +130,11 @@ src/styles/off-hours.css        个人爱好区样式
 src/styles/motion.css           动效、暂停与减少动态效果样式
 src/styles/work-orbit.css       三维轨道与静态回退样式
 src/styles/gaming-rig.css        游戏徽章、设备和悬停效果
-src/styles/haerin-burst.css      粉丝贴纸布局与动画样式
+src/styles/haerin-burst.css      官方贴纸布局与动画样式
 public/fonts/                  本地字体及 OFL 许可证
 public/data/                   地理路径、来源与许可证
 public/images/                 插画、照片、徽章、设备、贴纸及来源记录
+public/OFFICIAL-STICKERS.md      官方 NewJeans 贴图的逐项来源
 scripts/                       内容与构建检查
 .github/workflows/deploy.yml    GitHub Pages 工作流
 ```

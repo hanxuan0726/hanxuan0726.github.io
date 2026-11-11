@@ -48,7 +48,7 @@ for (const layer of document.querySelectorAll<HTMLElement>('[data-haerin-burst]'
   };
   const parallax = () => {
     request = 0;
-    if (!inView || !allowed()) return;
+    if (!inView || !allowed() || document.documentElement.dataset.introProjecting === 'true') return;
     const rect = host.getBoundingClientRect();
     const progress = Math.max(-1, Math.min(1, (innerHeight * .52 - (rect.top + rect.height * .5)) / innerHeight));
     layer.style.setProperty('--burst-scroll', progress.toFixed(3));
@@ -57,6 +57,7 @@ for (const layer of document.querySelectorAll<HTMLElement>('[data-haerin-burst]'
   updateMotion();
   if (allowed()) layer.dataset.burstState = 'pending';
   new IntersectionObserver(entries => {
+    if (document.documentElement.dataset.introProjecting === 'true') return;
     inView = entries[0].isIntersecting;
     if (inView && !entered) { entered = true; burst(); }
     schedule();

@@ -30,10 +30,9 @@ function initDepthGlass() {
     surface.dataset.depthActive = 'true';
     surface.style.setProperty('--depth-light-x', `${((nx + .5) * 100).toFixed(2)}%`);
     surface.style.setProperty('--depth-light-y', `${((ny + .5) * 100).toFixed(2)}%`);
-    if (surface.matches('.orbit-stage')) {
-      surface.style.setProperty('--depth-tilt-x', `${(-ny * 6).toFixed(2)}deg`);
-      surface.style.setProperty('--depth-tilt-y', `${(nx * 6).toFixed(2)}deg`);
-    }
+    const degrees = surface.matches('.gaming-rig') ? 12 : 6;
+    surface.style.setProperty('--depth-tilt-x', `${(-ny * degrees).toFixed(2)}deg`);
+    surface.style.setProperty('--depth-tilt-y', `${(nx * degrees).toFixed(2)}deg`);
   }
   for (const surface of surfaces) {
     surface.addEventListener('pointermove', event => {

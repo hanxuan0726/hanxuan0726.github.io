@@ -1,7 +1,5 @@
 ---
 import { site } from '../data/site';
-import { isConfigured } from '../utils/links';
-import ResourceLink from './ResourceLink.astro';
 import '../styles/work-orbit.css';
 const chapters = [
   { project: 0, title: 'IN THE\nREAL WORLD.', label: 'SO-101 / SYSTEM', type: 'system', note: 'Real-robot manipulation' },
@@ -11,25 +9,23 @@ const chapters = [
   { project: 1, title: 'SEE HERE.\nREASON THERE.', label: 'REMOTE CONTROL / OBSERVATIONS', type: 'observation', note: 'Image transmission & remote inference' },
   { project: 1, title: 'VERIFY.\nTHEN ACT.', label: 'REMOTE CONTROL / AUTHENTICATION', type: 'authentication', note: 'Protect command integrity' },
 ];
-const processes = [
-  ['Collect manipulation demonstrations.', 'Train an Action Chunking Transformer policy.', 'Deploy for centrifuge tube pick-and-place.'],
-  ['Transmit visual observations.', 'Run remote model inference.', 'Protect control-command integrity and authenticate communication.'],
-];
 ---
 <section id="projects" class="work-orbit" data-work-orbit aria-labelledby="orbit-title">
+  <span id="orbit-details" class="orbit-legacy-anchor" data-orbit-legacy-anchor aria-hidden="true"></span>
+  {site.projects.map(project => <span id={`orbit-project-${project.id}`} class="orbit-legacy-anchor" data-orbit-legacy-anchor aria-hidden="true"></span>)}
   <div class="orbit-section-top"><span>03 / SELECTED EXPLORATIONS</span><span>02 PROJECTS / 06 CHAPTERS</span></div>
   <h2 id="orbit-title" class="orbit-sr-only">Selected work: two projects, six chapters</h2>
   <div class="orbit-track" data-orbit-track>
     <div class="orbit-stage" data-orbit-stage>
       <div class="orbit-expansion" aria-hidden="true"></div>
-      <div class="orbit-stage-header"><p>IDEAS IN <em>motion.</em></p><a href="#orbit-details">READ THE PROJECTS <span aria-hidden="true">↘</span></a></div>
+      <div class="orbit-stage-header"><p>IDEAS IN <em>motion.</em></p></div>
       <div class="orbit-coordinate orbit-coordinate-left" aria-hidden="true">SCROLL TO EXPLORE<br />PERCEPTION → ACTION</div>
       <div class="orbit-coordinate orbit-coordinate-right" aria-hidden="true">RESEARCH / ENGINEERING<br />SHANGHAI, CHINA</div>
       <div class="orbit-space" data-orbit-space>
         <div class="orbit-wall" aria-hidden="true">{Array.from({length:9},(_,i)=><span style={`--wall-depth:${-(i-4)*(i-4)*13}px;--wall-angle:${-(i-4)*9}deg`}>W<br />O<br />R<br />K</span>)}</div>
         <div class="orbit-core" aria-hidden="true"><span>W</span><span>O</span><span>R</span><span>K</span><i>IN PROGRESS</i></div>
-        {chapters.map((chapter, index) => <a class={`orbit-card orbit-card-${chapter.type}`} data-orbit-card data-chapter-label={chapter.label} href={`#orbit-project-${site.projects[chapter.project].id}`} aria-label={`${chapter.label}: ${chapter.note}. Read project details.`}>
-          <div class="orbit-card-top"><span>0{index + 1} / 06</span><span>PROJECT 0{chapter.project + 1}</span><span aria-hidden="true">↗</span></div>
+        {chapters.map((chapter, index) => <article class={`orbit-card orbit-card-${chapter.type}`} data-orbit-card data-chapter-label={chapter.label} aria-label={`${chapter.label}: ${chapter.note}.`}>
+          <div class="orbit-card-top"><span>0{index + 1} / 06</span><span>PROJECT 0{chapter.project + 1}</span></div>
           <div class="orbit-card-art">
             {chapter.type === 'act' ? <svg viewBox="0 0 600 360" role="img" aria-label="Concept diagram of action chunks in the ACT workflow">
               <path fill="#101b16" d="M0 0h600v360H0z" />
@@ -46,8 +42,8 @@ const processes = [
             {chapter.type === 'demonstration' && <span class="orbit-crosshair" aria-hidden="true">+</span>}
           </div>
           <div class="orbit-card-copy"><h3>{chapter.title.split('\n').map((line)=><span>{line}</span>)}</h3><span class="orbit-card-project">{chapter.label}</span></div>
-          <div class="orbit-card-bottom"><span>CONCEPT STUDY</span><span>READ PROJECT ↗</span></div>
-        </a>)}
+          <div class="orbit-card-bottom"><span>CONCEPT STUDY</span><span>{site.projects[chapter.project].status.toUpperCase()}</span></div>
+        </article>)}
       </div>
       <div class="orbit-stage-footer">
         <p class="orbit-active" data-orbit-active aria-live="polite" aria-atomic="true"><span data-orbit-count>01 / 06</span><span data-orbit-label>SO-101 / SYSTEM</span></p>
@@ -56,14 +52,6 @@ const processes = [
       </div>
       <div class="orbit-timeline" aria-hidden="true"><span data-orbit-progress></span></div>
     </div>
-  </div>
-  <div class="orbit-project-details" id="orbit-details">
-    <div class="orbit-details-heading"><span>THE WORK BEHIND THE ORBIT</span><p>Two projects.<br /><em>From idea to action.</em></p></div>
-    {site.projects.map((project, index) => <article id={`orbit-project-${project.id}`} class="orbit-project-detail" aria-labelledby={`orbit-detail-title-${project.id}`}>
-      <div class="orbit-detail-number">0{index+1}<span>{project.status}</span></div>
-      <div class="orbit-detail-copy"><p class="orbit-detail-category">{project.category}</p><h3 id={`orbit-detail-title-${project.id}`}>{project.title}</h3><p>{project.description}</p><ul class="orbit-detail-tags" aria-label="Technologies">{project.tags.map(tag=><li>{tag}</li>)}</ul><ol class="orbit-detail-process">{processes[index].map(step=><li>{step}</li>)}</ol>{project.links.some(link=>isConfigured(link.url)) && <div class="orbit-detail-links">{project.links.filter(link=>isConfigured(link.url)).map(link=><ResourceLink {...link}/>)}</div>}</div>
-      <figure class="orbit-detail-image"><img src={project.image} alt={project.imageAlt} width="1200" height="850" loading="lazy"/><figcaption>CONCEPT ILLUSTRATION / NOT EXPERIMENT FOOTAGE</figcaption></figure>
-    </article>)}
   </div>
 </section>
 <script>

@@ -63,7 +63,7 @@ function captureReadingAnchor(): ReadingAnchor | null {
     const bounds = scene.getBoundingClientRect();
     if (bounds.top <= readingLine && bounds.bottom > readingLine) return null;
   }
-  const candidates = document.querySelectorAll<HTMLElement>('.site-frame main > section:not([data-work-orbit]), .site-frame main article, .orbit-project-details');
+  const candidates = document.querySelectorAll<HTMLElement>('.site-frame main > section:not([data-work-orbit]), .site-frame main article:not([data-orbit-card])');
   for (const element of candidates) {
     const bounds = element.getBoundingClientRect();
     if (bounds.bottom > readingLine && bounds.top < innerHeight) return { element, top: bounds.top };
@@ -143,8 +143,7 @@ if (canvas && field && context) {
   }
   function start() { if (!frame && !paused && visible && !document.hidden) frame = requestAnimationFrame(animate); }
   const resize = () => {
-    const box = canvas.getBoundingClientRect();
-    width = box.width; height = box.height;
+    width = canvas.clientWidth; height = canvas.clientHeight;
     const ratio = Math.min(devicePixelRatio || 1, 2);
     canvas.width = Math.round(width * ratio); canvas.height = Math.round(height * ratio);
     context.setTransform(ratio, 0, 0, ratio, 0, 0);

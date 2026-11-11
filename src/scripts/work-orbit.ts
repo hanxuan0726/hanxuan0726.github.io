@@ -5,7 +5,8 @@ for (const section of document.querySelectorAll<HTMLElement>('[data-work-orbit]'
   section.dataset.orbitInitialized = 'true';
   const track = section.querySelector<HTMLElement>('[data-orbit-track]')!;
   const stage = section.querySelector<HTMLElement>('[data-orbit-stage]')!;
-  const cards = Array.from(section.querySelectorAll<HTMLAnchorElement>('[data-orbit-card]'));
+  const cards = Array.from(section.querySelectorAll<HTMLElement>('[data-orbit-card]'));
+  const legacyHashes = new Set(Array.from(section.querySelectorAll<HTMLElement>('[data-orbit-legacy-anchor]'), anchor => `#${anchor.id}`));
   const count = section.querySelector<HTMLElement>('[data-orbit-count]');
   const label = section.querySelector<HTMLElement>('[data-orbit-label]');
   const progressBar = section.querySelector<HTMLElement>('[data-orbit-progress]');
@@ -14,13 +15,14 @@ for (const section of document.querySelectorAll<HTMLElement>('[data-work-orbit]'
   const shortViewport = matchMedia('(max-height: 560px)');
   const abort = new AbortController();
   const signal = abort.signal;
-  let enabled = false, frame = 0, active = -1, current = 0, target = 0;
+  let enabled = false, frame = 0, legacyFrame = 0, active = -1, current = 0, target = 0;
   let requestedIndex: number | null = null;
   let top = 0, distance = 1, radius = 300, stickyTop = 75;
   const maxTurn = (cards.length - 1) * 360 / cards.length;
   const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
   function measure() {
-    stickyTop = Math.round(document.querySelector('.site-header')?.getBoundingClientRect().height || 75);
+    if (root.dataset.introProjecting === 'true') return;
+    stickyTop = Math.round(document.querySelector<HTMLElement>('.site-header')?.offsetHeight || 75);
     section.style.setProperty('--orbit-sticky-top', `${stickyTop}px`);
     top = track.getBoundingClientRect().top + scrollY;
     distance = Math.max(1, track.offsetHeight - stage.offsetHeight);
@@ -34,7 +36,6 @@ for (const section of document.querySelectorAll<HTMLElement>('[data-work-orbit]'
     if (label) label.textContent = cards[index].dataset.chapterLabel || '';
     cards.forEach((card, i) => {
       card.dataset.orbitFront = String(i === index);
-      card.tabIndex = enabled && i !== index ? -1 : 0;
       // All six real chapters remain available to screen-reader navigation.
       card.removeAttribute('aria-hidden');
       if (i === index) card.setAttribute('aria-current', 'true'); else card.removeAttribute('aria-current');
@@ -71,7 +72,7 @@ for (const section of document.querySelectorAll<HTMLElement>('[data-work-orbit]'
     if (current !== target) frame = requestAnimationFrame(tick);
   }
   function update() {
-    if (!enabled) return;
+    if (!enabled || root.dataset.introProjecting === 'true') return;
     target = clamp((scrollY - top + stickyTop) / distance, 0, 1);
     if (!frame) frame = requestAnimationFrame(tick);
   }
@@ -87,7 +88,7 @@ for (const section of document.querySelectorAll<HTMLElement>('[data-work-orbit]'
     if (!enabled) { delete section.dataset.orbitDark; section.style.removeProperty('--orbit-opening'); }
     if (enabled) { measure(); target = clamp((scrollY - top + stickyTop) / distance, 0, 1); current = target; active = -1; paint(); }
     else {
-      cards.forEach(card => { card.removeAttribute('style'); card.removeAttribute('aria-hidden'); card.removeAttribute('aria-current'); card.tabIndex = 0; });
+      cards.forEach(card => { card.removeAttribute('style'); card.removeAttribute('aria-hidden'); card.removeAttribute('aria-current'); });
       if (restoreView) window.scrollTo({ top: Math.max(0, track.getBoundingClientRect().top + scrollY - stickyTop), behavior: 'instant' });
     }
     if (preservePastView) {
@@ -96,19 +97,33 @@ for (const section of document.querySelectorAll<HTMLElement>('[data-work-orbit]'
     }
   }
   function go(delta: number) {
-    if (!enabled) return;
+    if (!enabled || root.dataset.introProjecting === 'true') return;
     measure();
     // Buttons address exact chapters; scrolling remains the sole animation timeline.
     const index = ((requestedIndex ?? Math.round(target * (cards.length - 1))) + delta + cards.length) % cards.length;
     requestedIndex = index;
     window.scrollTo({ top: top - stickyTop + distance * index / (cards.length - 1), behavior: 'smooth' });
   }
+  function restoreLegacyLink() {
+    if (!legacyHashes.has(location.hash)) return;
+    // Old detail bookmarks now open WORK; the HTML aliases also work without JS.
+    history.replaceState(history.state, '', `#${section.id}`);
+    cancelAnimationFrame(legacyFrame);
+    legacyFrame = requestAnimationFrame(() => {
+      legacyFrame = 0;
+      const headerHeight = document.querySelector<HTMLElement>('.site-header')?.offsetHeight || 0;
+      window.scrollTo({ top: Math.max(0, section.getBoundingClientRect().top + scrollY - headerHeight), behavior: 'instant' });
+      if (enabled) { measure(); update(); }
+    });
+  }
   section.querySelector('[data-orbit-prev]')?.addEventListener('click', () => go(-1), { signal });
   section.querySelector('[data-orbit-next]')?.addEventListener('click', () => go(1), { signal });
   window.addEventListener('scroll', update, { passive: true, signal });
+  window.addEventListener('hashchange', restoreLegacyLink, { signal });
   window.addEventListener('scrollend', () => { requestedIndex = null; }, { signal });
   window.addEventListener('wheel', () => { requestedIndex = null; }, { passive: true, signal });
   window.addEventListener('touchstart', () => { requestedIndex = null; }, { passive: true, signal });
+  window.addEventListener('portfolio:layout', () => { if (enabled) { measure(); update(); } }, { signal });
   window.addEventListener('resize', () => { if (enabled) { measure(); update(); } }, { passive: true, signal });
   document.addEventListener('visibilitychange', () => { if (document.hidden) { cancelAnimationFrame(frame); frame = 0; } else update(); }, { signal });
   reduced.addEventListener('change', syncMode, { signal });
@@ -119,10 +134,11 @@ for (const section of document.querySelectorAll<HTMLElement>('[data-work-orbit]'
   const resizeObserver = new ResizeObserver(() => { if (enabled) { measure(); update(); } });
   resizeObserver.observe(document.body);
   syncMode();
+  restoreLegacyLink();
   window.addEventListener('pagehide', () => {
-    cancelAnimationFrame(frame); abort.abort(); modeObserver.disconnect(); resizeObserver.disconnect();
+    cancelAnimationFrame(frame); cancelAnimationFrame(legacyFrame); abort.abort(); modeObserver.disconnect(); resizeObserver.disconnect();
     section.classList.remove('orbit-enabled'); delete section.dataset.orbitInitialized; delete section.dataset.orbitDark;
-    cards.forEach(card => { card.removeAttribute('style'); card.removeAttribute('aria-hidden'); card.removeAttribute('aria-current'); card.tabIndex = 0; });
+    cards.forEach(card => { card.removeAttribute('style'); card.removeAttribute('aria-hidden'); card.removeAttribute('aria-current'); });
   }, { once: true });
 }
 }

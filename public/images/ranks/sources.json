@@ -18,6 +18,17 @@
   },
   "perfect-world-gold-s.svg": {
     "type": "Original illustrative gold S emblem",
-    "note": "Not official Perfect World artwork and not a Steam matchmaking rank. Exact user-provided label 完美黄金 S is preserved."
+    "note": "Not official Perfect World artwork and not a Steam matchmaking rank. Exact user-provided label 完美黄金 S is preserved.",
+    "currentUsage": "Retained legacy illustration; replaced by the official gold S image on homepage."
+  },
+  "perfect-world-gold-s.png": {
+    "source": "https://static.pwesports.cn/esportsadmin/esports/pwa/rank/icons/s-gold.png",
+    "sourcePage": "https://pvp.wanmei.com/",
+    "verificationBundle": "https://pvp.wanmei.com/pvp/umi.e624939f.js",
+    "officialMapping": "The official bundle defines sGoldOld = icons/s-gold.png and selects it for Mr.GOLD in its classic-season branch. Current sGold uses the animated icons/s-gold-1.png. This site deliberately uses the static, visibly gold classic icon; no season is claimed.",
+    "rightsHolder": "Perfect World / 完美世界电竞",
+    "identification": "Official classic gold S tier artwork, 46×59px; the user-provided rank label 完美黄金 S is unchanged.",
+    "modifications": "None; original PNG bytes unchanged.",
+    "retrieved": "2026-11-11"
   }
 }
