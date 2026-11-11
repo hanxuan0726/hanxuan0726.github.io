@@ -6,3 +6,22 @@
 html[data-motion=paused] .haerin-portrait,html[data-motion=paused] .haerin-listening-song>span{transition:none!important}
 html[data-motion=paused] .haerin-corner:hover .haerin-portrait{transform:rotate(-3deg);box-shadow:5px 6px 0 #17181320}
 html[data-motion=paused] .haerin-listening>a:hover .haerin-listening-song>span{transform:none}
+
+/* The collage supplies a photo-sized stage: stickers occupy its gaps and edges. */
+.haerin-media .haerin-burst{inset:auto 0 12px;height:var(--haerin-collage-height);z-index:5}
+.haerin-media .haerin-sticker{left:var(--sticker-x);top:var(--sticker-y);max-width:22%}
+.haerin-media .haerin-sticker:nth-child(1){--sticker-x:5%!important;--sticker-y:45%!important}
+.haerin-media .haerin-sticker:nth-child(2){--sticker-x:96%!important;--sticker-y:45%!important}
+.haerin-media .haerin-sticker:nth-child(3){--sticker-x:7%!important;--sticker-y:70%!important}
+.haerin-media .haerin-sticker:nth-child(4){--sticker-x:52%!important;--sticker-y:93%!important}
+.haerin-media .haerin-sticker:nth-child(5){--sticker-x:21%!important;--sticker-y:94%!important}
+.haerin-media .haerin-sticker:nth-child(6){--sticker-x:93%!important;--sticker-y:97%!important}
+.haerin-media .haerin-sticker:nth-child(7){--sticker-x:48%!important;--sticker-y:6%!important}
+.haerin-media .haerin-sticker:nth-child(8){--sticker-x:57%!important;--sticker-y:24%!important}
+.haerin-media .haerin-sticker:nth-child(9){--sticker-x:5%!important;--sticker-y:7%!important}
+.haerin-media .haerin-sticker:nth-child(10){--sticker-x:96%!important;--sticker-y:8%!important}
+.haerin-media .haerin-sticker:nth-child(11){--sticker-x:4%!important;--sticker-y:58%!important}
+.haerin-media .haerin-sticker:nth-child(12){--sticker-x:96%!important;--sticker-y:59%!important}
+.haerin-media .haerin-sticker:nth-child(13){--sticker-x:35%!important;--sticker-y:81%!important}
+.haerin-media .haerin-sticker:nth-child(14){--sticker-x:54%!important;--sticker-y:74%!important}
+@media(max-width:420px){.haerin-media .haerin-sticker{max-width:22%}.haerin-media .haerin-sticker:nth-child(7),.haerin-media .haerin-sticker:nth-child(8){max-width:25%}}

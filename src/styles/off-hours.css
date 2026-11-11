@@ -6,3 +6,30 @@
 @media(max-width:759px){.off-hours{padding-top:24px;padding-bottom:40px}.off-hours-heading{margin-block:45px 38px;gap:20px}.off-hours-heading h2{font-size:16vw}.off-hours-heading>p{font-size:13px;max-width:35%;padding-bottom:4px}.off-hours-heading>p>span{font-size:9px;line-height:1.6;margin-top:11px}.off-hours-grid{grid-template-columns:1fr}.haerin-corner,.gaming-corner{padding:24px}.haerin-portrait{width:58%;max-width:300px}.haerin-corner h3{font-size:19vw}.haerin-corner h3>span{font-size:15px}.haerin-photo-area{padding-block:30px}.haerin-side-note{left:12px}.haerin-cat-mark{right:12px;bottom:25px;width:75px}.haerin-bottomline p{font-size:13px}.haerin-credit{font-size:9px;margin-top:22px}.gaming-intro{padding-block:32px 30px}.gaming-intro h3{font-size:16vw}.game-rank{padding-block:26px}.game-number{display:block}.game-identity h4{font-size:clamp(23px,5vw,34px)}.game-rank-value>span{font-size:30px}.game-rank-cs .game-rank-value>span{font-size:25px}.gaming-footer{padding-top:23px}.gaming-footer svg{width:100px}}
 @media(max-width:420px){.off-hours-heading{align-items:flex-start;flex-direction:column;gap:21px}.off-hours-heading h2{font-size:21vw}.off-hours-heading>p{max-width:none;font-size:13px}.off-hours-heading>p>br{display:none}.off-hours-heading>p>span{margin-top:9px}.haerin-corner,.gaming-corner{padding-inline:18px}.haerin-portrait{width:76%}.haerin-side-note{left:-2px;font-size:8px}.haerin-cat-mark{right:-9px;width:49px}.haerin-corner h3{font-size:20vw}.haerin-corner h3>span{font-size:12px}.haerin-bottomline p{font-size:11px}.haerin-spark{font-size:32px}.haerin-credit{font-size:8px}.gaming-intro h3{font-size:18vw}.game-number{display:none}.game-identity h4{font-size:22px}.game-rank-value>span{font-size:27px}.game-rank-cs .game-rank-value>span{font-size:20px}.game-identity p{font-size:7px}.game-rank-value small{font-size:6px}.game-rank{gap:10px}}
 @media(prefers-reduced-motion:reduce){.haerin-portrait{transition:none}.haerin-corner:hover .haerin-portrait{transform:rotate(-3deg)}}
+
+/* Four full portraits, staggered so each face has its own open part of the stage. */
+.haerin-corner{--haerin-collage-height:clamp(480px,50vw,740px);color:#101b16;background:radial-gradient(ellipse at 70% 25%,#e6f3c58c,transparent 54%),#b6d8c5}
+.haerin-media{position:relative;display:flow-root;min-width:0}
+.haerin-collage.haerin-photo-area{display:block;height:var(--haerin-collage-height);padding:0;margin-block:22px 12px}
+.haerin-collage::before{content:"";position:absolute;inset:4% -10% 0;pointer-events:none;background:radial-gradient(ellipse at 27% 25%,#bdb5ff48,transparent 46%),radial-gradient(ellipse at 75% 72%,#ffa9cf48,transparent 49%);filter:blur(18px)}
+.haerin-collage-note{position:absolute;left:2%;bottom:2%;font-size:7px;letter-spacing:.13em;color:#355a46;writing-mode:vertical-rl;rotate:180deg;z-index:2}
+.haerin-collage .haerin-portrait,.haerin-photo-card{position:absolute;margin:0;padding:8px 8px 0;border:1px solid #ffffffb3;border-radius:3px;background:linear-gradient(140deg,#ffffffeb,#f2f3e9eb);box-shadow:inset 0 1px 0 #fff,2px 3px 0 #101b161a,9px 18px 28px #173e2c38;transform-origin:center;overflow:hidden}
+.haerin-photo-card img,.haerin-collage .haerin-portrait img{display:block;width:100%;height:auto;object-fit:cover}
+.haerin-photo-card figcaption,.haerin-collage .haerin-portrait figcaption{padding:10px 3px 9px;font-size:7px;line-height:1.2;letter-spacing:.1em;white-space:nowrap}
+.haerin-collage .haerin-portrait{width:56%;max-width:none;left:18%;top:27%;z-index:6;transform:rotate(-3deg);box-shadow:inset 0 1px 0 #fff,3px 5px 0 #e9eee4,4px 6px 0 #ffffff99,13px 24px 34px #163a2b4d}
+.haerin-collage .haerin-portrait img{object-position:50% 34%}
+.haerin-corner:hover .haerin-collage .haerin-portrait{transform:rotate(-1deg);box-shadow:inset 0 1px 0 #fff,3px 5px 0 #e9eee4,4px 6px 0 #ffffff99,15px 25px 36px #163a2b4d}
+.haerin-photo-dior{width:42%;left:-2%;top:4%;z-index:2;transform:rotate(-11deg)}
+.haerin-photo-dior img{object-position:45% 30%}
+.haerin-photo-mma{width:40%;right:-1%;top:10%;z-index:3;transform:rotate(10deg)}
+.haerin-photo-mma img{object-position:50% 30%}
+.haerin-photo-olens{width:36%;right:-1%;top:61%;z-index:6;transform:rotate(9deg);background:linear-gradient(140deg,#fff,#e9e4ff);box-shadow:inset 0 1px 0 #fff,2px 3px 0 #f2f3e9,10px 17px 27px #193b2d40}
+.haerin-photo-olens img{object-position:42% 35%}
+.haerin-corner h3{margin-top:10px}
+.haerin-credit{font-size:8px;line-height:1.8}
+@media(max-width:1050px){.haerin-collage .haerin-portrait,.haerin-photo-card{padding:6px 6px 0}.haerin-photo-card figcaption,.haerin-collage .haerin-portrait figcaption{font-size:6px;padding-block:8px}.haerin-collage-note{font-size:6px}}
+@media(max-width:759px){.haerin-corner{--haerin-collage-height:clamp(440px,105vw,700px)}.haerin-collage.haerin-photo-area{margin-block:20px 12px}.haerin-collage .haerin-portrait{width:56%;left:18%}.haerin-photo-card figcaption,.haerin-collage .haerin-portrait figcaption{font-size:7px}.haerin-credit{font-size:9px}}
+@media(max-width:420px){.haerin-corner{--haerin-collage-height:410px}.haerin-collage.haerin-photo-area{margin-inline:-9px;margin-top:18px}.haerin-collage .haerin-portrait,.haerin-photo-card{padding:5px 5px 0}.haerin-photo-card figcaption,.haerin-collage .haerin-portrait figcaption{font-size:5.5px;letter-spacing:.055em;padding:7px 0}.haerin-photo-dior{left:0;top:5%}.haerin-photo-mma{right:0;top:12%}.haerin-photo-olens{right:0;top:60%}.haerin-collage-note{left:2%;bottom:9%;font-size:5px}.haerin-credit{font-size:7px}.haerin-corner h3{margin-top:0}}
+@media(max-width:350px){.haerin-corner{--haerin-collage-height:370px}.haerin-photo-card figcaption,.haerin-collage .haerin-portrait figcaption{font-size:4.7px}}
+html[data-motion=paused] .haerin-corner:hover .haerin-collage .haerin-portrait{transform:rotate(-3deg);box-shadow:inset 0 1px 0 #fff,3px 5px 0 #e9eee4,4px 6px 0 #ffffff99,13px 24px 34px #163a2b4d}
+@media(prefers-reduced-motion:reduce){.haerin-corner:hover .haerin-collage .haerin-portrait{transform:rotate(-3deg);transition:none}}

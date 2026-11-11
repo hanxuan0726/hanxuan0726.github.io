@@ -77,7 +77,7 @@ npm run preview
 
 APEX 使用通用 Master 游戏徽章；VALORANT 使用历史通用 Immortal 图标，不指定 I/II/III 小段位。完美黄金 S 使用完美电竞官方 CDN 的经典金色图标 `perfect-world-gold-s.png`，不据此推断赛季。MY SETUP 展示本人提供的 Razer Viper V4 Pro 和 IQUNIX EV63 型号，使用品牌官方实物产品图 `viper-v4-pro-official.png`、`iqunix-ev63-official.jpg`；图片中的配色不推断本人设备的真实配色。素材及逐项来源分别位于 `public/images/ranks/`、`public/images/gear/` 的 `sources.json`。
 
-Haerin 照片存于 `public/images/haerin-seoul-fashion-week.jpg`，由 TV10 摄影、以 CC BY 3.0 授权使用，页面保留可见署名。具体来源及许可记录在 `public/images/haerin-photo-credit.json`；替换照片时同步更新图片替代文本、来源和署名。
+Haerin 区采用四张不同造型的照片堆叠：原有首尔时装周肖像，加上 Dior 红裙、OLENS 近景和 MMA 舞台造型。文件位于 `public/images/haerin-seoul-fashion-week.jpg` 与 `public/images/haerin-photos/`，页面保留作者及许可署名。逐图出处、CC BY 3.0 / CC BY-SA 4.0 许可与原图记录见 [HAERIN-PHOTOS.md](public/HAERIN-PHOTOS.md)。调整拼贴比例时保持各图脸部可见，并同步维护图片替代文本和署名。
 
 `src/components/HaerinBurst.astro` 配置官方 NewJeans × The Powerpuff Girls 贴纸的位置和 [NewJeans《Super Shy》官方 MV](https://www.youtube.com/watch?v=ArmDp-zijuc) 链接。十四个装饰实例使用十张 LINE 官方透明 PNG，保持原始图片字节；逐图来源与核对记录见 [OFFICIAL-STICKERS.md](public/OFFICIAL-STICKERS.md)。贴纸在首次进入视口时散开，可手动重播；暂停或减少动态效果时静态展示。MV 在 YouTube 新标签页打开，不自动播放或在本站分发音乐。
 

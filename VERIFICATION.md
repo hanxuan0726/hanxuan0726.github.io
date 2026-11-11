@@ -35,6 +35,12 @@ These inspected states contained exactly one `.site-frame` and no horizontal pag
 - At 1440×1000, all 14 official sticker instances and both official product images loaded. Replay entered the bursting state. A native pointer interaction changed the product's 3D matrix and the rig tilt value; no console warnings/errors were recorded.
 - Selecting Jiangsu and Hainan switched the map to China and selected the corresponding destination. The DOM contained 22 China buttons, one Jiangsu, one Hainan and exactly one Gansu.
 
+## Four-photo collage update
+
+- Added three distinct Commons portraits (Dior, OLENS and MMA) beside the existing Seoul Fashion Week photo. All originals are kept unchanged; photo-specific authors, source pages and CC BY 3.0 / CC BY-SA 4.0 terms are recorded in `public/HAERIN-PHOTOS.md` and visible credits.
+- Inspected the four-photo composition at 1440×1000, 390×844 and 320×740. Each face remains visible, with the main portrait and foreground OLENS photo above the sticker layer; photos overlap their frames/clothing rather than the other faces. Super Shy, Haerin's name and photo credits remain separate.
+- All four images loaded. The 390px layout had zero horizontal overflow and a 410px collage stage; the 320px screenshot showed the complete stack and credits. No console warnings/errors were recorded in the final local collage check.
+
 ## Earlier completed checks
 
 These checks were completed before the latest portal, card-content and official-asset replacements. They remain historical regression evidence and should not be read as fresh checks of those replacements.

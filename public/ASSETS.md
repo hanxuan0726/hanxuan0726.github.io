@@ -20,17 +20,19 @@
 
 替换项目图片时同步更新 `src/data/site.ts` 的 `image`、`imageAlt`、`imageIsPlaceholder`，以及 `src/components/WorkOrbit.astro` 中的卡片图片与替代文本。WORK 当前仅保留六张环绕卡片，不再展示下方展开项目详情；无 JavaScript 或减少动效时使用静态卡片回退。两项目原始内容仍保存在 `src/data/site.ts`。项目轨道中的 ACT 和身份认证图形同样是原创概念示意，不是实验结果。未提供真实头像或简历时，不生成冒充本人或研究证据的素材。
 
-## Haerin 粉丝角照片
+## Haerin 粉丝角照片拼贴
 
 - `images/haerin-seoul-fashion-week.jpg`：姜海粼（Haerin）出席 2024 年首尔时装周的照片，摄影者为 티비텐（TV10）。
 - 来源：[Wikimedia Commons — Haerin Seoul Fashion Week 3.jpg](https://commons.wikimedia.org/wiki/File:Haerin_Seoul_Fashion_Week_3.jpg)，许可证为 [Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/)。
 - JPEG 原文件未修改；页面仅在装饰相框内缩放显示。完整来源、原始视频和许可证记录见 `images/haerin-photo-credit.json`。
-- `src/components/OffHours.astro` 保留可见的摄影者、来源和许可证链接。替换或再分发时同步保留署名信息。
+- 新增 `images/haerin-photos/haerin-dior-2023.jpg`、`haerin-olens-2023.jpg`、`haerin-mma-2023.jpg`，与首尔时装周主肖像组成四张错层拼贴；文件均保持 Commons 原始 JPEG，网页仅做独立相框、缩放与旋转。
+- Dior 图作者 TV10、OLENS 图作者 OLensglobal，许可均为 CC BY 3.0；MMA 图作者 TenAsia，许可为 CC BY-SA 4.0。逐张原页、下载地址、尺寸与许可见 [HAERIN-PHOTOS.md](./HAERIN-PHOTOS.md)，完整文件记录在 `images/haerin-photos/sources.json`。
+- `src/components/OffHours.astro` 保留可见的摄影者、来源和各自许可证链接；主肖像最大，侧后景照片与官方贴纸错层排列。替换或再分发时同步保留署名信息及各图适用许可。
 
 ## 粉丝贴纸与音乐入口
 
 - 当前爆发贴纸使用 `images/official-stickers/` 中的官方 LINE 透明 PNG，来自 NewJeans 官方合作贴纸页面。逐项素材、版权归属与来源核对见 [OFFICIAL-STICKERS.md](./OFFICIAL-STICKERS.md)；原有原创 SVG 已不作为当前贴纸显示。
-- `src/components/HaerinBurst.astro` 使用十四个装饰实例。修改素材时保留 SVG 内的可读说明，布局和重播逻辑分别在 `haerin-burst.css`、`haerin-burst.ts`。
+- `src/components/HaerinBurst.astro` 使用十四个装饰实例。修改素材时保留官方 PNG 出处与逐图来源记录，布局和重播逻辑分别在 `haerin-burst.css`、`haerin-burst.ts`。
 - 《Super Shy》入口链接到 [NewJeans 官方 MV](https://www.youtube.com/watch?v=ArmDp-zijuc)。本站不保存音视频、不嵌入自动播放播放器。
 
 ## 游戏段位徽章
