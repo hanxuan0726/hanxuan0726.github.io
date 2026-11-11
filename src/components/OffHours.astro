@@ -1,0 +1,34 @@
+---
+import '../styles/off-hours.css';
+const games = [
+  { name: 'APEX LEGENDS', label: 'APEX 英雄', rank: '大师', sub: 'MASTER', mark: '01', shape: 'apex' },
+  { name: 'CS:GO', label: 'COUNTER-STRIKE', rank: '完美黄金 S', sub: 'PERFECT WORLD', mark: '02', shape: 'cs' },
+  { name: 'VALORANT', label: '瓦罗兰特', rank: '神话', sub: 'RANK', mark: '03', shape: 'valorant' },
+];
+---
+<section id="off-hours" class="off-hours panel" aria-labelledby="off-hours-title">
+  <div class="section-label mono"><span>05 / A LITTLE MORE ME</span><span>MUSIC, GAMES &amp; EVERYTHING IN BETWEEN</span></div>
+  <div class="off-hours-heading"><h2 id="off-hours-title">OFF<br /><span class="serif">the clock.</span></h2><p>Music I love.<br />Games I play.<br /><span lang="zh-CN">热爱，让生活有自己的节奏。</span></p></div>
+  <div class="off-hours-grid">
+    <article class="haerin-corner" aria-labelledby="haerin-title">
+      <div class="haerin-topline mono"><span>NEWJEANS / FAN CORNER</span><span aria-hidden="true">♡</span></div>
+      <div class="haerin-photo-area">
+        <span class="haerin-side-note mono" aria-hidden="true">강해린 · 姜海粼</span>
+        <figure class="haerin-portrait"><img src="/images/haerin-seoul-fashion-week.jpg" alt="姜海粼（Haerin）出席 2024 年首尔时装周，摄影：TV10。" width="624" height="872" loading="lazy" /><figcaption class="mono">HAERIN / SEOUL, 2024</figcaption></figure>
+        <svg class="haerin-cat-mark" viewBox="0 0 100 100" aria-hidden="true"><path d="M18 78V24l22 16h20l22-16v54M18 65c8 14 19 20 32 20s24-6 32-20M30 56c4-5 10-5 14 0m12 0c4-5 10-5 14 0M44 68l6 5 6-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3 id="haerin-title">HAERIN<span lang="zh-CN">姜海粼</span></h3>
+      <div class="haerin-bottomline"><p>A little space for my favorite.<br /><span lang="zh-CN">NewJeans 姜海粼的粉丝。</span></p><span class="haerin-spark" aria-hidden="true">✳</span></div>
+      <p class="haerin-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Haerin_Seoul_Fashion_Week_3.jpg" target="_blank" rel="noopener noreferrer">TV10 / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a></p>
+    </article>
+    <article class="gaming-corner" aria-labelledby="gaming-title">
+      <div class="gaming-topline mono"><span>PLAYER PROFILE</span><span aria-hidden="true">⌁</span></div>
+      <div class="gaming-intro"><h3 id="gaming-title">ONE MORE<br /><span class="serif">game.</span></h3><p lang="zh-CN">认真研究，也认真上分。</p></div>
+      <ol class="game-ranks" aria-label="My game ranks">{games.map(game => <li class={`game-rank game-rank-${game.shape}`}>
+        <div class="game-identity"><span class="game-number mono">{game.mark}</span><div><h4>{game.name}</h4><p class="mono">{game.label}</p></div></div>
+        <div class="game-rank-value"><span lang="zh-CN">{game.rank}</span><small class="mono">{game.sub}</small></div>
+      </li>)}</ol>
+      <div class="gaming-footer"><svg viewBox="0 0 140 70" aria-hidden="true"><path d="M38 13h64c13 0 23 34 19 43s-12 6-22-8H41C31 62 23 65 19 56S25 13 38 13ZM43 23v17M34 31h18M91 26h1m10 10h1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><p class="mono">OFF THE CLOCK.<br />STILL IN THE ZONE.</p></div>
+    </article>
+  </div>
+</section>

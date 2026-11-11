@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850" fill="none">
+  <title>SO-101 manipulation — conceptual engineering study</title>
+  <desc>An original illustrative robot arm reaching toward a rack of centrifuge tubes. This is a conceptual drawing, not a photograph of the actual experiment.</desc>
+  <defs>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><path d="M0 0V8" stroke="#ebe9df" stroke-opacity=".2"/></pattern>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#ebe9df" fill-opacity=".1"/></pattern>
+    <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ebe9df" stop-opacity=".07"/><stop offset="1" stop-color="#ebe9df" stop-opacity="0"/></linearGradient>
+  </defs>
+  <path fill="#151510" d="M0 0h1200v850H0z"/>
+  <path fill="url(#dots)" d="M0 0h1200v850H0z"/>
+  <g stroke="#ebe9df" stroke-opacity=".13" stroke-width="1">
+    <path d="M0 790L600 490 1200 790M0 680l600-190 600 190M0 590l600-100 600 100M0 520l600-30 600 30M150 850l450-360 450 360M400 850l200-360 200 360M600 490v360"/>
+    <path d="M40 570h1120M40 630h1120M40 710h1120M40 810h1120"/>
+  </g>
+  <circle cx="579" cy="405" r="284" fill="url(#wash)" stroke="#ebe9df" stroke-opacity=".12"/>
+  <path d="M579 90v630M264 405h630" stroke="#ebe9df" stroke-opacity=".11" stroke-dasharray="5 10"/>
+  <path d="M345 519a245 245 0 0 1 408-238" stroke="#f14b50" stroke-opacity=".6" stroke-dasharray="3 8"/>
+  <path d="M738 269l18 13-21 4" stroke="#f14b50" stroke-width="2"/>
+  <g stroke="#ebe9df" stroke-width="2" stroke-linejoin="round">
+    <!-- Grounded base and slewing pedestal. -->
+    <path d="M240 651l112-48 133 46-112 53z" fill="#1c1c16"/>
+    <path d="M240 651v31l133 52 112-51v-34M373 702v32"/>
+    <path d="M260 665l112 43 92-42" stroke-opacity=".32"/>
+    <ellipse cx="359" cy="638" rx="71" ry="27" fill="#151510"/>
+    <path d="M288 638v-39m142 39v-39"/>
+    <ellipse cx="359" cy="599" rx="71" ry="27" fill="#25251d"/>
+    <ellipse cx="359" cy="599" rx="48" ry="17" stroke-opacity=".38"/>
+    <path d="M324 589l-8-70 37-36 52 15 6 82-34 24z" fill="#151510"/>
+    <path d="M353 483l14 79 10 42M316 519l51 43 44-19" stroke-opacity=".5"/>
+    <!-- Shoulder-to-elbow chassis. -->
+    <path d="M335 492l182-233 64 46-181 236z" fill="#25251d"/>
+    <path d="M350 497l179-224 36 27-180 226z" fill="url(#hatch)"/>
+    <path d="M355 487l173-211M383 509l171-211" stroke-opacity=".55"/>
+    <path d="M373 520l178-228 35 21-179 230z" fill="#151510"/>
+    <path d="M392 518l171-220" stroke-opacity=".3"/>
+    <!-- Elbow-to-wrist chassis. -->
+    <path d="M560 262l231 113-24 58-231-114z" fill="#25251d"/>
+    <path d="M578 282l194 96-14 30-194-96z" fill="url(#hatch)"/>
+    <path d="M562 309l203 99 9 28-230-109z" fill="#151510"/>
+    <path d="M580 321l168 82" stroke-opacity=".4"/>
+    <!-- Joint housings, flange bolts and drives. -->
+    <ellipse cx="367" cy="512" rx="39" ry="45" transform="rotate(20 367 512)" fill="#151510"/>
+    <ellipse cx="367" cy="512" rx="27" ry="32" transform="rotate(20 367 512)" stroke="#f14b50"/>
+    <ellipse cx="367" cy="512" rx="11" ry="14" transform="rotate(20 367 512)"/>
+    <ellipse cx="548" cy="292" rx="42" ry="45" transform="rotate(-22 548 292)" fill="#151510"/>
+    <ellipse cx="548" cy="292" rx="29" ry="31" transform="rotate(-22 548 292)" stroke="#f14b50"/>
+    <ellipse cx="548" cy="292" rx="10" ry="12" transform="rotate(-22 548 292)"/>
+    <circle cx="778" cy="405" r="35" fill="#151510"/>
+    <circle cx="778" cy="405" r="23" stroke="#f14b50"/>
+    <circle cx="778" cy="405" r="7"/>
+    <path d="M801 406l45 29-19 31-48-29" fill="#25251d"/>
+    <path d="M813 429l22 14M823 433l-13 20" stroke-opacity=".5"/>
+    <path d="M843 439l21 12-20 35-20-11z" fill="#151510"/>
+    <!-- Open parallel gripper. -->
+    <path d="M859 457l20 13-22 40-12-8 14-28-9-5M841 479l15 9-22 40-12-8 15-28-6-4" stroke-width="3"/>
+    <path d="M840 518l-12 30" stroke="#f14b50" stroke-width="4"/>
+    <path d="M820 543l6 9 10-3" stroke="#f14b50"/>
+    <!-- Flexible control harness. -->
+    <path d="M324 579c-72-78 91-267 180-311s101 23 145 47 99 33 136 52" stroke-opacity=".45" stroke-width="4"/>
+    <path d="M324 579c-72-78 91-267 180-311s101 23 145 47 99 33 136 52" stroke="#151510" stroke-width="1"/>
+  </g>
+  <!-- Pick-and-place rack, intentionally diagrammatic. -->
+  <g stroke="#ebe9df" stroke-width="1.7" stroke-linejoin="round">
+    <path d="M742 625l94-40 139 49-95 41z" fill="#22221b"/>
+    <path d="M742 625v66l138 51 95-43v-65M880 675v67"/>
+    <path d="M757 641v40l109 40v-39M894 681v42l65-29v-42" stroke-opacity=".3"/>
+    <g fill="#151510"><path d="M785 582v38l9 19 9-12v-39"/><ellipse cx="794" cy="585" rx="9" ry="4"/><path d="M824 596v38l9 19 9-12v-39"/><ellipse cx="833" cy="599" rx="9" ry="4"/><path d="M862 610v38l9 19 9-12v-39"/><ellipse cx="871" cy="613" rx="9" ry="4"/><path d="M832 563v39l9 18 9-12v-39"/><ellipse cx="841" cy="566" rx="9" ry="4"/><path d="M871 577v39l9 18 9-12v-39"/><ellipse cx="880" cy="580" rx="9" ry="4"/><path d="M910 591v39l9 18 9-12v-39"/><ellipse cx="919" cy="594" rx="9" ry="4"/></g>
+    <g stroke="#f14b50"><path d="M787 609l7 16 7-10M826 623l7 16 7-10M864 637l7 16 7-10M834 590l7 16 7-10M873 604l7 16 7-10M912 618l7 16 7-10"/></g>
+  </g>
+  <g stroke="#ebe9df" stroke-opacity=".45" stroke-width="1">
+    <path d="M567 252l81-94h144M431 499l71 58h141M862 495l116-55h76"/>
+    <circle cx="567" cy="252" r="3" fill="#ebe9df"/><circle cx="431" cy="499" r="3" fill="#ebe9df"/><circle cx="862" cy="495" r="3" fill="#ebe9df"/>
+    <path d="M75 95v38M56 114h38M1125 735v38M1106 754h38"/>
+  </g>
+  <g fill="#ebe9df" font-family="monospace" font-size="13" letter-spacing="2">
+    <text x="48" y="52">01 / MANIPULATION STUDY</text>
+    <text x="1152" y="52" text-anchor="end" fill="#f14b50">SO-101 / ACT</text>
+    <text x="653" y="146" font-size="11" fill-opacity=".65">ARTICULATED MOTION</text>
+    <text x="510" y="579" font-size="11" fill-opacity=".65">POLICY → ACTION</text>
+    <text x="973" y="427" font-size="11" fill-opacity=".65">GRASP</text>
+    <text x="48" y="804" font-size="11" fill-opacity=".55">DEMONSTRATION → LEARNING → DEPLOYMENT</text>
+    <text x="1152" y="804" text-anchor="end" font-size="11" fill-opacity=".55">CONCEPT ILLUSTRATION</text>
+  </g>
+</svg>

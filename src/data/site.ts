@@ -24,7 +24,7 @@ export const site = {
   portraitAlt: 'Portrait placeholder for Hanxuan Zhou; personal photo not yet provided.',
   portraitIsPlaceholder: true,
   cv: null as string | null, // e.g. '/files/hanxuan-zhou-cv.pdf' after adding the real PDF
-  lastUpdated: '2026-10-31', // Deliberately explicit: change when updating public content.
+  lastUpdated: '2026-11-11', // Explicit content update: redesign and user-provided travel history.
   title: 'Hanxuan Zhou | Embodied AI & Robot Learning',
   description: "Hanxuan Zhou (周瀚轩), a master's student at East China Normal University, interested in Embodied AI, Vision-Language-Action Models, World Models, and Robot Learning.",
   introduction: 'I am interested in how embodied agents perceive, reason, and act in the physical world, with a focus on learning useful behavior from multimodal observations.',
@@ -44,8 +44,8 @@ export const site = {
       category: 'Real-world manipulation', status: 'Implemented',
       description: 'A real-robot manipulation project using LeRobot, SO-101, and Action Chunking Transformer (ACT). The workflow covers demonstration collection, policy training, and deployment on the physical robot, demonstrating centrifuge tube pick-and-place.',
       tags: ['LeRobot', 'SO-101', 'ACT', 'Imitation Learning'],
-      image: '/images/so101-placeholder.svg',
-      imageAlt: 'Project image placeholder: schematic of a robot arm and centrifuge tubes, not an actual experiment photo.',
+      image: '/images/manipulation-study.svg',
+      imageAlt: 'Concept illustration of an articulated robot arm and centrifuge tube rack; not experiment footage.',
       imageIsPlaceholder: true,
       links: [ { label: 'GitHub', url: null, placeholder: '[PROJECT_REPOSITORY_URL]' }, { label: 'Demo', url: null, placeholder: '[PROJECT_DEMO_URL]' } ],
     },
@@ -54,8 +54,8 @@ export const site = {
       category: 'Robotics infrastructure', status: 'In Progress',
       description: 'Exploring secure communication for distributed robotic control, including image transmission, remote model inference, control-command integrity protection, and authentication.',
       tags: ['Remote Inference', 'Secure Communication', 'Authentication'],
-      image: '/images/remote-control-placeholder.svg',
-      imageAlt: 'Project image placeholder: schematic connecting a robot, secure communication channel, and remote model.',
+      image: '/images/remote-study.svg',
+      imageAlt: 'Concept illustration of secure observation and action streams between a robot and remote inference; not experiment footage.',
       imageIsPlaceholder: true,
       links: [ { label: 'GitHub', url: null, placeholder: '[PROJECT_REPOSITORY_URL]' }, { label: 'Demo', url: null, placeholder: '[PROJECT_DEMO_URL]' } ],
     },

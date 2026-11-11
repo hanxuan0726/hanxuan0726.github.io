@@ -4,7 +4,8 @@ import assert from 'node:assert/strict';
 const html = await readFile('dist/index.html', 'utf8');
 assert(html.includes('Hanxuan Zhou'), 'Full public name must be in generated HTML.');
 assert(/id="contact"/.test(html), 'Contact section must be prerendered.');
-assert(/<h1[^>]*>Hanxuan Zhou<\/h1>/.test(html), 'Identity must be visible HTML text.');
+const heading = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)?.[1].replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+assert.equal(heading, 'Hanxuan Zhou', 'Identity must be visible HTML text in the main heading.');
 const resources = [...html.matchAll(/(?:src|href)="(\/[^"#?]*)/g)].map(match => match[1]);
 for (const resource of new Set(resources)) {
   assert(!resource.startsWith('//'), `Unexpected protocol-relative resource: ${resource}`);
