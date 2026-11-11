@@ -34,7 +34,7 @@ function initEditorialMotion() {
   register('.project-copy', 'copy', 90);
   register('.haerin-portrait', 'portrait');
   register('.haerin-corner h3, .gaming-intro h3', 'headline', 100);
-  register('.game-rank', 'rank', 95);
+  register('.game-rank, .rig-rank', 'rank', 95);
 
   function play(el: HTMLElement, frames: Keyframe[], options: KeyframeAnimationOptions) {
     if (!enabled || typeof el.animate !== 'function') return;
@@ -101,6 +101,13 @@ function initEditorialMotion() {
   function drawScroll() {
     scrollFrame = 0;
     if (!enabled || document.hidden) return;
+    // A fully clipped headline can have a zero intersection in WebKit.
+    // Use its layout bounds as a fallback so the entrance cannot hide content.
+    for (const item of reveals) {
+      if (item.seen) continue;
+      const bounds = item.el.getBoundingClientRect();
+      if (bounds.top < innerHeight * .93 && bounds.bottom > 0) reveal(item);
+    }
     const max = document.documentElement.scrollHeight - innerHeight;
     progress.style.transform = `scaleX(${max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0})`;
     if (hero) {

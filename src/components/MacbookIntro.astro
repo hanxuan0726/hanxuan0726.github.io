@@ -1,0 +1,60 @@
+---
+import { site } from '../data/site';
+import '../styles/macbook-intro.css';
+const keyboardRows = [
+  ['esc', '◁', '☀', '☀', '▦', '⌕', '◉', '◀', '▶', '▶', '◀', '◖', '◗', '●'],
+  ['~', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '−', '+', 'delete'],
+  ['tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', '\\'],
+  ['caps', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', '“', 'return'],
+  ['shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', 'shift'],
+  ['fn', 'control', 'option', 'command', ' ', 'command', 'option', '◀', '▲', '▶'],
+];
+---
+<section class="macbook-intro" data-macbook-intro aria-label="A desk in Shanghai: enter Hanxuan Zhou’s portfolio">
+  <div class="macbook-intro-fallback"><a href="#portfolio-content">ENTER THE PORTFOLIO <span aria-hidden="true">↗</span></a></div>
+  <div class="macbook-intro-stage" data-intro-stage>
+    <div class="intro-tabletop" aria-hidden="true"></div>
+    <div class="intro-desk-edge" aria-hidden="true"></div>
+    <div class="intro-ambient-light" aria-hidden="true"></div>
+    <div class="intro-desk-shadow" aria-hidden="true"></div>
+    <div class="intro-meta"><span>HANXUAN ZHOU / PERSONAL PORTFOLIO</span><span>SHANGHAI IS HOME</span></div>
+    <div class="intro-caption"><p>A small desk.<br /><em>A wider world.</em></p><span>从这里，进入我的世界。</span></div>
+    <div class="intro-camera" aria-hidden="true">
+      <div class="intro-laptop" data-intro-laptop>
+        <div class="intro-laptop-lid">
+          <div class="intro-lid-shell"></div>
+          <div class="intro-display-bezel">
+            <div class="intro-display" data-intro-display>
+              <div class="intro-screen-page" data-intro-screen>
+                <div class="intro-page-fallback">
+                  <div class="intro-page-nav"><b>HZ ✳</b><span>About　Research　Projects　Footprints</span><span>Let’s talk ↗</span></div>
+                  <div class="intro-page-kicker"><span>EMBODIED AI &amp; ROBOT LEARNING</span><span>SHANGHAI / {site.chineseName}</span></div>
+                  <div class="intro-page-name">HANXUAN<br />ZHOU</div>
+                  <svg class="intro-page-field" viewBox="0 0 600 400"><g fill="none" stroke="currentColor">{Array.from({length:38},(_,i)=><ellipse cx="300" cy="200" rx={38+i*6.5} ry={176-Math.sin(i/8)*70} transform={`rotate(${i*4.7} 300 200)`}/>)}</g></svg>
+                  <div class="intro-page-footer"><p>{site.role}<br />{site.university}</p><p>Exploring how machines<br />perceive, reason, and act.</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="intro-display-notch"><i></i></div>
+            <span class="intro-air-label">MacBook Air</span>
+          </div>
+          <div class="intro-display-reflection"></div>
+        </div>
+        <div class="intro-hinge"></div>
+        <div class="intro-laptop-base">
+          <div class="intro-speaker intro-speaker-left"></div><div class="intro-speaker intro-speaker-right"></div>
+          <div class="intro-keyboard">{keyboardRows.map((row,index)=><div class:list={['intro-keyboard-row',{'intro-keyboard-function':index===0,'intro-keyboard-bottom':index===5}]}>{row.map(key=><span class:list={{'intro-space-key':key===' ','intro-wide-key':key.length>2}}>{key}</span>)}</div>)}</div>
+          <div class="intro-trackpad"></div>
+          <div class="intro-base-front"><i></i></div>
+          <div class="intro-base-side"></div>
+        </div>
+      </div>
+    </div>
+    <div class="intro-handoff" data-intro-handoff aria-hidden="true" inert></div>
+    <div class="intro-bottom-bar"><p><span class="intro-scroll-line" aria-hidden="true"></span>SCROLL TO STEP INSIDE <span aria-hidden="true">↓</span></p><div><button type="button" data-intro-still>ENTER WITHOUT MOTION</button><a href="#portfolio-content" data-intro-skip>SKIP INTRO <span aria-hidden="true">↗</span></a></div></div>
+    <div class="intro-progress" aria-hidden="true"><span data-intro-progress></span></div>
+  </div>
+</section>
+<script>
+  import '../scripts/macbook-intro';
+</script>

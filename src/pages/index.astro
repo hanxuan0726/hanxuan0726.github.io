@@ -4,7 +4,10 @@ import ResourceLink from '../components/ResourceLink.astro';
 import PublicationList from '../components/PublicationList.astro';
 import TravelMap from '../components/TravelMap.astro';
 import OffHours from '../components/OffHours.astro';
+import WorkOrbit from '../components/WorkOrbit.astro';
+import MacbookIntro from '../components/MacbookIntro.astro';
 import '../styles/motion.css';
+import '../styles/depth-glass.css';
 import { site } from '../data/site';
 import { isConfigured, formatDate } from '../utils/links';
 const github = `https://github.com/${site.githubUsername}`;
@@ -13,6 +16,8 @@ const nav = [['about', 'About'], ['research', 'Research'], ['projects', 'Project
 const updated = new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${site.lastUpdated}T00:00:00Z`));
 ---
 <Layout>
+  <MacbookIntro />
+  <div id="portfolio-content" tabindex="-1"></div>
   <div class="site-frame" id="home">
     <header class="site-header">
       <a class="monogram" href="#home" aria-label="Hanxuan Zhou, back to top">HZ<span aria-hidden="true">✳</span></a>
@@ -53,17 +58,7 @@ const updated = new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric',
         <div class="research-heading"><h2 id="research-title">LEARNING<br />TO <span class="serif">act.</span></h2><p>From multimodal observations<br />to behavior in the physical world.</p></div>
         <div class="research-list">{site.interests.map((interest, i) => <details class="research-item" name="research-interest" open={i === 0}><summary><span class="mono">0{i + 1}</span><h3>{interest.title}</h3><span class="details-symbol" aria-hidden="true"></span></summary><div class="research-answer"><p class="mono">{interest.subtitle}</p><p>{interest.description}</p></div></details>)}</div>
       </section>
-      <section id="projects" class="projects-section panel" aria-labelledby="projects-title">
-        <div class="section-label mono"><span>03 / SELECTED EXPLORATIONS</span><span>FROM IDEAS TO PHYSICAL SYSTEMS</span></div>
-        <div class="projects-heading"><h2 id="projects-title">IN THE<br /><span class="serif">making.</span></h2><span class="project-count mono">({String(site.projects.length).padStart(2, '0')})</span></div>
-        <div class="projects">{site.projects.map((project, i) => <article class:list={['project', { 'project-reverse': i % 2 !== 0 }]} aria-labelledby={`${project.id}-title`}>
-          <figure class="project-figure"><img src={project.image} alt={project.imageAlt} width="1200" height="850" loading="lazy" /><figcaption class="mono"><span>FIG. 0{i + 1} / CONCEPT STUDY</span><span>ILLUSTRATION, NOT EXPERIMENT FOOTAGE</span></figcaption></figure>
-          <div class="project-copy"><div class="project-meta mono"><span>0{i + 1} / {project.category}</span><span class="project-status"><i class="status-dot" aria-hidden="true"></i>{project.status}</span></div><h3 id={`${project.id}-title`}>{project.title}</h3><p>{project.description}</p><ul class="tags" aria-label="Technologies">{project.tags.map(tag => <li>{tag}</li>)}</ul>
-          <details class="project-notes"><summary>Explore the process <span aria-hidden="true">+</span></summary><div>{i === 0 ? <><p>A hands-on workflow with LeRobot and the SO-101, from human demonstrations to learned behavior on the physical robot.</p><ol><li>Collect manipulation demonstrations.</li><li>Train an Action Chunking Transformer policy.</li><li>Deploy for centrifuge tube pick-and-place.</li></ol></> : <><p>An ongoing exploration of the communication path between a robot and remote model inference.</p><ol><li>Transmit visual observations.</li><li>Run remote model inference.</li><li>Protect control-command integrity and authenticate communication.</li></ol></>}</div></details>
-          {project.links.some(link => isConfigured(link.url)) && <div class="resource-links">{project.links.filter(link => isConfigured(link.url)).map(link => <ResourceLink {...link} />)}</div>}
-          </div>
-        </article>)}</div>
-      </section>
+      <WorkOrbit />
       {site.publications.length > 0 && <section id="publications" class="panel publications-section" aria-labelledby="publications-title"><div class="section-label mono">SELECTED WRITING</div><h2 id="publications-title">Publications</h2><PublicationList publications={site.publications} name={site.name} /></section>}
       <TravelMap />
       <OffHours />
@@ -77,4 +72,5 @@ const updated = new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric',
   </div>
   <script src="../scripts/portfolio.ts"></script>
   <script src="../scripts/motion.ts"></script>
+  <script src="../scripts/depth-glass.ts"></script>
 </Layout>

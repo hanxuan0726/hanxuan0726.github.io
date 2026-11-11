@@ -3,7 +3,7 @@ const contrast = document.querySelector<HTMLButtonElement>('#contrast-toggle');
 const updateContrast = () => {
   const dark = root.dataset.theme === 'dark';
   contrast?.setAttribute('aria-pressed', String(dark));
-  contrast?.setAttribute('aria-label', dark ? 'Use coral contrast' : 'Use dark contrast');
+  contrast?.setAttribute('aria-label', dark ? 'Use lime contrast' : 'Use dark contrast');
 };
 updateContrast();
 contrast?.addEventListener('click', () => {
@@ -53,10 +53,48 @@ const syncMotion = () => {
   root.classList.add('motion-ready');
   };
 syncMotion();
-const toggleMotion = () => { paused = !paused; syncMotion(); };
+type ReadingAnchor = { element: HTMLElement; top: number };
+let readingAnchor: ReadingAnchor | null = null;
+let readingFrame = 0;
+function captureReadingAnchor(): ReadingAnchor | null {
+  const readingLine = Math.max(0, document.querySelector('.site-header')?.getBoundingClientRect().bottom || 0) + 1;
+  // These scenes own their transition into a static, readable fallback.
+  for (const scene of document.querySelectorAll<HTMLElement>('.intro-enabled, [data-orbit-track]')) {
+    const bounds = scene.getBoundingClientRect();
+    if (bounds.top <= readingLine && bounds.bottom > readingLine) return null;
+  }
+  const candidates = document.querySelectorAll<HTMLElement>('.site-frame main > section:not([data-work-orbit]), .site-frame main article, .orbit-project-details');
+  for (const element of candidates) {
+    const bounds = element.getBoundingClientRect();
+    if (bounds.bottom > readingLine && bounds.top < innerHeight) return { element, top: bounds.top };
+  }
+  return null;
+}
+function setMotionPaused(next: boolean) {
+  // Retain the original anchor if another toggle arrives before restoration.
+  readingAnchor ??= captureReadingAnchor();
+  cancelAnimationFrame(readingFrame);
+  paused = next;
+  syncMotion();
+  if (!readingAnchor) return;
+  // Component observers and browser scroll anchoring must finish first. Measure
+  // the remaining displacement rather than adding their track-height deltas.
+  readingFrame = requestAnimationFrame(() => {
+    readingFrame = requestAnimationFrame(() => {
+      readingFrame = 0;
+      const anchor = readingAnchor;
+      readingAnchor = null;
+      if (!anchor?.element.isConnected) return;
+      const delta = anchor.element.getBoundingClientRect().top - anchor.top;
+      if (Math.abs(delta) > 1) window.scrollTo({ top: Math.max(0, scrollY + delta), behavior: 'instant' });
+    });
+  });
+}
+window.addEventListener('pagehide', () => { cancelAnimationFrame(readingFrame); readingFrame = 0; readingAnchor = null; });
+const toggleMotion = () => setMotionPaused(!paused);
 motionButton?.addEventListener('click', toggleMotion);
 pageMotionButton?.addEventListener('click', toggleMotion);
-reduced.addEventListener('change', () => { paused = reduced.matches; syncMotion(); });
+reduced.addEventListener('change', () => setMotionPaused(reduced.matches));
 const context = canvas?.getContext('2d');
 if (canvas && field && context) {
   let visible = true;
