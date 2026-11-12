@@ -51,9 +51,9 @@ for (const section of document.querySelectorAll<HTMLElement>('[data-work-orbit]'
       const x = Math.sin(radians) * radius;
       const z = Math.cos(radians) * radius;
       // An inclined orbit gives the cards a visible rising and falling path.
-      const y = Math.sin(radians) * -55 + Math.cos(radians) * 68 + (index % 2 ? -12 : 12);
+      const y = Math.sin(radians) * -95 + Math.cos(radians) * 78 + (index % 2 ? -12 : 12);
       // Each card remains readable while its yaw visibly follows the cylinder.
-      const yaw = Math.sin(radians) * 34;
+      const yaw = Math.sin(radians) * 42;
       card.style.transform = `translate(-50%,-50%) translate3d(${x.toFixed(2)}px,${y.toFixed(2)}px,${z.toFixed(2)}px) rotateY(${yaw.toFixed(2)}deg)`;
       // Keep physical panels solid; lighting, scale and perspective convey depth.
       card.style.opacity = '1';

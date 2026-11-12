@@ -6,13 +6,14 @@ import TravelMap from '../components/TravelMap.astro';
 import OffHours from '../components/OffHours.astro';
 import WorkOrbit from '../components/WorkOrbit.astro';
 import MacbookIntro from '../components/MacbookIntro.astro';
+import ContactScene from '../components/ContactScene.astro';
 import '../styles/motion.css';
 import '../styles/depth-glass.css';
+import '../styles/color-flow.css';
 import { site } from '../data/site';
 import { isConfigured, formatDate } from '../utils/links';
 const github = `https://github.com/${site.githubUsername}`;
-const email = `mailto:${site.email}`;
-const nav = [['about', 'About'], ['research', 'Research'], ['projects', 'Projects'], ['travel', 'Footprints'], ['off-hours', 'Off hours'], ...(site.publications.length ? [['publications', 'Publications']] : [])];
+const nav = [['about', 'About'], ['research', 'Research'], ['projects', 'Work'], ['travel', 'Footprints'], ['haerin', 'Haerin'], ['off-hours', 'Music + Games'], ...(site.publications.length ? [['publications', 'Publications']] : [])];
 const updated = new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${site.lastUpdated}T00:00:00Z`));
 ---
 <Layout>
@@ -21,10 +22,10 @@ const updated = new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric',
   <div class="site-frame" id="home">
     <header class="site-header">
       <a class="monogram" href="#home" aria-label="Hanxuan Zhou, back to top">HZ<span aria-hidden="true">✳</span></a>
-      <p class="header-note">RESEARCHER IN THE MAKING<br />SHANGHAI IS HOME</p>
+      <p class="header-note">RESEARCHER IN THE MAKING<br />BASED IN SHANGHAI</p>
       <nav aria-label="Main navigation">{nav.map(([id, label]) => <a href={`#${id}`} data-section={id}>{label}</a>)}</nav>
       <a class="header-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
-      <button class="page-motion-toggle" id="page-motion-toggle" type="button" aria-label="Pause all animations" aria-pressed="false"><span aria-hidden="true">Ⅱ</span></button>
+      <button class="page-motion-toggle" id="page-motion-toggle" type="button" aria-label="View still version" aria-pressed="false"><span aria-hidden="true">Ⅱ</span></button>
       <button class="contrast-button" id="contrast-toggle" type="button" aria-label="Use dark contrast" aria-pressed="false"><span aria-hidden="true">◐</span></button>
     </header>
     <main id="main">
@@ -36,7 +37,7 @@ const updated = new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric',
           <canvas id="motion-field" aria-hidden="true"></canvas>
           <div class="field-cross field-cross-a" aria-hidden="true">+</div><div class="field-cross field-cross-b" aria-hidden="true">+</div>
           <figcaption class="mono"><span>PERCEPTION → ACTION</span><span>LIVE FIELD / 01</span></figcaption>
-          <button type="button" id="motion-toggle" class="motion-toggle" aria-pressed="false" aria-label="Pause animation"><span aria-hidden="true">Ⅱ</span></button>
+          <button type="button" id="motion-toggle" class="motion-toggle" aria-pressed="false" aria-label="View still version"><span aria-hidden="true">Ⅱ</span></button>
         </figure>
         <div class="hero-footer">
           <div class="hero-identity"><p>{site.role} <span class="serif">at</span></p><p>{site.university}</p>{isConfigured(site.cv) && <ResourceLink label="Curriculum vitae" url={site.cv} />}</div>
@@ -53,20 +54,20 @@ const updated = new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric',
         </div>
         <div id="experience" class="education-strip"><span class="mono">CURRENT CHAPTER</span>{site.education.map(item => <div><h3>{item.institution}</h3><p>{item.degree} <span aria-hidden="true">/</span> <span lang="zh-CN">{item.school}</span></p>{(item.start || item.end) && <p class="mono">{formatDate(item.start)}{item.start && item.end ? ' — ' : ''}{formatDate(item.end)}</p>}</div>)}<span class="education-emblem" aria-hidden="true">↗</span></div>
       </section>
+      <div class="color-bridge bridge-paper-forest" aria-hidden="true"></div>
       <section id="research" class="research-section panel" aria-labelledby="research-title">
         <div class="section-label mono"><span>02 / RESEARCH INTERESTS</span><span>OPEN QUESTIONS. NEW POSSIBILITIES.</span></div>
         <div class="research-heading"><h2 id="research-title">LEARNING<br />TO <span class="serif">act.</span></h2><p>From multimodal observations<br />to behavior in the physical world.</p></div>
         <div class="research-list">{site.interests.map((interest, i) => <details class="research-item" name="research-interest" open={i === 0}><summary><span class="mono">0{i + 1}</span><h3>{interest.title}</h3><span class="details-symbol" aria-hidden="true"></span></summary><div class="research-answer"><p class="mono">{interest.subtitle}</p><p>{interest.description}</p></div></details>)}</div>
       </section>
+      <div class="color-bridge bridge-forest-lime" aria-hidden="true"></div>
       <WorkOrbit />
       {site.publications.length > 0 && <section id="publications" class="panel publications-section" aria-labelledby="publications-title"><div class="section-label mono">SELECTED WRITING</div><h2 id="publications-title">Publications</h2><PublicationList publications={site.publications} name={site.name} /></section>}
       <TravelMap />
+      <div class="color-bridge bridge-forest-mint" aria-hidden="true"></div>
       <OffHours />
-      <section id="contact" class="contact-section panel" aria-labelledby="contact-title">
-        <div class="section-label mono"><span>06 / KEEP IN TOUCH</span><span>GOOD IDEAS START WITH A CONVERSATION</span></div>
-        <a class="contact-title-link" href={email}><h2 id="contact-title">LET’S<br /><span class="serif">connect.</span></h2><span class="contact-arrow" aria-hidden="true">↗</span></a>
-        <div class="contact-bottom"><p>Embodied intelligence, robot learning,<br />or a shared curiosity. Say hello.</p><div><a class="email-link" href={email}>{site.email}<span aria-hidden="true">↗</span></a><button id="copy-email" class="copy-email mono" data-email={site.email} type="button">COPY EMAIL <span aria-hidden="true">⧉</span></button><span id="copy-status" class="mono" role="status" aria-live="polite"></span></div></div>
-      </section>
+      <div class="color-bridge bridge-forest-contact" aria-hidden="true"></div>
+      <ContactScene />
     </main>
     <footer class="site-footer mono"><span>© {new Date().getUTCFullYear()} {site.name} <span lang="zh-CN">/ 周瀚轩</span></span><span>CONTENT UPDATED <time datetime={site.lastUpdated}>{updated}</time></span><div><a href={github} target="_blank" rel="noopener noreferrer">GITHUB ↗</a><a href="#home">BACK TO TOP ↑</a></div></footer>
   </div>

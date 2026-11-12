@@ -41,6 +41,7 @@ const ready = origin.hostname !== 'example.invalid' && isConfigured(site.email) 
         try { theme = localStorage.getItem('portfolio-contrast') || 'light'; } catch {}
         if (!['light', 'dark'].includes(theme)) theme = 'light';
         document.documentElement.dataset.theme = theme;
+        document.documentElement.dataset.motion = new URLSearchParams(location.search).get('motion') === 'still' || matchMedia('(prefers-reduced-motion: reduce)').matches ? 'paused' : 'playing';
       })();
     </script>
   </head>

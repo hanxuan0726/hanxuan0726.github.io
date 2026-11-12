@@ -1,13 +1,5 @@
 ---
 import '../styles/macbook-intro.css';
-const keyboardRows = [
-  ['esc', '◁', '☀', '☀', '▦', '⌕', '◉', '◀', '▶', '▶', '◀', '◖', '◗', '●'],
-  ['~', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '−', '+', 'delete'],
-  ['tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', '\\'],
-  ['caps', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', '“', 'return'],
-  ['shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', 'shift'],
-  ['fn', 'control', 'option', 'command', ' ', 'command', 'option', '◀', '▲', '▶'],
-];
 ---
 <section class="macbook-intro" data-macbook-intro aria-label="A desk in Shanghai: enter Hanxuan Zhou’s portfolio">
   <div class="macbook-intro-fallback"><a href="#portfolio-content">ENTER THE PORTFOLIO <span aria-hidden="true">↗</span></a></div>
@@ -17,7 +9,7 @@ const keyboardRows = [
     <div class="intro-ambient-light" aria-hidden="true"></div>
     <div class="intro-desk-shadow" aria-hidden="true"></div>
     <div class="intro-meta"><span>HANXUAN ZHOU / PERSONAL PORTFOLIO</span><span>BASED IN SHANGHAI</span></div>
-    <div class="intro-caption"><p>A small desk.<br /><em>A wider world.</em></p><span>从这里，进入我的世界。</span><small>MACBOOK PRO · 14″ · M5</small></div>
+    <div class="intro-caption"><p>A small desk.<br /><em>A wider world.</em></p><span>从这里，进入我的世界。</span><small>MACBOOK AIR · M5</small></div>
     <div class="intro-camera" aria-hidden="true">
       <div class="intro-laptop" data-intro-laptop>
         <div class="intro-laptop-lid">
@@ -32,9 +24,7 @@ const keyboardRows = [
         </div>
         <div class="intro-hinge"></div>
         <div class="intro-laptop-base">
-          <div class="intro-speaker intro-speaker-left"></div><div class="intro-speaker intro-speaker-right"></div>
-          <div class="intro-keyboard">{keyboardRows.map((row,index)=><div class:list={['intro-keyboard-row',{'intro-keyboard-function':index===0,'intro-keyboard-bottom':index===5}]}>{row.map(key=><span class:list={{'intro-space-key':key===' ','intro-wide-key':key.length>2}}>{key}</span>)}</div>)}</div>
-          <div class="intro-trackpad"></div>
+          <div class="intro-official-deck"><img src="/images/macbook-air/apple-air-top-clean.png" width="814" height="508" alt="" decoding="async" fetchpriority="high" /></div>
           <div class="intro-base-front"><i></i></div>
           <div class="intro-base-side"></div>
         </div>

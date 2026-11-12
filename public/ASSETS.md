@@ -45,8 +45,8 @@
 ## 个人设备实物图
 
 - `images/gear/viper-v4-pro-official.png`：雷蛇 Viper V4 Pro 白色产品官方透明图（500×500），在 [Razer 官方产品页](https://www.razer.com/gaming-mice/razer-viper-v4-pro) 核对，直接下载自 [Razer 官方媒体服务器](https://medias-p1.phoenix.razer.com/sys-master-phoenix-images-container/h57/h60/10039373201438/viper-v4-pro-white-2-500x500.png)。权利归 Razer Inc.。
-- `images/gear/iqunix-ev63-official.jpg`：IQUNIX EV63 官方产品实拍图（1000×750），来自 [IQUNIX 官方产品页](https://iqunix.com/products/iqunix-ev63-hall-effect-keyboard) 的图库，[原图地址](https://iqunix.com/cdn/shop/files/04_ee0aad70-2530-4881-9fab-5e08f198c0cf.jpg?v=1765951802&width=1000)。权利归 IQUNIX。
-- 两张素材保存的字节与品牌服务器交付原图一致，未生成、重绘或替换产品外形。键盘仅在网页 CSS 中裁出产品区域；独立玻璃底板、接触阴影和透视变换构成立体展示。设备图选用官网展示配色，不推断用户实际拥有的颜色，也不代表品牌支持或合作。
+- `images/gear/iqunix-ev63-official.jpg`：IQUNIX EV63 官方产品实拍原图（1946×1460），来自 [IQUNIX 官方产品页](https://iqunix.com/products/iqunix-ev63-hall-effect-keyboard) 的图库，[原图地址](https://iqunix.com/cdn/shop/files/04_ee0aad70-2530-4881-9fab-5e08f198c0cf.jpg?v=1765951802)。权利归 IQUNIX。
+- 两张素材保存的字节与品牌服务器交付原图一致，未生成、重绘或替换产品外形。键盘下载不带尺寸参数的官方原文件，未放大；仅在网页 CSS 中裁出产品区域。产品通过轻微透视与独立虚影直接悬浮展示，不使用底座。设备图选用官网展示配色，不推断用户实际拥有的颜色，也不代表品牌支持或合作。
 - 完整下载地址、核对页和处理说明在 `images/gear/sources.json`。旧 `viper-v4-pro.svg`、`iqunix-ev63.svg` 为保留的示意素材，当前首页不使用。产品图并无开放许可证声明，相关商标与美术权利仍归各品牌。
 
 ## 地图数据
@@ -60,6 +60,6 @@
 
 ## 开场与材质
 
-MacBook Pro（M5 Pro）开场使用本站 CSS/SVG/DOM 绘制，外形参考 [Apple 官方产品展示](https://www.apple.com/macbook-pro/)。没有下载或打包 Apple 的产品照片、视频或三维模型；该示意不代表 Apple 的支持或合作关系。屏幕与进入后的页面共用唯一的真实主页 DOM，通过开场场景中的缩放与接力切换完成进入，不使用外部截图、复制主页或 iframe。实现位于 `src/components/MacbookIntro.astro`、`src/styles/macbook-intro.css` 和 `src/scripts/macbook-intro.ts`。
+MacBook Air（M5）开场以 CSS 三维结构承载 Apple 官方的原始透明俯视图 `images/macbook-air/apple-air-top-clean.png`，来自 [Apple 官方 MacBook Air 使用手册](https://support.apple.com/en-gb/guide/macbook-air/welcome/2026/mac/27)。保留原始图片字节，仅通过 CSS 隐去透明留白，并将其投射到薄机身平面；不再绘制键帽或两侧扬声器格栅。逐图来源在 `images/macbook-air/SOURCES.md`。产品图权利归 Apple；此个人网站不代表 Apple 的支持或合作。Apple 当前 Air 机型为 13/15 英寸，页面仅标注型号，不声称存在 14 英寸 Air。屏幕与进入后的页面共用唯一的真实主页 DOM，按实际屏幕矩形完成 1:1 无缝接力；没有外部页面截图、克隆主页或 iframe。实现位于 `MacbookIntro.astro`、`macbook-intro.css` 和 `macbook-intro.ts`。
 
 玻璃边缘、投影、反光与桌面光源由 CSS 绘制，位于 `src/styles/depth-glass.css`；指针响应在 `src/scripts/depth-glass.ts`。材质参考 [Apple 的 Liquid Glass 设计指导](https://developer.apple.com/documentation/technologyoverviews/adopting-liquid-glass)，属于网页视觉实现，不调用 Apple 原生材质框架。青柠绿、奶油白、森林绿以及薄荷、淡紫、冰蓝辅助色均为本站配色。

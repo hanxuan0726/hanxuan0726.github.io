@@ -145,7 +145,6 @@ function initMacbookIntro() {
   intro.querySelector('[data-intro-still]')?.addEventListener('click', () => {
     const globalPause = document.getElementById('page-motion-toggle');
     if (root.dataset.motion !== 'paused' && globalPause) globalPause.click();
-    syncMode(); skip();
   }, { signal });
   // Keyboard skip links and hash navigation must never target a projected coordinate.
   document.addEventListener('click', event => {

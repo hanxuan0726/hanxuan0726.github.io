@@ -20,15 +20,23 @@
     "rightsHolder": "Razer Inc.",
     "type": "Official product image; white product variant",
     "modifications": "Original image bytes unchanged; CSS scales and tilts the product plane. Displayed color does not assert the user’s owned color.",
-    "retrieved": "2026-11-11"
+    "retrieved": "2026-11-11",
+    "width": 500,
+    "height": 500,
+    "resolutionVerification": "The native transparent source is 500×500. Larger 1500px/1920px srcset URLs on the Razer product page wrap this same 500px source; they were not substituted or described as higher detail."
   },
   "iqunix-ev63-official.jpg": {
     "product": "IQUNIX EV63",
     "sourcePage": "https://iqunix.com/products/iqunix-ev63-hall-effect-keyboard",
-    "source": "https://iqunix.com/cdn/shop/files/04_ee0aad70-2530-4881-9fab-5e08f198c0cf.jpg?v=1765951802&width=1000",
+    "source": "https://iqunix.com/cdn/shop/files/04_ee0aad70-2530-4881-9fab-5e08f198c0cf.jpg?v=1765951802",
     "rightsHolder": "IQUNIX",
     "type": "Official EV63 product photograph from the product gallery",
-    "modifications": "Saved original official 1000px delivery unchanged; CSS clips the keyboard region and applies a perspective transform. Displayed color does not assert the user’s owned color.",
-    "retrieved": "2026-11-11"
+    "modifications": "Original 1946×1460 JPEG downloaded without the Shopify width parameter; original image bytes unchanged, no upscaling. CSS clips the keyboard region and applies a gentle floating perspective. Displayed color does not assert the user’s owned color.",
+    "retrieved": "2026-11-11",
+    "width": 1946,
+    "height": 1460,
+    "bytes": 175728,
+    "sha256": "2b4947b9ebc7bb274f307850cbff1ec809b7c74804befd0155944098756e9bb6",
+    "resolutionVerification": "The official product page srcset identifies the original delivery. The downloaded file is 1946×1460; its framing matches the former 1000×750 delivery."
   }
 }

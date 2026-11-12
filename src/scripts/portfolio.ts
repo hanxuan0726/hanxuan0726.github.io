@@ -41,60 +41,37 @@ const field = document.querySelector<HTMLElement>('.field-art');
 const motionButton = document.querySelector<HTMLButtonElement>('#motion-toggle');
 const pageMotionButton = document.querySelector<HTMLButtonElement>('#page-motion-toggle');
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-let paused = reduced.matches;
+let paused = root.dataset.motion === 'paused';
 const syncMotion = () => {
   root.dataset.motion = paused ? 'paused' : 'playing';
   motionButton?.setAttribute('aria-pressed', String(paused));
-  motionButton?.setAttribute('aria-label', paused ? 'Play animation' : 'Pause animation');
+  motionButton?.setAttribute('aria-label', paused ? 'View animated version' : 'View still version');
   if (motionButton) motionButton.innerHTML = `<span aria-hidden="true">${paused ? '▶' : 'Ⅱ'}</span>`;
   pageMotionButton?.setAttribute('aria-pressed', String(paused));
-  pageMotionButton?.setAttribute('aria-label', paused ? 'Play all animations' : 'Pause all animations');
+  pageMotionButton?.setAttribute('aria-label', paused ? 'View animated version' : 'View still version');
   if (pageMotionButton) pageMotionButton.innerHTML = `<span aria-hidden="true">${paused ? '▶' : 'Ⅱ'}</span>`;
   root.classList.add('motion-ready');
   };
 syncMotion();
-type ReadingAnchor = { element: HTMLElement; top: number };
-let readingAnchor: ReadingAnchor | null = null;
-let readingFrame = 0;
-function captureReadingAnchor(): ReadingAnchor | null {
-  const readingLine = Math.max(0, document.querySelector('.site-header')?.getBoundingClientRect().bottom || 0) + 1;
-  // These scenes own their transition into a static, readable fallback.
-  for (const scene of document.querySelectorAll<HTMLElement>('.intro-enabled, [data-orbit-track]')) {
-    const bounds = scene.getBoundingClientRect();
-    if (bounds.top <= readingLine && bounds.bottom > readingLine) return null;
+// Switching presentation modes reloads at the current chapter. This avoids
+// tearing down several composited sticky scenes in one WebKit style update.
+function navigateMotion(still: boolean) {
+  const url=new URL(location.href);
+  if(still)url.searchParams.set('motion','still');else url.searchParams.delete('motion');
+  const line=(document.querySelector('.site-header')?.getBoundingClientRect().bottom || 0)+1;
+  let chapter='home', visibleHeight=0;
+  for(const section of document.querySelectorAll<HTMLElement>('main > section[id]')) {
+    const bounds=section.getBoundingClientRect();
+    const visible=Math.max(0,Math.min(bounds.bottom,innerHeight)-Math.max(bounds.top,line));
+    if(visible>visibleHeight){chapter=section.id;visibleHeight=visible}
   }
-  const candidates = document.querySelectorAll<HTMLElement>('.site-frame main > section:not([data-work-orbit]), .site-frame main article:not([data-orbit-card])');
-  for (const element of candidates) {
-    const bounds = element.getBoundingClientRect();
-    if (bounds.bottom > readingLine && bounds.top < innerHeight) return { element, top: bounds.top };
-  }
-  return null;
+  url.hash=chapter;
+  location.replace(url.href);
 }
-function setMotionPaused(next: boolean) {
-  // Retain the original anchor if another toggle arrives before restoration.
-  readingAnchor ??= captureReadingAnchor();
-  cancelAnimationFrame(readingFrame);
-  paused = next;
-  syncMotion();
-  if (!readingAnchor) return;
-  // Component observers and browser scroll anchoring must finish first. Measure
-  // the remaining displacement rather than adding their track-height deltas.
-  readingFrame = requestAnimationFrame(() => {
-    readingFrame = requestAnimationFrame(() => {
-      readingFrame = 0;
-      const anchor = readingAnchor;
-      readingAnchor = null;
-      if (!anchor?.element.isConnected) return;
-      const delta = anchor.element.getBoundingClientRect().top - anchor.top;
-      if (Math.abs(delta) > 1) window.scrollTo({ top: Math.max(0, scrollY + delta), behavior: 'instant' });
-    });
-  });
-}
-window.addEventListener('pagehide', () => { cancelAnimationFrame(readingFrame); readingFrame = 0; readingAnchor = null; });
-const toggleMotion = () => setMotionPaused(!paused);
+const toggleMotion = () => navigateMotion(!paused);
 motionButton?.addEventListener('click', toggleMotion);
 pageMotionButton?.addEventListener('click', toggleMotion);
-reduced.addEventListener('change', () => setMotionPaused(reduced.matches));
+reduced.addEventListener('change', () => location.reload());
 const context = canvas?.getContext('2d');
 if (canvas && field && context) {
   let visible = true;

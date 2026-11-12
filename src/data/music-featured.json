@@ -1,0 +1,86 @@
+{
+  "catalogSource": "Apple iTunes Lookup API / Apple Music",
+  "verifiedAt": "2026-11-11",
+  "tracks": [
+    {
+      "id": "1692686518",
+      "title": "Super Shy",
+      "artist": "NewJeans",
+      "album": "NewJeans 'Super Shy' - Single",
+      "appleMusicUrl": "https://music.apple.com/us/album/super-shy/1692686264?i=1692686518",
+      "embedUrl": "https://embed.music.apple.com/us/album/super-shy/1692686264?i=1692686518&theme=dark",
+      "artwork": "/images/music/super-shy-apple-music.jpg",
+      "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/63/e5/e2/63e5e2e4-829b-924d-a1dc-8058a1d69bd4/196922462702_Cover.jpg/600x600bb.jpg"
+    },
+    {
+      "id": "6802397043",
+      "title": "If The Sun Burns Out Tonight",
+      "artist": "VALORANT Music, Grabbitz, Oli Sykes & Courtney LaPlante",
+      "album": "If The Sun Burns Out Tonight - Single",
+      "appleMusicUrl": "https://music.apple.com/us/album/if-the-sun-burns-out-tonight/6802396880?i=6802397043",
+      "embedUrl": "https://embed.music.apple.com/us/album/if-the-sun-burns-out-tonight/6802396880?i=6802397043&theme=dark",
+      "artwork": "/images/music/if-the-sun-burns-out-tonight-apple-music.jpg",
+      "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2d/7d/d8/2d7dd83c-21c2-f453-88b6-fe7009ae6a04/823375376644_Cover.jpg/600x600bb.jpg"
+    },
+    {
+      "id": "1734501146",
+      "title": "Lucky Girl Syndrome",
+      "artist": "ILLIT",
+      "album": "SUPER REAL ME - EP",
+      "appleMusicUrl": "https://music.apple.com/us/album/lucky-girl-syndrome/1734500886?i=1734501146",
+      "embedUrl": "https://embed.music.apple.com/us/album/lucky-girl-syndrome/1734500886?i=1734501146&theme=dark",
+      "artwork": "/images/music/lucky-girl-syndrome-apple-music.jpg",
+      "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/3e/49/1e/3e491e43-4961-21ab-2abe-37fb1c0feb40/196922879227_Cover.jpg/600x600bb.jpg"
+    },
+    {
+      "id": "1682502889",
+      "title": "Flash Forward",
+      "artist": "LE SSERAFIM",
+      "album": "UNFORGIVEN",
+      "appleMusicUrl": "https://music.apple.com/us/album/flash-forward/1682502020?i=1682502889",
+      "embedUrl": "https://embed.music.apple.com/us/album/flash-forward/1682502020?i=1682502889&theme=dark",
+      "artwork": "/images/music/flash-forward-apple-music.jpg",
+      "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/27/13/c3/2713c389-4f01-b5e7-59f5-3204b37cb594/196922444470_Cover.jpg/600x600bb.jpg"
+    },
+    {
+      "id": "1833057828",
+      "title": "GODS",
+      "artist": "League of Legends Music & NewJeans",
+      "album": "GODS - Single",
+      "appleMusicUrl": "https://music.apple.com/us/album/gods/1833057824?i=1833057828",
+      "embedUrl": "https://embed.music.apple.com/us/album/gods/1833057824?i=1833057828&theme=dark",
+      "artwork": "/images/music/gods-apple-music.jpg",
+      "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/30/59/e0/3059e000-eb6f-6c08-4387-c1ee9d38d962/00198704670657_Cover.jpg/600x600bb.jpg"
+    },
+    {
+      "id": "1657231962",
+      "title": "Ditto",
+      "artist": "NewJeans",
+      "album": "Ditto - Single",
+      "appleMusicUrl": "https://music.apple.com/us/album/ditto/1657231957?i=1657231962",
+      "embedUrl": "https://embed.music.apple.com/us/album/ditto/1657231957?i=1657231962&theme=dark",
+      "artwork": "/images/music/ditto-apple-music.jpg",
+      "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/f6/29/42/f629426e-92fe-535c-cbe4-76e70850819b/196922287107_Cover.jpg/600x600bb.jpg"
+    },
+    {
+      "id": "1656337517",
+      "title": "Joah",
+      "artist": "Jay Park",
+      "album": "Joah - Single",
+      "appleMusicUrl": "https://music.apple.com/us/album/joah/1656337095?i=1656337517",
+      "embedUrl": "https://embed.music.apple.com/us/album/joah/1656337095?i=1656337517&theme=dark",
+      "artwork": "/images/music/joah-apple-music.jpg",
+      "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/a1/1d/a6/a11da67f-1d34-fc46-c7eb-499c36bbfcba/8809259909766_Cover.jpg/600x600bb.jpg"
+    },
+    {
+      "id": "1853104685",
+      "title": "Sports car",
+      "artist": "Tate McRae",
+      "album": "SO CLOSE TO WHAT??? (deluxe)",
+      "appleMusicUrl": "https://music.apple.com/us/album/sports-car/1853104433?i=1853104685",
+      "embedUrl": "https://embed.music.apple.com/us/album/sports-car/1853104433?i=1853104685&theme=dark",
+      "artwork": "/images/music/sports-car-apple-music.jpg",
+      "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e9/4d/17/e94d17d9-5745-b1cb-00a2-107b7091a0b7/196873763132.jpg/600x600bb.jpg"
+    }
+  ]
+}
