@@ -17,6 +17,7 @@
 html.intro-scroll-scene{overflow-anchor:none}
 .intro-screen-page .site-frame{pointer-events:none}
 
-/* Apple's unedited top view is mapped onto the base plane, with the transparent margins hidden by CSS. */
+/* Center-crop Apple's unedited top view for the smaller Air's narrower keyboard-side metal.
+   The keyboard spans ~90% of the deck; the base and live-screen camera geometry stay fixed. */
 .intro-official-deck{position:absolute;inset:0;overflow:hidden;border-radius:8px 8px 24px 24px;transform:translateZ(1px)}
-.intro-official-deck img{position:absolute;width:118.66%;height:105.84%;max-width:none;left:-9.33%;top:-2.92%;object-fit:fill}
+.intro-official-deck img{position:absolute;width:130.5%;height:105.84%;max-width:none;left:-15.25%;top:-2.92%;object-fit:fill}

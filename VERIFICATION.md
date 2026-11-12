@@ -14,6 +14,15 @@ The portfolio remains an Astro static site for root-path GitHub Pages. Dependenc
 - Equipment now uses the brands' product images: `viper-v4-pro-official.png` and `iqunix-ev63-official.jpg`. The product models are user-provided; the displayed product colors do not assert the user's owned colors. Source URLs and unchanged-image records are in `public/images/gear/sources.json`.
 - Lime, cream and forest green are accented with mint, lavender and ice. Glass shells preserve opaque artwork/text surfaces. Fine-pointer camera/light effects are bounded and disabled in still/reduced-motion mode; narrow screens reduce or remove backdrop blur.
 
+## Progressive WORK entrance and compact Air deck — 2026-11-12
+
+- WORK starts with the central capsule and zero visible cards. Native scroll reveals the six chapters in sequence, with depth/scale entrances before each chapter reaches the front; reverse scroll conceals them again. The scroll track is longer, and previous/next controls target the new chapter positions.
+- At 1280×720, local IAB observations confirmed opacity sequences of 0/0/0/0/0/0, 1/0/0/0/0/0, 1/1/0/0/0/0, and all six visible at the last chapter. Native previous-button navigation wrapped from the first chapter to the last. Reverse scrolling returned to six hidden cards.
+- At 390×844, native scrolling repeated the first two entrances, with no horizontal page overflow. Switching to the still version at WORK rendered all six cards at full opacity in the static grid. OS reduced-motion and no-JavaScript fallbacks were source-reviewed, not newly browser-tested.
+- The stage uses overflow clipping without creating an internal scroll container where supported, preventing focus/scroll-into-view from shifting the stage contents. The front card's vertical path was raised to keep the card complete in the inspected desktop viewport.
+- Apple's original deck image remains unchanged. Its centered CSS crop now gives the keyboard approximately 90% of the base width, narrowing the side metal to match the requested compact Air appearance. This is a visual proportion adjustment, not an exact Apple 3D model. The screen portal geometry is unchanged; local entry and release still showed one live site-frame.
+- `npm run check:content`, `npm run build` and `git diff --check` passed. Astro reported 0 errors, 0 warnings and 0 hints; the static output checker verified 41 root-relative resources.
+
 ## Current music, contact and still-mode checks — 2026-11-12
 
 The main agent reported the following local browser observations for this revision. They do not establish support across every browser.
