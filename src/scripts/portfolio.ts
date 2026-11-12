@@ -65,7 +65,7 @@ function navigateMotion(still: boolean) {
     const visible=Math.max(0,Math.min(bounds.bottom,innerHeight)-Math.max(bounds.top,line));
     if(visible>visibleHeight){chapter=section.id;visibleHeight=visible}
   }
-  url.hash=chapter;
+  url.hash=root.dataset.introProjecting==='true' ? 'home' : chapter;
   location.replace(url.href);
 }
 const toggleMotion = () => navigateMotion(!paused);
