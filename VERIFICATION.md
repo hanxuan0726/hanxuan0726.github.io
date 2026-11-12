@@ -16,7 +16,7 @@ The portfolio remains an Astro static site for root-path GitHub Pages. Dependenc
 
 ## Viewport proportion pass — 2026-11-12
 
-- The normal root URL still opens the MacBook intro. Explicit chapter fragments such as `#projects` remain valid deep links; they intentionally bypass the intro. The public homepage entry is `https://hanxuan0726.github.io/`.
+- The normal root URL opens the MacBook intro and resets restored scroll on a fresh root load or reload. A local native-scroll test moved to scrollY 2160 before reloading back to the intro at scrollY 0. Explicit chapter fragments such as `#projects` remain valid deep links; they intentionally bypass the intro. The public homepage entry is `https://hanxuan0726.github.io/`.
 - Desktop type and artwork now use available window height as well as width. Research uses two columns, the map sits beside its complete destination list, Haerin uses a title column beside the collage, and music/games use compact side-by-side compositions. There is no whole-page CSS zoom; primary content and controls remain in normal flow.
 - At 1280×720 with a 75px header, measured section heights were: hero 598px, About 645px, Research 645px, Travel 626px, Haerin 635px, Music + Games 637px. Chapter navigation placed Travel at y=75 to 701, Haerin at y=75 to 710, and Music + Games at y=75 to 712. The WORK stage occupied y=75 to 720; an inspected front card occupied y=310 to 655, including its full bottom caption.
 - At 1440×900, Travel was 647px, Haerin 795px, Music + Games 702px; all fit below the 75px header. At 1024×768 they were 622px, 683px and 655px respectively, below the 693px available height. No horizontal page overflow was observed at those three desktop sizes.

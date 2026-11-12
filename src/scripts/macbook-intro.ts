@@ -3,6 +3,9 @@ function initMacbookIntro() {
   const intro = document.querySelector<HTMLElement>('[data-macbook-intro]');
   const portfolio = document.querySelector<HTMLElement>('.site-frame');
   if (!intro || !portfolio || intro.dataset.introInitialized) return;
+  if (!location.hash && !new URLSearchParams(location.search).has('motion')) {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }
   intro.dataset.introInitialized = 'true';
   const stage = intro.querySelector<HTMLElement>('[data-intro-stage]')!;
   const laptop = intro.querySelector<HTMLElement>('[data-intro-laptop]')!;

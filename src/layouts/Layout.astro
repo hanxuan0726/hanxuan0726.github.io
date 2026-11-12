@@ -37,6 +37,12 @@ const ready = origin.hostname !== 'example.invalid' && isConfigured(site.email) 
     <script is:inline>
       // Haerin-inspired green is the art direction; a remembered high-contrast choice is optional.
       (() => {
+        // A fresh homepage entry starts at the desk, even when the browser has
+        // remembered a previous scroll position. Chapter URLs keep their target.
+        if (!location.hash && !new URLSearchParams(location.search).has('motion')) {
+          history.scrollRestoration = 'manual';
+          window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        }
         let theme = 'light';
         try { theme = localStorage.getItem('portfolio-contrast') || 'light'; } catch {}
         if (!['light', 'dark'].includes(theme)) theme = 'light';
