@@ -36,7 +36,7 @@ function initContactScene() {
     stage.style.setProperty('--portal-tilt', `${(1-type)*65 - Math.sin(p*Math.PI)*14 + mouseY*9}deg`);
     stage.style.setProperty('--portal-yaw', `${Math.sin(p*Math.PI*2)*15 + mouseX*13}deg`);
     stage.style.setProperty('--portal-roll', `${Math.sin(p*Math.PI*2)*-6 + mouseX*2}deg`);
-    stage.style.setProperty('--portal-depth', `${7 + Math.sin(p*Math.PI)*12}px`);
+    stage.style.setProperty('--portal-depth', `${(4 + Math.sin(p*Math.PI)*7) * Math.min(1, stage.clientHeight / 900)}px`);
     const bulge = Math.sin(expansion * Math.PI / 2) * .7;
     if(context) {
       const width=stage.clientWidth, height=stage.clientHeight;

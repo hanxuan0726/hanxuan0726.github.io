@@ -27,7 +27,7 @@ for (const map of maps) {
       panel.setAttribute('aria-hidden', String(hidden));
     });
     if (readout) readout.textContent = view === 'world' ? 'HOME / SHANGHAI · 上海，我的家 → the world' : 'HOME / SHANGHAI · 上海，我的家 → China · Nanchang / roots';
-    if (help) help.textContent = view === 'world' ? 'Hover over China to explore. Tap the controls on mobile.' : 'Select a destination below. Use World to zoom out.';
+    if (help) help.textContent = view === 'world' ? 'Hover over China to explore. Tap the controls on mobile.' : 'Select a destination to highlight. Use World to zoom out.';
   };
   const selectPlace = (id: string, label: string) => {
     clearSelection();

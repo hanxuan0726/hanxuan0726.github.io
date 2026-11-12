@@ -5,6 +5,7 @@ for (const section of document.querySelectorAll<HTMLElement>('[data-work-orbit]'
   section.dataset.orbitInitialized = 'true';
   const track = section.querySelector<HTMLElement>('[data-orbit-track]')!;
   const stage = section.querySelector<HTMLElement>('[data-orbit-stage]')!;
+  const space = section.querySelector<HTMLElement>('[data-orbit-space]')!;
   const cards = Array.from(section.querySelectorAll<HTMLElement>('[data-orbit-card]'));
   const legacyHashes = new Set(Array.from(section.querySelectorAll<HTMLElement>('[data-orbit-legacy-anchor]'), anchor => `#${anchor.id}`));
   const count = section.querySelector<HTMLElement>('[data-orbit-count]');
@@ -17,7 +18,7 @@ for (const section of document.querySelectorAll<HTMLElement>('[data-work-orbit]'
   const signal = abort.signal;
   let enabled = false, frame = 0, legacyFrame = 0, active = -2, current = 0, target = 0;
   let requestedIndex: number | null = null;
-  let top = 0, distance = 1, radius = 300, stickyTop = 75;
+  let top = 0, distance = 1, radius = 300, verticalTravel = 70, stickyTop = 75;
   const maxTurn = (cards.length - 1) * 360 / cards.length;
   // Leave the opening capsule alone, then reveal each chapter just before its turn.
   const firstChapter = .18, lastChapter = .93, revealDuration = .10;
@@ -28,10 +29,30 @@ for (const section of document.querySelectorAll<HTMLElement>('[data-work-orbit]'
     if (root.dataset.introProjecting === 'true') return;
     stickyTop = Math.round(document.querySelector<HTMLElement>('.site-header')?.offsetHeight || 75);
     section.style.setProperty('--orbit-sticky-top', `${stickyTop}px`);
+    // Native #projects navigation must begin at the same header offset as the
+    // sticky stage, rather than leaving the site's general anchor breathing room.
+    const anchorPadding = parseFloat(getComputedStyle(root).scrollPaddingTop) || 0;
+    section.style.scrollMarginTop = `${stickyTop - anchorPadding}px`;
     top = track.getBoundingClientRect().top + scrollY;
     distance = Math.max(1, track.offsetHeight - stage.offsetHeight);
-    radius = clamp(stage.clientWidth * .3, 126, 410);
-    if (stage.clientWidth < 600) radius = clamp(stage.clientWidth * .34, 112, 185);
+    // Fit the entire composition between the heading and controls, including
+    // perspective enlargement at the front of the cylinder.
+    const mobile = stage.clientWidth < 600;
+    const sceneHeight = Math.max(200, space.clientHeight);
+    radius = mobile
+      ? Math.min(clamp(stage.clientWidth * .34, 106, 170), sceneHeight * .49)
+      : Math.min(clamp(stage.clientWidth * .28, 160, 360), sceneHeight * .56);
+    verticalTravel = Math.min(mobile ? 56 : 85, sceneHeight * .14);
+    const cardWidth = mobile
+      ? Math.min(162, stage.clientWidth * .44, sceneHeight * .49)
+      : Math.min(clamp(stage.clientWidth * .17, 180, 245), sceneHeight * .47);
+    const coreHeight = Math.min(mobile ? 335 : 520, sceneHeight * .86);
+    section.style.setProperty('--orbit-card-width', `${cardWidth.toFixed(1)}px`);
+    section.style.setProperty('--orbit-art-height', `${(cardWidth * .55).toFixed(1)}px`);
+    section.style.setProperty('--orbit-title-size', `${Math.min(mobile ? 22 : 33, cardWidth * .135).toFixed(1)}px`);
+    section.style.setProperty('--orbit-core-height', `${coreHeight.toFixed(1)}px`);
+    section.style.setProperty('--orbit-core-width', `${Math.min(mobile ? 106 : 205, coreHeight * .44).toFixed(1)}px`);
+    section.style.setProperty('--orbit-core-font', `${(coreHeight * .19).toFixed(1)}px`);
   }
   function setFront(index: number) {
     if (active === index) return;
@@ -58,7 +79,7 @@ for (const section of document.querySelectorAll<HTMLElement>('[data-work-orbit]'
       const x = Math.sin(radians) * radius * (.3 + reveal * .7);
       const z = Math.cos(radians) * radius * reveal - (1 - reveal) * 150;
       // An inclined orbit gives the cards a visible rising and falling path.
-      const y = Math.sin(radians) * -95 - Math.cos(radians) * 12 + (index % 2 ? -8 : 8) + (1 - reveal) * 100;
+      const y = Math.sin(radians) * -verticalTravel - Math.cos(radians) * 12 + (index % 2 ? -8 : 8) + (1 - reveal) * Math.min(80, verticalTravel);
       // Each card remains readable while its yaw visibly follows the cylinder.
       const yaw = Math.sin(radians) * 42 + (1 - reveal) * 24;
       card.style.transform = `translate(-50%,-50%) translate3d(${x.toFixed(2)}px,${y.toFixed(2)}px,${z.toFixed(2)}px) rotateY(${yaw.toFixed(2)}deg) scale(${(.45 + reveal * .55).toFixed(3)})`;

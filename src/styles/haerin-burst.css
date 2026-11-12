@@ -31,3 +31,13 @@ html[data-motion=paused] .haerin-listening>a:hover .haerin-listening-song>span{t
 .haerin-media .haerin-burst{overflow:visible}
 @media(max-width:420px){.haerin-media .haerin-sticker{max-width:20%}.haerin-media .haerin-sticker:nth-child(7),.haerin-media .haerin-sticker:nth-child(8){max-width:24%}}
 .haerin-section .haerin-media .haerin-sticker:is(:nth-child(1),:nth-child(3),:nth-child(9),:nth-child(11)){--sticker-x:13%!important}.haerin-section .haerin-media .haerin-sticker:is(:nth-child(2),:nth-child(6),:nth-child(10),:nth-child(12)){--sticker-x:87%!important}
+
+@media (min-width:1000px) {
+  .haerin-section .haerin-listening { min-height:42px; margin-top:0; padding-block:4px; }
+  .haerin-section .haerin-listening-song { font-size:22px; line-height:1.1; }
+  .haerin-section .haerin-listening-label { font-size:7px; }
+  .haerin-section .haerin-replay { min-height:38px; font-size:7px; }
+  .haerin-section .haerin-media .haerin-sticker { width:min(var(--sticker-size),calc(var(--haerin-collage-height) * .18)); max-width:18%; }
+  .haerin-section .haerin-media .haerin-sticker:nth-child(6) { --sticker-y:91%!important; }
+  .haerin-section .haerin-media .haerin-sticker:nth-child(8) { --sticker-y:7%!important; }
+}

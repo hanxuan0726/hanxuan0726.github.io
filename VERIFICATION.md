@@ -14,6 +14,15 @@ The portfolio remains an Astro static site for root-path GitHub Pages. Dependenc
 - Equipment now uses the brands' product images: `viper-v4-pro-official.png` and `iqunix-ev63-official.jpg`. The product models are user-provided; the displayed product colors do not assert the user's owned colors. Source URLs and unchanged-image records are in `public/images/gear/sources.json`.
 - Lime, cream and forest green are accented with mint, lavender and ice. Glass shells preserve opaque artwork/text surfaces. Fine-pointer camera/light effects are bounded and disabled in still/reduced-motion mode; narrow screens reduce or remove backdrop blur.
 
+## Viewport proportion pass — 2026-11-12
+
+- The normal root URL still opens the MacBook intro. Explicit chapter fragments such as `#projects` remain valid deep links; they intentionally bypass the intro. The public homepage entry is `https://hanxuan0726.github.io/`.
+- Desktop type and artwork now use available window height as well as width. Research uses two columns, the map sits beside its complete destination list, Haerin uses a title column beside the collage, and music/games use compact side-by-side compositions. There is no whole-page CSS zoom; primary content and controls remain in normal flow.
+- At 1280×720 with a 75px header, measured section heights were: hero 598px, About 645px, Research 645px, Travel 626px, Haerin 635px, Music + Games 637px. Chapter navigation placed Travel at y=75 to 701, Haerin at y=75 to 710, and Music + Games at y=75 to 712. The WORK stage occupied y=75 to 720; an inspected front card occupied y=310 to 655, including its full bottom caption.
+- At 1440×900, Travel was 647px, Haerin 795px, Music + Games 702px; all fit below the 75px header. At 1024×768 they were 622px, 683px and 655px respectively, below the 693px available height. No horizontal page overflow was observed at those three desktop sizes.
+- At 390×844, WORK occupied the available 752px under the 92px mobile header, started with six hidden cards, and had no horizontal page overflow. Mobile prose and content-heavy chapters retain natural vertical reading. At 1280×390, WORK reverted to visible static cards and the map retained its 220px minimum height instead of collapsing.
+- Opening research details, the full music library, or the official Apple Music preview can naturally make the chapter taller. The multi-viewport WORK and Contact tracks provide animation time; their visible stages fit the window.
+
 ## Progressive WORK entrance and compact Air deck — 2026-11-12
 
 - WORK starts with the central capsule and zero visible cards. Native scroll reveals the six chapters in sequence, with depth/scale entrances before each chapter reaches the front; reverse scroll conceals them again. The scroll track is longer, and previous/next controls target the new chapter positions.

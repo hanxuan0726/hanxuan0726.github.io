@@ -66,3 +66,59 @@ html[data-motion=paused] .haerin-collage>figure{--photo-lift:0px!important;--pho
 @media(max-width:350px){.haerin-section>.haerin-corner{--haerin-collage-height:380px}}
 
 @media(max-width:420px){.haerin-section .haerin-collage.haerin-photo-area{margin-inline:10px}}
+
+/* Desktop chapters use the available screen height instead of a tall poster.
+   The portraits remain separate layers; narrow layouts keep their natural flow. */
+@media (min-width:1000px) {
+  .haerin-section { padding-top:18px; padding-bottom:22px; }
+  .haerin-section > .haerin-corner {
+    --haerin-collage-height:clamp(360px,calc(100svh - 230px),650px);
+    display:grid;
+    grid-template-columns:minmax(0,.31fr) minmax(0,.69fr);
+    grid-template-rows:auto 1fr auto auto;
+    column-gap:clamp(24px,2.8vw,44px);
+    row-gap:16px;
+    padding-top:16px;
+  }
+  .haerin-section .haerin-topline { grid-column:1; grid-row:1; width:100%; }
+  .haerin-section .haerin-media { grid-column:2; grid-row:1 / 5; width:100%; margin:0; }
+  .haerin-section .haerin-name {
+    grid-column:1; grid-row:2; align-self:center;
+    flex-direction:column; align-items:flex-start; justify-content:center;
+    gap:18px; width:100%; margin:0;
+    font-size:clamp(78px,8.2vw,132px); line-height:.98;
+  }
+  .haerin-section .haerin-name > span { writing-mode:horizontal-tb; font-size:18px; margin:0; letter-spacing:.28em; }
+  .haerin-section .haerin-bottomline { grid-column:1; grid-row:3; width:100%; margin:0; padding-top:16px; }
+  .haerin-section .haerin-bottomline p { font-size:13px; }
+  .haerin-section .haerin-bottomline p > span { font-size:12px; }
+  .haerin-section .haerin-credit { grid-column:1; grid-row:4; width:100%; margin:0; font-size:9px; line-height:1.6; }
+  .haerin-section .haerin-collage.haerin-photo-area { margin-block:14px 12px; }
+  .haerin-section .haerin-collage > figure {
+    display:grid; grid-template-rows:minmax(0,1fr) 22px;
+    width:auto; padding:6px 6px 0;
+  }
+  .haerin-section .haerin-collage > figure img { width:100%; height:100%; min-height:0; object-fit:cover; }
+  .haerin-section .haerin-collage > figure figcaption { display:flex; align-items:center; padding:0 2px; font-size:7px; }
+  .haerin-section .haerin-collage .haerin-portrait { width:auto; height:78%; aspect-ratio:.73; left:30%; top:13%; }
+  .haerin-section .haerin-photo-dior { height:64%; aspect-ratio:.78; left:1%; top:9%; }
+  .haerin-section .haerin-photo-mma { height:66%; aspect-ratio:.68; right:1%; top:2%; }
+  .haerin-section .haerin-photo-olens { height:54%; aspect-ratio:.89; right:3%; top:40%; }
+
+  .music-gaming-section.off-hours { padding-top:18px; padding-bottom:24px; }
+  .music-gaming-section .off-hours-heading { margin-block:14px 18px; align-items:center; gap:24px; }
+  .music-gaming-section .off-hours-heading h2 { font-size:clamp(48px,7svh,66px); line-height:1; }
+  .music-gaming-section .off-hours-heading h2 > br { display:none; }
+  .music-gaming-section .off-hours-heading h2 .serif { margin-left:.15em; }
+  .music-gaming-section .off-hours-heading > p { display:flex; align-items:center; gap:7px; padding:0; font-size:12px; }
+  .music-gaming-section .off-hours-heading > p > br { display:none; }
+  .music-gaming-section .off-hours-heading > p > span { margin:0 0 0 12px; font-size:10px; }
+  .music-gaming-grid { gap:24px; align-items:start; }
+}
+
+@media (min-width:760px) and (max-width:999px) {
+  .haerin-section > .haerin-corner { --haerin-collage-height:clamp(460px,65svh,640px); }
+  .haerin-section .haerin-name { font-size:clamp(110px,16vw,170px); }
+  .music-gaming-section .off-hours-heading { margin-block:32px; }
+  .music-gaming-section .off-hours-heading h2 { font-size:clamp(64px,8vw,88px); }
+}

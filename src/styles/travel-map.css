@@ -14,3 +14,36 @@ html[data-motion=paused] .travel-route-pulse,html[data-motion=paused] .travel-or
 
 /* Shanghai is the visual and emotional home of this map. */
 .travel-map h2 em{font-size:.72em}.travel-map-intro p:first-child{font-size:clamp(18px,2vw,26px);line-height:1.6}.travel-home-control:hover{color:var(--map-coral)}.travel-home-control .travel-origin-dot{width:8px;height:8px;box-shadow:0 0 0 4px #c6f36b26,0 0 16px #c6f36b70}.travel-home-glow{fill:var(--map-coral);opacity:.12}.travel-home-orbit{fill:none;stroke:var(--map-coral);stroke-width:1;opacity:.7}.travel-origin-core{fill:var(--map-coral);stroke:var(--map-paper);stroke-width:2;filter:drop-shadow(0 0 8px #c6f36bb3)}.travel-map[data-home-highlighted=true] .travel-home-glow{opacity:.27}.travel-map[data-home-highlighted=true] .travel-origin-core{stroke-width:3;filter:drop-shadow(0 0 12px #c6f36b)}.travel-shanghai .travel-origin-sub{font-size:8px;letter-spacing:0}.travel-map-intro p+p{line-height:1.8}@media(max-width:600px){.travel-map-intro p:first-child{font-size:14px}.travel-map-intro p+p{font-size:9px}.travel-map-toolbar>.travel-home-control{padding-bottom:14px}.travel-shanghai text{font-size:14px}}@media(max-width:420px){.travel-map h2{font-size:clamp(49px,16vw,65px)}.travel-map-intro p:first-child{max-width:165px;font-size:14px}.travel-map-intro p+p{max-width:135px;font-size:9px}}
+
+/* Desktop keeps the complete journey in one composition; narrow screens retain
+   the natural document flow and every destination remains an HTML button. */
+@media(min-width:1000px){
+  .travel-map{padding:20px clamp(28px,2.5vw,40px) 17px;overflow:visible}
+  .travel-map-heading{gap:28px;padding-bottom:14px}
+  .travel-map-eyebrow{font-size:9px;margin-bottom:7px}
+  .travel-map h2{font-size:clamp(42px,min(4vw,6.1svh),56px)}
+  .travel-map-intro{max-width:350px;padding-bottom:0}
+  .travel-map-intro p:first-child{font-size:17px;line-height:1.5}
+  .travel-map-intro p+p{font-size:9px;line-height:1.6;margin-top:7px}
+  .travel-map-layout{display:grid;grid-template-columns:minmax(0,68fr) minmax(0,32fr);gap:26px;align-items:start}
+  .travel-map-explorer{min-width:0}
+  .travel-map-toolbar{min-height:44px;gap:10px}
+  .travel-map-toolbar>.travel-home-control{gap:8px;font-size:9px;letter-spacing:.04em}
+  .travel-map-switch button{padding:11px 13px;font-size:10px}
+  .travel-map-switch button span{margin-left:4px}
+  .travel-map-svg{height:clamp(220px,calc(100svh - 385px),330px);min-height:0;aspect-ratio:auto}
+  .travel-point-label{font-size:17px;letter-spacing:.6px}
+  .travel-shanghai text{font-size:20px;letter-spacing:.7px}
+  .travel-shanghai .travel-origin-sub{font-size:8px;letter-spacing:0}
+  .travel-map-bottomline{display:block;min-height:0;padding-block:8px;font-size:9px;line-height:1.5}
+  .travel-map-bottomline>p+p{margin-top:2px}
+  .travel-map-places{grid-template-columns:minmax(0,1fr);gap:16px;padding:0 0 0 20px;border-top:0;border-left:1px solid #f2f3e930}
+  .travel-place-group h3{font-size:9px;line-height:1.4;margin-bottom:7px}
+  .travel-place-group h3>span{margin-left:8px}
+  .travel-place-group ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 12px}
+  .travel-place-group-china ul{grid-template-columns:repeat(3,minmax(0,1fr));gap:2px 10px}
+  .travel-place-group button{font-size:10px;line-height:1.2;padding:2px 0;min-height:29px}
+  .travel-place-group button>span:last-child{font-size:9px;line-height:1.2;margin-top:2px}
+  .travel-map-notes{gap:24px;margin-top:10px;padding-top:10px;font-size:9px;line-height:1.6}
+  .travel-map-notes p:first-child{max-width:850px}
+}

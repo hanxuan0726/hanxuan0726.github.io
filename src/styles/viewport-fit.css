@@ -1,0 +1,54 @@
+/* Use both window dimensions: a wide laptop window is not necessarily tall. */
+html { overflow-x: clip; }
+@media (min-width: 760px) {
+  html { scroll-padding-top: 75px; }
+  .site-header .header-note { margin-left: 18px; }
+  .site-header nav { gap: clamp(12px, 1.5vw, 24px); padding-inline: clamp(12px, 1.5vw, 24px); min-width: 0; }
+  .site-header nav a { font-size: 11px; white-space: nowrap; }
+  .site-header .header-contact { gap: 12px; padding-inline: 18px; white-space: nowrap; }
+  .site-header .contrast-button { width: 54px; flex-shrink: 0; }
+  .site-header .page-motion-toggle { width: 44px; }
+  .hero { min-height: calc(100svh - 122px); padding: 18px 32px 22px; display: flex; flex-direction: column; }
+  .hero .hero-kicker { margin-bottom: 16px; }
+  .hero h1 { font-size: clamp(96px, min(20vw, 28svh), 300px); line-height: .99; }
+  .hero .field-art { width: 44%; height: min(26vw, 34svh); bottom: 124px; }
+  .hero .hero-footer { padding-top: 18px; margin-top: auto; }
+  .hero .hero-description { font-size: clamp(17px, 1.5vw, 22px); }
+  .hero .round-link { width: 48px; height: 48px; font-size: 27px; }
+  .ticker { padding-block: 7px; }
+  .color-bridge { height: clamp(36px, 6svh, 64px); }
+  .about-section.panel { padding-block: 28px; min-height: calc(100svh - 75px); display: flex; flex-direction: column; }
+  .about-section .about-grid { padding-block: clamp(28px, 5svh, 54px); gap: 6%; flex: 1; align-items: center; }
+  .about-section .about-grid h2 { font-size: clamp(40px, min(5.2vw, 8svh), 76px); }
+  .about-section .about-copy > .intro { font-size: 18px; margin-bottom: 18px; }
+  .about-section .about-copy > p { margin-bottom: 14px; }
+  .about-section .education-strip { padding-top: 20px; }
+  .research-section.panel { min-height: calc(100svh - 75px); padding-block: 28px; display: grid; grid-template-columns: .85fr 1.15fr; grid-template-rows: auto 1fr; gap: 30px 6%; }
+  .research-section > .section-label { grid-column: 1 / -1; }
+  .research-section .research-heading { margin: 0; flex-direction: column; align-items: flex-start; justify-content: center; gap: 28px; }
+  .research-section .research-heading h2 { font-size: clamp(58px, min(7vw, 11svh), 110px); }
+  .research-section .research-list { align-self: center; }
+  .research-section .research-item summary { grid-template-columns: 24px 1fr 25px; gap: 14px; padding-block: 16px; }
+  .research-section .research-item h3 { font-size: clamp(18px, 1.8vw, 28px); }
+  .research-section .research-answer { grid-template-columns: 1fr; gap: 7px; padding: 0 24px 18px 38px; }
+  .research-section .research-answer > p:last-child { font-size: 13px; }
+  .contact-scene .contact-scene-stage { min-height: 0; height: calc(100svh - var(--contact-sticky-top)); }
+  .contact-scene .contact-type-top { font-size: clamp(48px, min(8vw, 12svh), 120px); margin-bottom: 18px; }
+  .contact-scene .contact-type-stack { height: clamp(85px, min(15vw, 22svh), 220px); }
+  .contact-scene .contact-type-stack > span { font-size: clamp(85px, min(15vw, 22svh), 220px); }
+  .contact-scene .contact-type-caption { margin-top: calc(var(--portal-depth) * 10 + 16px); }
+  .contact-scene .contact-scene-actions { bottom: 22px; padding: 10px 24px; }
+  .contact-scene .contact-scene-actions .email-link { font-size: clamp(16px, 1.6vw, 24px); }
+}
+@media (min-width: 760px) and (max-width: 1199px) {
+  .site-header .header-note { display: none; }
+  .site-header .header-contact { font-size: 12px; padding-inline: 14px; }
+  .site-header .monogram { padding-inline: 18px; }
+}
+@media (min-width: 760px) and (max-height: 560px) {
+  .hero { min-height: 0; }
+  .hero .hero-footer { margin-top: 18px; }
+  .hero h1 { font-size: clamp(96px, 20svh, 160px); }
+  .about-section.panel, .research-section.panel { min-height: 0; }
+  .contact-scene .contact-scene-stage { height: 500px; }
+}

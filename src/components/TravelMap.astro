@@ -50,6 +50,8 @@ const visitedCountries = new Set(['CHN', 'USA', 'CAN', 'THA', 'MYS']);
     <div><p class="travel-map-eyebrow">04 / FOOTPRINTS</p><h2 id="travel-title">Shanghai.<br /><em>Always home.</em></h2></div>
     <div class="travel-map-intro"><p lang="zh-CN">上海是家，也是每一次出发的原点。</p><p>Home in Shanghai. Roots in Nanchang.<br />Curiosity everywhere.</p></div>
   </div>
+  <div class="travel-map-layout">
+  <div class="travel-map-explorer">
   <div class="travel-map-toolbar">
     <button type="button" class="travel-home-control" data-map-home aria-label="Highlight Shanghai, my home" title="Shanghai is home — reset destination highlight"><span class="travel-origin-dot" aria-hidden="true"></span> HOME / SHANGHAI <span lang="zh-CN">上海 · 我的家</span></button>
     <div class="travel-map-switch" role="group" aria-label="Map view">
@@ -101,9 +103,11 @@ const visitedCountries = new Set(['CHN', 'USA', 'CAN', 'THA', 'MYS']);
     <p class="travel-map-readout" role="status" aria-live="polite" data-map-readout>HOME / SHANGHAI · 上海，我的家 → the world</p>
     <p data-map-help>Hover over China to explore. Tap the controls on mobile.</p>
   </div>
+  </div>
   <div class="travel-map-places">
     <div class="travel-place-group"><h3>Across borders <span>04</span></h3><ul>{worldPlaces.map(p => <li><button type="button" data-place-button={p.id} data-place-view="world" data-place-label={`${p.name} / ${p.zh}`}><span>{p.name}</span><span lang="zh-CN">{p.zh}</span></button></li>)}</ul></div>
     <div class="travel-place-group travel-place-group-china"><h3>Around China <span>{String(chinaPlaces.length).padStart(2, '0')}</span></h3><ul>{chinaPlaces.map(p => <li><button type="button" class:list={{'is-roots':p.roots}} data-place-button={p.id} data-place-view="china" data-place-label={`${p.name} / ${p.zh}`}><span>{p.roots ? '↳ ' : ''}{p.name}</span><span lang="zh-CN">{p.zh}</span></button></li>)}</ul></div>
+  </div>
   </div>
   <footer class="travel-map-notes"><p>Routes connect Shanghai with visited places; they are not recorded flight paths. Countries and provinces use regional anchors, not exact visited cities. <span lang="zh-CN">上海是家，南昌是老家。</span></p><p>Map data: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a> · <a href="https://github.com/apache/echarts/blob/master/test/data/map/js/china.js" target="_blank" rel="noopener noreferrer">Apache ECharts</a></p></footer>
 </section>
