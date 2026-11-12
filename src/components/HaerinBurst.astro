@@ -1,0 +1,36 @@
+---
+import '../styles/haerin-burst.css';
+// Original transparent PNGs from the official LINE collection 29385.
+// Source URLs and unchanged-file checksums: public/images/official-stickers/sources.json.
+const artwork = {
+  'newjeans-circle': [270, 249],
+  'haerin-friend-rainbow': [303, 212],
+  'haerin-friend-bunnies': [303, 188],
+  'haerin-hearts': [281, 245],
+  'haerin-ta-da': [294, 251],
+  'haerin-bubbles': [290, 221],
+  'haerin-party': [294, 254],
+  'haerin-thank-you': [291, 246],
+  'haerin-disco': [260, 263],
+  'haerin-surprise': [294, 227],
+} as const;
+const stickers = [
+  ['haerin-hearts', 8, 29, 119, -15, 16], ['haerin-ta-da', 91, 31, 122, 16, -20],
+  ['haerin-disco', 7, 49, 117, -20, 24], ['haerin-party', 93, 53, 116, 22, -16],
+  ['haerin-thank-you', 9, 63, 103, -13, 15], ['haerin-surprise', 90, 63, 107, 16, -22],
+  ['haerin-friend-rainbow', 29, 19, 136, -13, -11], ['haerin-friend-bunnies', 76, 19, 136, 10, 14],
+  ['newjeans-circle', 6, 17, 76, -17, 20], ['haerin-hearts', 94, 15, 73, 21, -16],
+  ['haerin-bubbles', 15, 39, 66, -12, 24], ['haerin-ta-da', 88, 42, 65, 16, -17],
+  ['haerin-party', 7, 59, 64, 14, 19], ['haerin-disco', 95, 61, 72, 13, -15],
+] as const;
+---
+<div class="haerin-listening">
+  <a href="https://www.youtube.com/watch?v=ArmDp-zijuc" target="_blank" rel="noopener noreferrer" aria-label="Watch NewJeans Super Shy official music video on YouTube"><span class="haerin-listening-label">ON REPEAT / MY FAVORITE</span><span class="haerin-listening-song">Super Shy <span aria-hidden="true">↗</span></span></a>
+  <button type="button" class="haerin-replay" data-burst-replay aria-label="Replay Haerin stickers"><span aria-hidden="true">↻</span><span data-replay-label>REPLAY<br />STICKERS</span></button>
+</div>
+<div class="haerin-burst" data-haerin-burst aria-hidden="true">
+  {stickers.map(([asset,x,y,size,rotation,drift],i)=><div class="haerin-sticker" data-burst-sticker style={`--sticker-x:${x}%;--sticker-y:${y}%;--sticker-size:${size}px;--sticker-turn:${rotation}deg;--sticker-drift:${drift};--sticker-order:${i}`}><img class="haerin-sticker-art" src={`/images/official-stickers/${asset}.png`} alt="" width={artwork[asset][0]} height={artwork[asset][1]} loading="lazy" decoding="async" draggable="false" /></div>)}
+</div>
+<script>
+  import '../scripts/haerin-burst';
+</script>

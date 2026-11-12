@@ -1,0 +1,21 @@
+/* Content remains fully visible unless enhancement has initialized successfully. */
+.motion-enabled [data-motion-state="pending"]{opacity:0}
+.motion-enabled [data-motion-state="pending"][data-motion-kind="headline"],.motion-enabled [data-motion-state="pending"][data-motion-kind="image"],.motion-enabled [data-motion-state="pending"][data-motion-kind="rule"]{opacity:1;clip-path:inset(0 0 100% 0)}
+.motion-reading-progress{position:absolute;left:0;right:0;bottom:-2px;height:3px;background:currentColor;transform:scaleX(0);transform-origin:left center;pointer-events:none;z-index:2;opacity:.8}
+.motion-enabled .hero h1{translate:0 var(--hero-type-y,0px)}
+.motion-enabled .field-art canvas,.motion-enabled .field-fallback{translate:0 var(--hero-art-y,0px);rotate:var(--hero-art-angle,0deg)}
+.motion-enabled .round-link{translate:var(--magnet-x,0px) var(--magnet-y,0px);transition:translate .35s cubic-bezier(.2,.8,.3,1),transform .3s,background .25s,color .25s}
+.motion-enabled .header-contact>span{display:inline-block;translate:var(--magnet-x,0px) var(--magnet-y,0px);transition:translate .35s cubic-bezier(.2,.8,.3,1)}
+.motion-enabled .project-figure{position:relative;transform:perspective(1000px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transition:transform .5s cubic-bezier(.2,.8,.3,1);transform-origin:center center}
+.motion-enabled .project-figure[data-pointer-active=true]{transition:transform .16s ease-out}
+.motion-enabled .project-figure::after{content:"";position:absolute;inset:0 0 35px;pointer-events:none;background:linear-gradient(115deg,transparent 25%,#eeede619 var(--glint-x,50%),transparent 75%);opacity:0;transition:opacity .4s;mix-blend-mode:screen}
+.motion-enabled .project-figure[data-pointer-active=true]::after{opacity:1}
+/* A global pause makes every in-progress entrance immediately readable. */
+html[data-motion=paused] [data-motion-state],html:not(.motion-enabled) [data-motion-state]{opacity:1!important;clip-path:none!important}
+html[data-motion=paused] .motion-reading-progress{opacity:0}
+html[data-motion=paused] *,html[data-motion=paused] *::before,html[data-motion=paused] *::after{animation-play-state:paused!important;transition:none!important}
+html[data-motion=paused] .haerin-corner:hover .haerin-portrait{transform:rotate(-3deg)}
+html[data-motion=paused] .round-link:hover{transform:none}
+@media(prefers-reduced-motion:reduce){[data-motion-state]{opacity:1!important;clip-path:none!important}.motion-reading-progress{display:none}.motion-enabled .hero h1,.motion-enabled .field-art canvas,.motion-enabled .field-fallback,.motion-enabled .round-link,.motion-enabled .header-contact>span{translate:none!important;rotate:none!important}.motion-enabled .project-figure{transform:none!important}.motion-enabled .project-figure::after{display:none}}
+@media(hover:none),(pointer:coarse){.motion-enabled .project-figure{transform:none}.motion-enabled .project-figure::after{display:none}.motion-enabled .round-link,.motion-enabled .header-contact>span{translate:none}}
+html[data-motion=paused]{scroll-behavior:auto}

@@ -1,0 +1,34 @@
+{
+  "apex-master.png": {
+    "source": "https://api.mozambiquehe.re/assets/ranks/master.png",
+    "provider": "Apex Legends Status public rank asset endpoint",
+    "rightsHolder": "Electronic Arts / Respawn Entertainment",
+    "identification": "Master generic tier icon; not a seasonal reward badge",
+    "verification": "https://help.ea.com/en/articles/apex-legends/ranked/",
+    "modifications": "None"
+  },
+  "valorant-immortal.png": {
+    "source": "https://media.valorant-api.com/competitivetiers/23eb970e-6408-bc0b-3f20-d8fb0e0354ea/21/largeicon.png",
+    "metadata": "https://valorant-api.com/v1/competitivetiers",
+    "rightsHolder": "Riot Games",
+    "identification": "Generic Immortal division icon from the historical consolidated tier; no I/II/III rank is asserted",
+    "verification": "https://playvalorant.com/zh-tw/news/game-updates/valorant-episode-2-act-i-competitive-changes/",
+    "assetGuidance": "https://developer.riotgames.com/docs/valorant",
+    "modifications": "None"
+  },
+  "perfect-world-gold-s.svg": {
+    "type": "Original illustrative gold S emblem",
+    "note": "Not official Perfect World artwork and not a Steam matchmaking rank. Exact user-provided label 完美黄金 S is preserved.",
+    "currentUsage": "Retained legacy illustration; replaced by the official gold S image on homepage."
+  },
+  "perfect-world-gold-s.png": {
+    "source": "https://static.pwesports.cn/esportsadmin/esports/pwa/rank/icons/s-gold.png",
+    "sourcePage": "https://pvp.wanmei.com/",
+    "verificationBundle": "https://pvp.wanmei.com/pvp/umi.e624939f.js",
+    "officialMapping": "The official bundle defines sGoldOld = icons/s-gold.png and selects it for Mr.GOLD in its classic-season branch. Current sGold uses the animated icons/s-gold-1.png. This site deliberately uses the static, visibly gold classic icon; no season is claimed.",
+    "rightsHolder": "Perfect World / 完美世界电竞",
+    "identification": "Official classic gold S tier artwork, 46×59px; the user-provided rank label 完美黄金 S is unchanged.",
+    "modifications": "None; original PNG bytes unchanged.",
+    "retrieved": "2026-11-11"
+  }
+}

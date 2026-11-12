@@ -1,0 +1,59 @@
+---
+import { site } from '../data/site';
+import '../styles/work-orbit.css';
+const chapters = [
+  { project: 0, title: 'IN THE\nREAL WORLD.', label: 'SO-101 / SYSTEM', type: 'system', note: 'Real-robot manipulation' },
+  { project: 0, title: 'SHOW.\nTHEN LEARN.', label: 'SO-101 / DEMONSTRATIONS', type: 'demonstration', note: 'Collect human demonstrations' },
+  { project: 0, title: 'ACTIONS\nIN CHUNKS.', label: 'SO-101 / ACT', type: 'act', note: 'Train an Action Chunking Transformer' },
+  { project: 1, title: 'BEYOND\nTHE ROBOT.', label: 'REMOTE CONTROL / SYSTEM', type: 'remote', note: 'Explore distributed robotic control' },
+  { project: 1, title: 'SEE HERE.\nREASON THERE.', label: 'REMOTE CONTROL / OBSERVATIONS', type: 'observation', note: 'Image transmission & remote inference' },
+  { project: 1, title: 'VERIFY.\nTHEN ACT.', label: 'REMOTE CONTROL / AUTHENTICATION', type: 'authentication', note: 'Protect command integrity' },
+];
+---
+<section id="projects" class="work-orbit" data-work-orbit aria-labelledby="orbit-title">
+  <span id="orbit-details" class="orbit-legacy-anchor" data-orbit-legacy-anchor aria-hidden="true"></span>
+  {site.projects.map(project => <span id={`orbit-project-${project.id}`} class="orbit-legacy-anchor" data-orbit-legacy-anchor aria-hidden="true"></span>)}
+  <div class="orbit-section-top"><span>03 / SELECTED EXPLORATIONS</span><span>02 PROJECTS / 06 CHAPTERS</span></div>
+  <h2 id="orbit-title" class="orbit-sr-only">Selected work: two projects, six chapters</h2>
+  <div class="orbit-track" data-orbit-track>
+    <div class="orbit-stage" data-orbit-stage>
+      <div class="orbit-expansion" aria-hidden="true"></div>
+      <div class="orbit-stage-header"><p>IDEAS IN <em>motion.</em></p></div>
+      <div class="orbit-coordinate orbit-coordinate-left" aria-hidden="true">SCROLL TO EXPLORE<br />PERCEPTION → ACTION</div>
+      <div class="orbit-coordinate orbit-coordinate-right" aria-hidden="true">RESEARCH / ENGINEERING<br />SHANGHAI, CHINA</div>
+      <div class="orbit-space" data-orbit-space>
+        <div class="orbit-wall" aria-hidden="true">{Array.from({length:9},(_,i)=><span style={`--wall-depth:${-(i-4)*(i-4)*13}px;--wall-angle:${-(i-4)*9}deg`}>W<br />O<br />R<br />K</span>)}</div>
+        <div class="orbit-core" aria-hidden="true"><span>W</span><span>O</span><span>R</span><span>K</span><i>IN PROGRESS</i></div>
+        {chapters.map((chapter, index) => <article class={`orbit-card orbit-card-${chapter.type}`} data-orbit-card data-chapter-label={chapter.label} aria-label={`${chapter.label}: ${chapter.note}.`}>
+          <div class="orbit-card-top"><span>0{index + 1} / 06</span><span>PROJECT 0{chapter.project + 1}</span></div>
+          <div class="orbit-card-art">
+            {chapter.type === 'act' ? <svg viewBox="0 0 600 360" role="img" aria-label="Concept diagram of action chunks in the ACT workflow">
+              <path fill="#101b16" d="M0 0h600v360H0z" />
+              <g stroke="#f2f3e9" fill="none" stroke-width="1">{Array.from({length:9},(_,i)=><path d={`M35 ${65+i*26}H565`} opacity=".16" />)}{Array.from({length:12},(_,i)=><path d={`M${40+i*46} 40V320`} opacity=".12" />)}</g>
+              <g stroke="#c6f36b" fill="none" stroke-width="2">{Array.from({length:5},(_,i)=><path d={`M${55+i*104} ${240-i*30}v-80h84v80z`} />)}<path d="M55 270L565 105" stroke-dasharray="3 7" /></g>
+              <g fill="#f2f3e9" font-family="monospace" font-size="17"><text x="47" y="48">OBSERVE → PREDICT → EXECUTE</text><text x="50" y="320">ACT / LEARNED ACTION SEQUENCES</text></g>
+            </svg> : chapter.type === 'authentication' ? <svg viewBox="0 0 600 360" role="img" aria-label="Concept diagram of authenticated remote control">
+              <path fill="#101b16" d="M0 0h600v360H0z" />
+              <g fill="none" stroke="#f2f3e9" stroke-width="1">{Array.from({length:9},(_,i)=><ellipse cx="300" cy="180" rx={60+i*22} ry={145-i*9} transform={`rotate(${i*10} 300 180)`} opacity={.2+i*.06} />)}</g>
+              <path d="M250 130l50-22 50 22v59c0 34-50 62-50 62s-50-28-50-62z" fill="#101b16" stroke="#c6f36b" stroke-width="3" /><path d="M275 180l18 20 35-43" fill="none" stroke="#f2f3e9" stroke-width="4" />
+              <g fill="#f2f3e9" font-family="monospace" font-size="13"><text x="25" y="32">AUTHENTICATED CHANNEL</text><text x="25" y="335">OBSERVATION → INFERENCE → CONTROL</text></g>
+            </svg> : <img src={site.projects[chapter.project].image} alt={site.projects[chapter.project].imageAlt} width="1200" height="850" loading="lazy" />}
+            {chapter.type === 'observation' && <div class="orbit-scan-frame" aria-hidden="true"><span>VISUAL INPUT</span><b>↗</b></div>}
+            {chapter.type === 'demonstration' && <span class="orbit-crosshair" aria-hidden="true">+</span>}
+          </div>
+          <div class="orbit-card-copy"><h3>{chapter.title.split('\n').map((line)=><span>{line}</span>)}</h3><span class="orbit-card-project">{chapter.label}</span></div>
+          <div class="orbit-card-bottom"><span>CONCEPT STUDY</span><span>{site.projects[chapter.project].status.toUpperCase()}</span></div>
+        </article>)}
+      </div>
+      <div class="orbit-stage-footer">
+        <p class="orbit-active" data-orbit-active aria-live="polite" aria-atomic="true"><span data-orbit-count>01 / 06</span><span data-orbit-label>SO-101 / SYSTEM</span></p>
+        <div class="orbit-controls" role="group" aria-label="Explore project chapters"><button type="button" data-orbit-prev aria-label="Previous project chapter">←</button><button type="button" data-orbit-next aria-label="Next project chapter">→</button></div>
+        <span class="orbit-scroll-note">KEEP SCROLLING <b aria-hidden="true">↓</b></span>
+      </div>
+      <div class="orbit-timeline" aria-hidden="true"><span data-orbit-progress></span></div>
+    </div>
+  </div>
+</section>
+<script>
+  import '../scripts/work-orbit';
+</script>

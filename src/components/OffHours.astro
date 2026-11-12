@@ -1,0 +1,34 @@
+---
+import '../styles/off-hours.css';
+import HaerinBurst from './HaerinBurst.astro';
+import GamingRig from './GamingRig.astro';
+import MusicPlayer from './MusicPlayer.astro';
+---
+<section id="haerin" class="haerin-section panel" aria-labelledby="haerin-title">
+  <div class="section-label mono"><span>05 / MY FAVORITE</span><span>NEWJEANS / 강해린</span></div>
+    <article class="haerin-corner" aria-labelledby="haerin-title">
+      <div class="haerin-topline mono"><span>NEWJEANS / FAN CORNER</span><span aria-hidden="true">♡</span></div>
+      <div class="haerin-media">
+        <HaerinBurst />
+        <div class="haerin-photo-area haerin-collage" role="group" aria-label="姜海粼的四张照片拼贴">
+          <span class="haerin-collage-note mono" aria-hidden="true">강해린 / A FEW FAVORITE FRAMES</span>
+          <figure class="haerin-photo-card haerin-photo-dior" tabindex="0" aria-label="姜海粼，2023 年 Dior 活动照片"><img src="/images/haerin-photos/haerin-dior-2023.jpg" alt="姜海粼穿红色连衣裙出席 2023 年 Dior 活动，摄影：TV10。" width="799" height="1042" loading="lazy" decoding="async" /><figcaption class="mono">DIOR / 2023</figcaption></figure>
+          <figure class="haerin-photo-card haerin-photo-mma" tabindex="0" aria-label="姜海粼，2023 年 Melon Music Awards 照片"><img src="/images/haerin-photos/haerin-mma-2023.jpg" alt="姜海粼扎马尾、穿白色外套出席 2023 年 Melon Music Awards，摄影：TenAsia。" width="595" height="889" loading="lazy" decoding="async" /><figcaption class="mono">MMA / 2023</figcaption></figure>
+          <figure class="haerin-portrait" tabindex="0" aria-label="姜海粼，2024 年首尔时装周主肖像"><img src="/images/haerin-seoul-fashion-week.jpg" alt="姜海粼（Haerin）出席 2024 年首尔时装周，摄影：TV10。" width="624" height="872" loading="lazy" decoding="async" /><figcaption class="mono">HAERIN / SEOUL, 2024</figcaption></figure>
+          <figure class="haerin-photo-card haerin-photo-olens" tabindex="0" aria-label="姜海粼，2023 年 OLENS 近景肖像"><img src="/images/haerin-photos/haerin-olens-2023.jpg" alt="浅棕色长发的姜海粼在 NewJeans × OLENS 2023 年宣传中的近景肖像，摄影：OLensglobal。" width="841" height="956" loading="lazy" decoding="async" /><figcaption class="mono">OLENS / 2023</figcaption></figure>
+        </div>
+      </div>
+      <h2 id="haerin-title" class="haerin-name">HAERIN<span lang="zh-CN">姜海粼</span></h2>
+      <div class="haerin-bottomline"><p>A little space for my favorite.<br /><span lang="zh-CN">Haerin 的狗</span></p><span class="haerin-spark" aria-hidden="true">✳</span></div>
+      <p class="haerin-credit">Photos: TV10 · OLensglobal / <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a><br />TenAsia / <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> · <a href="/HAERIN-PHOTOS.md">Sources &amp; photo credits ↗</a></p>
+    </article>
+</section>
+<div class="color-bridge bridge-mint-forest" aria-hidden="true"></div>
+<section id="off-hours" class="off-hours music-gaming-section panel" aria-labelledby="off-hours-title">
+  <div class="section-label mono"><span>06 / OFF THE CLOCK</span><span>MUSIC, GAMES &amp; EVERYTHING IN BETWEEN</span></div>
+  <div class="off-hours-heading"><h2 id="off-hours-title">ON<br /><span class="serif">repeat.</span></h2><p>Music I love.<br />Games I play.<br /><span lang="zh-CN">热爱，让生活有自己的节奏。</span></p></div>
+  <div class="music-gaming-grid">
+    <MusicPlayer />
+    <GamingRig />
+  </div>
+</section>

@@ -1,0 +1,23 @@
+/* Shared color endpoints make the scroll chapters one continuous surface. */
+:root{--flow-forest:#101b16;--flow-mint:#b6d8c5;--flow-lime:#c6f36b}
+.color-bridge{height:clamp(80px,11vw,164px);position:relative;pointer-events:none;background:linear-gradient(180deg,var(--flow-from) 0%,var(--flow-from) 5%,var(--flow-through) 52%,var(--flow-to) 96%,var(--flow-to) 100%)}
+.bridge-paper-forest{--flow-from:var(--paper);--flow-through:#637f6c;--flow-to:var(--flow-forest)}
+.bridge-forest-lime{--flow-from:var(--flow-forest);--flow-through:#708e4d;--flow-to:var(--flow-lime)}
+.bridge-forest-mint{--flow-from:var(--flow-forest);--flow-through:#628777;--flow-to:var(--flow-mint)}
+.bridge-mint-forest{--flow-from:var(--flow-mint);--flow-through:#657e80;--flow-to:var(--flow-forest)}
+.bridge-forest-contact{--flow-from:var(--flow-forest);--flow-through:#718e50;--flow-to:var(--red)}
+.hero{background:radial-gradient(ellipse at 86% 42%,#b6d8c54d,transparent 56%),linear-gradient(180deg,var(--red) 72%,color-mix(in srgb,var(--red) 74%,var(--mint)))}
+.ticker{background:color-mix(in srgb,var(--red) 74%,var(--mint));color:var(--red-ink);border-color:#101b1626}
+.ticker b{color:inherit}
+.about-section{background:linear-gradient(180deg,color-mix(in srgb,var(--red) 74%,var(--mint)),var(--paper) 150px,var(--paper));padding-top:clamp(52px,7vw,104px)}
+.research-section{background:radial-gradient(ellipse at 85% 50%,#31493455,transparent 64%),var(--flow-forest);border:0}
+.work-orbit{border-top:0}
+.travel-map{background:radial-gradient(ellipse at 54% 30%,#29443770,transparent 58%),var(--flow-forest)}
+.contact-section{background:radial-gradient(ellipse at 85% 50%,#b6d8c566,transparent 57%),linear-gradient(180deg,var(--red) 70%,color-mix(in srgb,var(--red) 55%,var(--paper)))}
+.site-footer{background:linear-gradient(180deg,#bdb5ff,var(--paper));border-top:0}
+:root[data-theme='dark'] .bridge-paper-forest{--flow-through:#14271c}
+:root[data-theme='dark'] .bridge-forest-contact{--flow-through:#192f22}
+@media(max-width:759px){.color-bridge{height:88px}.about-section{padding-top:48px}.header-note{display:none}}
+/* Transformed collage layers keep their full artwork; trim only the page's
+   unused horizontal scroll area, without creating a sticky scroll container. */
+body{overflow-x:clip}

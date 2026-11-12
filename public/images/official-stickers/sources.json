@@ -1,0 +1,114 @@
+{
+  "collection": "THE POWERPUFF GIRLS X NEWJEANS",
+  "provider": "LINE STORE / LINE official sticker CDN",
+  "source_page": "https://store.line.me/stickershop/product/29385/en",
+  "metadata_source": "https://stickershop.line-scdn.net/stickershop/v1/product/29385/android/productInfo.meta",
+  "retrieved": "2026-11-11",
+  "character_reference": {
+    "page": "https://shop.weverse.io/en/shop/USD/artists/82/sales/17347",
+    "title": "THE POWERPUFF GIRLS x NJ iPhone CASE (HAERIN)",
+    "image": "https://cdn-contents.weverseshop.io/public/shop/38cf02f40614b0343660e413b75a7369.png"
+  },
+  "assets": [
+    {
+      "file": "newjeans-circle.png",
+      "sticker_id": 616659319,
+      "source": "https://stickershop.line-scdn.net/stickershop/v1/sticker/616659319/android/sticker.png",
+      "width": 270,
+      "height": 249,
+      "bytes": 16167,
+      "sha256": "fefde9d44c325e62c8a8cfdadf4506b7da5f4ae3d1a413af448e595b5c37d2af",
+      "changes": "None. Original transparent PNG; only CSS sizing, rotation and animation on the page."
+    },
+    {
+      "file": "haerin-friend-rainbow.png",
+      "sticker_id": 616659320,
+      "source": "https://stickershop.line-scdn.net/stickershop/v1/sticker/616659320/android/sticker.png",
+      "width": 303,
+      "height": 212,
+      "bytes": 16144,
+      "sha256": "2d9831f3ef935083d5fb128637fb4ada0e4d7e623197b3c054d5face0688ffa5",
+      "changes": "None. Original transparent PNG; only CSS sizing, rotation and animation on the page."
+    },
+    {
+      "file": "haerin-friend-bunnies.png",
+      "sticker_id": 616659322,
+      "source": "https://stickershop.line-scdn.net/stickershop/v1/sticker/616659322/android/sticker.png",
+      "width": 303,
+      "height": 188,
+      "bytes": 11635,
+      "sha256": "e93e0f99eaaadfe4b3d445ab6940c17204860fcf3ab20be8aebc77bc6285ac35",
+      "changes": "None. Original transparent PNG; only CSS sizing, rotation and animation on the page."
+    },
+    {
+      "file": "haerin-hearts.png",
+      "sticker_id": 616659330,
+      "source": "https://stickershop.line-scdn.net/stickershop/v1/sticker/616659330/android/sticker.png",
+      "width": 281,
+      "height": 245,
+      "bytes": 12337,
+      "sha256": "a06395bf50bda7eb6ffe04386a01620faec9e75f7eb12654a56b78366fbb4db0",
+      "changes": "None. Original transparent PNG; only CSS sizing, rotation and animation on the page."
+    },
+    {
+      "file": "haerin-ta-da.png",
+      "sticker_id": 616659331,
+      "source": "https://stickershop.line-scdn.net/stickershop/v1/sticker/616659331/android/sticker.png",
+      "width": 294,
+      "height": 251,
+      "bytes": 14884,
+      "sha256": "9a7d1ab46fefe92b77a195662d2914213ae16c9d244d2fcec7e5ba8bcce654d2",
+      "changes": "None. Original transparent PNG; only CSS sizing, rotation and animation on the page."
+    },
+    {
+      "file": "haerin-bubbles.png",
+      "sticker_id": 616659332,
+      "source": "https://stickershop.line-scdn.net/stickershop/v1/sticker/616659332/android/sticker.png",
+      "width": 290,
+      "height": 221,
+      "bytes": 13129,
+      "sha256": "7f049a537b1e100fefc4154ab9ff6c51401b0f4665559b853112350c581b1e28",
+      "changes": "None. Original transparent PNG; only CSS sizing, rotation and animation on the page."
+    },
+    {
+      "file": "haerin-party.png",
+      "sticker_id": 616659333,
+      "source": "https://stickershop.line-scdn.net/stickershop/v1/sticker/616659333/android/sticker.png",
+      "width": 294,
+      "height": 254,
+      "bytes": 15804,
+      "sha256": "9706cb2b984fb06a2aa5c8468559eedc2ac833eaf1c4101e7bb4a7145ade486c",
+      "changes": "None. Original transparent PNG; only CSS sizing, rotation and animation on the page."
+    },
+    {
+      "file": "haerin-thank-you.png",
+      "sticker_id": 616659334,
+      "source": "https://stickershop.line-scdn.net/stickershop/v1/sticker/616659334/android/sticker.png",
+      "width": 291,
+      "height": 246,
+      "bytes": 13177,
+      "sha256": "9b3435e8fa225ec74a5502abed5574f635d91ddfdcf5eff92c4aa45e96141fd6",
+      "changes": "None. Original transparent PNG; only CSS sizing, rotation and animation on the page."
+    },
+    {
+      "file": "haerin-disco.png",
+      "sticker_id": 616659335,
+      "source": "https://stickershop.line-scdn.net/stickershop/v1/sticker/616659335/android/sticker.png",
+      "width": 260,
+      "height": 263,
+      "bytes": 12725,
+      "sha256": "bd260b6903eeea2fc6c2d09bf337d2193720511b190a9447f62ffca2e39adff2",
+      "changes": "None. Original transparent PNG; only CSS sizing, rotation and animation on the page."
+    },
+    {
+      "file": "haerin-surprise.png",
+      "sticker_id": 616659336,
+      "source": "https://stickershop.line-scdn.net/stickershop/v1/sticker/616659336/android/sticker.png",
+      "width": 294,
+      "height": 227,
+      "bytes": 13286,
+      "sha256": "be8d267fa0bdd19a390275d97dd4bdeebb14d577deab803c0e1995d40f85394f",
+      "changes": "None. Original transparent PNG; only CSS sizing, rotation and animation on the page."
+    }
+  ]
+}

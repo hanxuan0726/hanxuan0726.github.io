@@ -1,0 +1,3335 @@
+{
+  "source": "Apple Music · Favorite Songs",
+  "importedAt": "2026-11-11",
+  "total": 333,
+  "sourceDisplayedTotal": 333,
+  "reconciliationStatus": "ui-complete",
+  "durationUnit": "seconds",
+  "order": "source-collection",
+  "tracks": [
+    {
+      "id": "fav-cb25bc01f39e",
+      "title": "Sports car",
+      "artist": "Tate McRae",
+      "album": "SO CLOSE TO WHAT??? (deluxe)",
+      "genre": "Pop",
+      "duration": 165,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-2ff8ae50a9c0",
+      "title": "Hong Kong (feat. 王菲季候風)",
+      "artist": "The Weeknd",
+      "album": "Hong Kong (feat. 王菲季候風) - Single",
+      "genre": "R&B/Soul",
+      "duration": 217,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-77b3ac674a05",
+      "title": "Joah",
+      "artist": "朴宰范",
+      "album": "Joah - Single",
+      "genre": "R&B/Soul",
+      "duration": 228,
+      "source": "ui-confirmed",
+      "year": 2013
+    },
+    {
+      "id": "fav-70f26b81e428",
+      "title": "Dynamite",
+      "artist": "防弹少年团",
+      "album": "BE",
+      "genre": "K-Pop",
+      "duration": 199,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-162532deec50",
+      "title": "oh well",
+      "artist": "Ariana Grande",
+      "album": "petal",
+      "genre": "Pop",
+      "duration": 196,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-72ed8bd9a9dd",
+      "title": "If The Sun Burns Out Tonight",
+      "artist": "VALORANT Music, Grabbitz, Oli Sykes & Courtney LaPlante",
+      "album": "If The Sun Burns Out Tonight - Single",
+      "genre": "Metal",
+      "duration": 226,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-03680485fc5c",
+      "title": "爱你但说不出口",
+      "artist": "Karencici",
+      "album": "爱你但说不出口 - Single",
+      "genre": "Mandopop",
+      "duration": 179,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-abf25d598938",
+      "title": "OK",
+      "artist": "Kanye West & Don Toliver",
+      "album": "BULLY - DELUXE",
+      "genre": "Hip-Hop/Rap",
+      "duration": 158,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-3885675a4408",
+      "title": "Lucky Girl Syndrome",
+      "artist": "ILLIT",
+      "album": "SUPER REAL ME - EP",
+      "genre": "K-Pop",
+      "duration": 140,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-5c97a0d93fbc",
+      "title": "Flash Forward",
+      "artist": "LE SSERAFIM",
+      "album": "UNFORGIVEN",
+      "genre": "K-Pop",
+      "duration": 196,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-88f8c7ac363b",
+      "title": "IYKYK (If You Know You Know)",
+      "artist": "ILLIT",
+      "album": "I'LL LIKE YOU - EP",
+      "genre": "K-Pop",
+      "duration": 144,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-6224a5cbb517",
+      "title": "BTG",
+      "artist": "KiiiKiii",
+      "album": "UNCUT GEM - EP",
+      "genre": "K-Pop",
+      "duration": 190,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-1d9bd717465b",
+      "title": "GRLS",
+      "artist": "TUIDE",
+      "album": "TUNE & PLAY - EP",
+      "genre": "K-Pop",
+      "duration": 169,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-d4324455c2df",
+      "title": "NOT YOUR GIRL",
+      "artist": "IVE",
+      "album": "I've IVE",
+      "genre": "K-Pop",
+      "duration": 202,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-ecf906c74eaa",
+      "title": "Push Back",
+      "artist": "AtHeart",
+      "album": "Plot Twist - 1st EP - EP",
+      "genre": "K-Pop",
+      "duration": 180,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-980c1772acf0",
+      "title": "Magnetic",
+      "artist": "ILLIT",
+      "album": "SUPER REAL ME - EP",
+      "genre": "K-Pop",
+      "duration": 161,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-d24e5ce6c6d6",
+      "title": "Glow Up",
+      "artist": "RESCENE",
+      "album": "Glow Up - EP",
+      "genre": "K-Pop",
+      "duration": 148,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-bacbeb8601eb",
+      "title": "FREAKED OUT",
+      "artist": "Fat Papi & prodshushy",
+      "album": "FREAKED OUT - Single",
+      "genre": "Hip-Hop/Rap",
+      "duration": 158,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-853bdbfcb073",
+      "title": "Secondhand",
+      "artist": "Don Toliver & Rema",
+      "album": "Secondhand - Single",
+      "genre": "Hip-Hop/Rap",
+      "duration": 227,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-7febf3741b73",
+      "title": "Runaway",
+      "artist": "RESCENE",
+      "album": "Runaway - Single",
+      "genre": "K-Pop",
+      "duration": 182,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-354c411b3d1d",
+      "title": "Midnight Fiction",
+      "artist": "ILLIT",
+      "album": "SUPER REAL ME - EP",
+      "genre": "K-Pop",
+      "duration": 168,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-d0de63e8c8ff",
+      "title": "Eve, Psyche & The Bluebeard’s wife",
+      "artist": "LE SSERAFIM",
+      "album": "UNFORGIVEN",
+      "genre": "K-Pop",
+      "duration": 186,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-d2bbabef079c",
+      "title": "Zero",
+      "artist": "NewJeans",
+      "album": "Zero - Single",
+      "genre": "K-Pop",
+      "duration": 154,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-36c548f7c4de",
+      "title": "Get Up",
+      "artist": "NewJeans",
+      "album": "NewJeans 2nd EP 'Get Up'",
+      "genre": "K-Pop",
+      "duration": 36,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-1c3a43538ef6",
+      "title": "Right Now",
+      "artist": "NewJeans",
+      "album": "Supernatural - Single",
+      "genre": "J-Pop",
+      "duration": 160,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-40a8954aef72",
+      "title": "GODS",
+      "artist": "League of Legends Music & NewJeans",
+      "album": "GODS - Single",
+      "genre": "Pop",
+      "duration": 221,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-954af6d9f02d",
+      "title": "ASAP",
+      "artist": "NewJeans",
+      "album": "NewJeans 2nd EP 'Get Up'",
+      "genre": "K-Pop",
+      "duration": 134,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-d5154cfc571e",
+      "title": "Cool With You",
+      "artist": "NewJeans",
+      "album": "NewJeans 2nd EP 'Get Up'",
+      "genre": "K-Pop",
+      "duration": 148,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-3213d51d8453",
+      "title": "ETA",
+      "artist": "NewJeans",
+      "album": "NewJeans 2nd EP 'Get Up'",
+      "genre": "K-Pop",
+      "duration": 151,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-1bb766a8e144",
+      "title": "Hurt",
+      "artist": "NewJeans",
+      "album": "NewJeans 1st EP 'New Jeans'",
+      "genre": "K-Pop",
+      "duration": 178,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-222557d3493b",
+      "title": "New Jeans",
+      "artist": "NewJeans",
+      "album": "NewJeans 'Super Shy' - Single",
+      "genre": "K-Pop",
+      "duration": 109,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-8e2226bb9ef3",
+      "title": "Supernatural",
+      "artist": "NewJeans",
+      "album": "Supernatural - Single",
+      "genre": "J-Pop",
+      "duration": 191,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-8893d52476c0",
+      "title": "The Team",
+      "artist": "Central Cee",
+      "album": "The Team - Single",
+      "genre": "Hip-Hop/Rap",
+      "duration": 213,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-fcd24f2b253e",
+      "title": "SUN KISS",
+      "artist": "TUIDE",
+      "album": "TUNE & PLAY - EP",
+      "genre": "K-Pop",
+      "duration": 181,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-bac01525a401",
+      "title": "What is Love?",
+      "artist": "TWICE",
+      "album": "Summer Nights",
+      "genre": "K-Pop",
+      "duration": 208,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-ac7d73d2e731",
+      "title": "ONE SPARK",
+      "artist": "TWICE",
+      "album": "With YOU-th - EP",
+      "genre": "K-Pop",
+      "duration": 184,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-8d170710d26c",
+      "title": "POP!",
+      "artist": "NAYEON",
+      "album": "IM NAYEON",
+      "genre": "K-Pop",
+      "duration": 168,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-66781b39eb68",
+      "title": "在雨后醒来",
+      "artist": "艾志恒Asen",
+      "album": "在雨后醒来",
+      "genre": "Chinese Hip-Hop",
+      "duration": 246,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-8d249354a15e",
+      "title": "英雄",
+      "artist": "艾志恒Asen",
+      "album": "在雨后醒来",
+      "genre": "Chinese Hip-Hop",
+      "duration": 183,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-82fac763dc4c",
+      "title": "THIS IS FOR",
+      "artist": "TWICE",
+      "album": "THIS IS FOR",
+      "genre": "K-Pop",
+      "duration": 131,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-9b05bf4e9c33",
+      "title": "Inner Light",
+      "artist": "Elderbrook & Bob Moses",
+      "album": "Innerlight EP",
+      "genre": "Electronic",
+      "duration": 258,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-5560c88b40b2",
+      "title": "Golden",
+      "artist": "HUNTR/X, EJAE, AUDREY NUNA, REI AMI & KPop Demon Hunters Cast",
+      "album": "KPop Demon Hunters (Soundtrack from the Netflix Film)",
+      "genre": "K-Pop",
+      "duration": 195,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-3784b483b14d",
+      "title": "Letal (Takedown)",
+      "artist": "HUNTR/X, Analu Pimenta, Vic Brow, Taís Feijó & KPop Demon Hunters Cast",
+      "album": "Guerreiras do K-Pop (Trilha Sonora do Filme da Netflix)",
+      "genre": "K-Pop",
+      "duration": 182,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-b24ad11e8760",
+      "title": "ICONIC BY MISTAKE",
+      "artist": "LE SSERAFIM, ILLIT & KATSEYE",
+      "album": "ICONIC BY MISTAKE - Single",
+      "genre": "Pop",
+      "duration": 178,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-200c3453e165",
+      "title": "Touch",
+      "artist": "KATSEYE",
+      "album": "SIS (Soft Is Strong) - EP",
+      "genre": "Pop",
+      "duration": 130,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-f62fd95430fb",
+      "title": "Been Through",
+      "artist": "EXO",
+      "album": "Universe – Winter Special Album, 2017",
+      "genre": "K-Pop",
+      "duration": 218,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-5dcec6f87f9f",
+      "title": "Starboy (feat. Daft Punk)",
+      "artist": "The Weeknd",
+      "album": "Starboy",
+      "genre": "R&B/Soul",
+      "duration": 230,
+      "source": "ui-confirmed",
+      "year": 2016
+    },
+    {
+      "id": "fav-5aaefdf0dc14",
+      "title": "Love Me",
+      "artist": "JMSN",
+      "album": "Love Me - Single",
+      "genre": "R&B/Soul",
+      "duration": 273,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-0cdbaeeb5ea9",
+      "title": "Boom Boom Bass",
+      "artist": "RIIZE",
+      "album": "RIIZING - The 1st Mini Album",
+      "genre": "K-Pop",
+      "duration": 153,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-55d4932f2b2a",
+      "title": "nowhere, nobody",
+      "artist": "Ariana Grande",
+      "album": "petal",
+      "genre": "Pop",
+      "duration": 172,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-79d322369d7a",
+      "title": "bad thing (bunny hop)",
+      "artist": "Ariana Grande",
+      "album": "petal",
+      "genre": "Pop",
+      "duration": 208,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-ea215a7a73b8",
+      "title": "IF YOU",
+      "artist": "BIGBANG",
+      "album": "D - Single",
+      "genre": "K-Pop",
+      "duration": 264,
+      "source": "ui-confirmed",
+      "year": 2015
+    },
+    {
+      "id": "fav-0e887c7b4418",
+      "title": "Baby Don't Cry",
+      "artist": "EXO",
+      "album": "The 1st Album 'XOXO'",
+      "genre": "K-Pop",
+      "duration": 234,
+      "source": "ui-confirmed",
+      "year": 2013
+    },
+    {
+      "id": "fav-4e3003436443",
+      "title": "LOVE SCENARIO",
+      "artist": "iKON",
+      "album": "Return",
+      "genre": "K-Pop",
+      "duration": 210,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-277c14670d30",
+      "title": "눈,코,입",
+      "artist": "太阳",
+      "album": "RISE",
+      "genre": "K-Pop",
+      "duration": 230,
+      "source": "ui-confirmed",
+      "year": 2014
+    },
+    {
+      "id": "fav-ee2bc482b80b",
+      "title": "MY EYES",
+      "artist": "Travis Scott",
+      "album": "UTOPIA",
+      "genre": "Hip-Hop/Rap",
+      "duration": 251,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-def67209f85e",
+      "title": "Deja Vu",
+      "artist": "RESCENE",
+      "album": "Dearest - Single",
+      "genre": "K-Pop",
+      "duration": 184,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-9375a77d5b86",
+      "title": "Black (feat. Sky Ferreira)",
+      "artist": "权志龙",
+      "album": "G-Dragon 2nd Album : Coup D'etat",
+      "genre": "Korean",
+      "duration": 204,
+      "source": "ui-confirmed",
+      "year": 2013
+    },
+    {
+      "id": "fav-897acefebe29",
+      "title": "Bubble Gum",
+      "artist": "NewJeans",
+      "album": "How Sweet - EP",
+      "genre": "K-Pop",
+      "duration": 200,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-7dde5189e482",
+      "title": "OMG",
+      "artist": "NewJeans",
+      "album": "NewJeans 'OMG' - Single",
+      "genre": "K-Pop",
+      "duration": 212,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-976838b62b91",
+      "title": "How Sweet",
+      "artist": "NewJeans",
+      "album": "How Sweet - EP",
+      "genre": "K-Pop",
+      "duration": 219,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-41312c9ad54a",
+      "title": "Hype Boy",
+      "artist": "NewJeans",
+      "album": "NewJeans 1st EP 'New Jeans'",
+      "genre": "K-Pop",
+      "duration": 179,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-d5ce2aed5713",
+      "title": "Attention",
+      "artist": "NewJeans",
+      "album": "NewJeans 1st EP 'New Jeans'",
+      "genre": "K-Pop",
+      "duration": 180,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-7e72087be63e",
+      "title": "好不容易",
+      "artist": "方大同",
+      "album": "15",
+      "genre": "Mandopop",
+      "duration": 380,
+      "source": "ui-confirmed",
+      "year": 2011
+    },
+    {
+      "id": "fav-96113f60a3a9",
+      "title": "On the Low",
+      "artist": "Justin Park",
+      "album": "Places Like Home",
+      "genre": "Pop",
+      "duration": 181,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-585f42bf9270",
+      "title": "今天没回家",
+      "artist": "陶喆",
+      "album": "乐之路",
+      "genre": "Mandopop",
+      "duration": 236,
+      "source": "ui-confirmed",
+      "year": 2003
+    },
+    {
+      "id": "fav-cc951412b968",
+      "title": "因为你",
+      "artist": "方大同",
+      "album": "因为你 - Single",
+      "genre": "Mandopop",
+      "duration": 236,
+      "source": "ui-confirmed",
+      "year": 2011
+    },
+    {
+      "id": "fav-f94aa49b47ac",
+      "title": "Without You",
+      "artist": "Tobias Jesso Jr",
+      "album": "Goon",
+      "genre": "Alternative",
+      "duration": 309,
+      "source": "ui-confirmed",
+      "year": 2015
+    },
+    {
+      "id": "fav-37509d25f329",
+      "title": "About Work the Dancefloor",
+      "artist": "Georgia",
+      "album": "Seeking Thrills",
+      "genre": "Pop",
+      "duration": 209,
+      "source": "ui-confirmed",
+      "year": 2019
+    },
+    {
+      "id": "fav-828c14750f20",
+      "title": "kiss me",
+      "artist": "Ariana Grande",
+      "album": "petal",
+      "genre": "Pop",
+      "duration": 220,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-9dd664e1b873",
+      "title": "Beauty and a Beat (feat. Nicki Minaj)",
+      "artist": "Justin Bieber",
+      "album": "Believe (Deluxe Edition)",
+      "genre": "Pop",
+      "duration": 228,
+      "source": "ui-confirmed",
+      "year": 2012
+    },
+    {
+      "id": "fav-16a6b518ec97",
+      "title": "Janice STFU",
+      "artist": "Drake",
+      "album": "ICEMAN",
+      "genre": "Hip-Hop/Rap",
+      "duration": 237,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-fdeb776f1297",
+      "title": "玻璃 demo",
+      "artist": "Gareth.T",
+      "album": "玻璃 demo - Single",
+      "genre": "Mandopop",
+      "duration": 186,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-71033255cb25",
+      "title": "Cookie",
+      "artist": "NewJeans",
+      "album": "NewJeans 1st EP 'New Jeans'",
+      "genre": "K-Pop",
+      "duration": 236,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-60882d24a3d9",
+      "title": "Sports car",
+      "artist": "Tate McRae",
+      "album": "So Close To What",
+      "genre": "Pop",
+      "duration": 165,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-071c191f90d7",
+      "title": "玻璃",
+      "artist": "Gareth.T",
+      "album": "玻璃 - Single",
+      "genre": "Mandopop",
+      "duration": 185,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-35967315600f",
+      "title": "Calling my phone_ (孟菲斯beat)",
+      "artist": "关键词",
+      "album": "Calling my phone_ (孟菲斯beat) - Single",
+      "genre": "Mandopop",
+      "duration": 224,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-7364d962a5e0",
+      "title": "From The Bottom",
+      "artist": "Bigxthaplug",
+      "album": "I Hope You're Happy (Deluxe)",
+      "genre": "Hip-Hop/Rap",
+      "duration": 122,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-cd8c53cec863",
+      "title": "梦幻上升",
+      "artist": "Capper",
+      "album": "枪火天使",
+      "genre": "Chinese Hip-Hop",
+      "duration": 149,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-a9b59e628f9f",
+      "title": "颜色",
+      "artist": "Gareth.T",
+      "album": "颜色 - Single",
+      "genre": "Mandopop",
+      "duration": 211,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-1b90c015b582",
+      "title": "遇上你之前的我",
+      "artist": "Gareth.T",
+      "album": "遇上你之前的我 - Single",
+      "genre": "Mandopop",
+      "duration": 216,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-c7efda32684b",
+      "title": "紧急联络人",
+      "artist": "Gareth.T",
+      "album": "紧急联络人 - Single",
+      "genre": "Cantopop/HK-Pop",
+      "duration": 223,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-d135fce54281",
+      "title": "用背脊唱情歌",
+      "artist": "Gareth.T",
+      "album": "用背脊唱情歌 - Single",
+      "genre": "Cantopop/HK-Pop",
+      "duration": 210,
+      "source": "ui-confirmed",
+      "year": 2026
+    },
+    {
+      "id": "fav-0a9214b0f9a5",
+      "title": "到时说爱我",
+      "artist": "茜拉",
+      "album": "心旅 - Single",
+      "genre": "Mandopop",
+      "duration": 202,
+      "source": "ui-confirmed",
+      "year": 2016
+    },
+    {
+      "id": "fav-d8450fb54caf",
+      "title": "JUMP",
+      "artist": "BLACKPINK",
+      "album": "JUMP - Single",
+      "genre": "K-Pop",
+      "duration": 165,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-5be64f9eb95b",
+      "title": "lose my head",
+      "artist": "Oppidan",
+      "album": "lose my head - Single",
+      "genre": "Garage",
+      "duration": 193,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-851be10cf00d",
+      "title": "坠落",
+      "artist": "蔡健雅",
+      "album": "天使与魔鬼的对话",
+      "genre": "Mandopop",
+      "duration": 250,
+      "source": "ui-confirmed",
+      "year": 2013
+    },
+    {
+      "id": "fav-483638a97295",
+      "title": "NOKIA",
+      "artist": "Drake",
+      "album": "$ome $exy $ongs 4 U",
+      "genre": "R&B/Soul",
+      "duration": 241,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-ba99cb635605",
+      "title": "The London (feat. J. Cole & Travis Scott)",
+      "artist": "Young Thug",
+      "album": "So Much Fun",
+      "genre": "Hip-Hop/Rap",
+      "duration": 200,
+      "source": "ui-confirmed",
+      "year": 2019
+    },
+    {
+      "id": "fav-4eeaa2b3a1f9",
+      "title": "Out of Love (feat. Internet Money)",
+      "artist": "Lil Tecca",
+      "album": "Virgo World",
+      "genre": "Hip-Hop/Rap",
+      "duration": 154,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-f0c1c658bcea",
+      "title": "Just Keep Watching",
+      "artist": "Tate McRae",
+      "album": "F1 The Album",
+      "genre": "Pop",
+      "duration": 143,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-8e0352f55573",
+      "title": "Lose My Mind (feat. Doja Cat) [From F1® The Movie]",
+      "artist": "Don Toliver",
+      "album": "Lose My Mind (feat. Doja Cat) [From F1® The Movie] - Single",
+      "genre": "Pop",
+      "duration": 209,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-3912086da011",
+      "title": "BAHAMA",
+      "artist": "aespa",
+      "album": "Armageddon - The 1st Album",
+      "genre": "K-Pop",
+      "duration": 191,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-93be925b173e",
+      "title": "回留",
+      "artist": "方大同",
+      "album": "梦想家 The Dreamer",
+      "genre": "Mandopop",
+      "duration": 236,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-c566e0eb4fab",
+      "title": "春风吹",
+      "artist": "方大同",
+      "album": "The Soulboy Collection",
+      "genre": "Mandopop",
+      "duration": 201,
+      "source": "ui-confirmed",
+      "year": 2005
+    },
+    {
+      "id": "fav-23c7d9227e92",
+      "title": "Fiction",
+      "artist": "BEAST",
+      "album": "Fiction And Fact",
+      "genre": "Dance",
+      "duration": 235,
+      "source": "ui-confirmed",
+      "year": 2011
+    },
+    {
+      "id": "fav-2be632906a5c",
+      "title": "ydoifeel?",
+      "artist": "Saam Sultan",
+      "album": "ydoifeel? - Single",
+      "genre": "Hip-Hop/Rap",
+      "duration": 190,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-21df08806f0a",
+      "title": "So Innocent",
+      "artist": "sleepy dawg",
+      "album": "So Innocent (Extra Mixes) - Single",
+      "genre": "Hip-Hop/Rap",
+      "duration": 150,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-cb581d0855d9",
+      "title": "Seasons (club mix)",
+      "artist": "Sam Austins",
+      "album": "Seasons (club mix) - Single",
+      "genre": "Alternative",
+      "duration": 203,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-f9529c12992f",
+      "title": "Seasons",
+      "artist": "Sam Austins",
+      "album": "The woods, vol. 1",
+      "genre": "Alternative",
+      "duration": 158,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-14fa2ef3bfaa",
+      "title": "Dive",
+      "artist": "ziproom",
+      "album": "Dive - Single",
+      "genre": "Hip-Hop/Rap",
+      "duration": 160,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-eb43aeb660da",
+      "title": "PIMMIE'S DILEMMA",
+      "artist": "Pimmie, PARTYNEXTDOOR & Drake",
+      "album": "$ome $exy $ongs 4 U",
+      "genre": "R&B/Soul",
+      "duration": 118,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-70de4cc696c7",
+      "title": "Love Galore (feat. Travis Scott)",
+      "artist": "SZA",
+      "album": "Ctrl",
+      "genre": "R&B/Soul",
+      "duration": 275,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-303a2081cc25",
+      "title": "BUTTERFLY EFFECT",
+      "artist": "Travis Scott",
+      "album": "ASTROWORLD",
+      "genre": "Hip-Hop/Rap",
+      "duration": 191,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-c9c5a26f36c0",
+      "title": "90210 (feat. Kacy Hill)",
+      "artist": "Travis Scott",
+      "album": "Rodeo",
+      "genre": "Hip-Hop/Rap",
+      "duration": 339,
+      "source": "ui-confirmed",
+      "year": 2015
+    },
+    {
+      "id": "fav-566f0846619d",
+      "title": "IS THIS LOVE",
+      "artist": "XG",
+      "album": "AWE",
+      "genre": "Pop",
+      "duration": 155,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-c3100dfb1120",
+      "title": "HIGHEST IN THE ROOM",
+      "artist": "Travis Scott",
+      "album": "HIGHEST IN THE ROOM - Single",
+      "genre": "Hip-Hop/Rap",
+      "duration": 176,
+      "source": "ui-confirmed",
+      "year": 2019
+    },
+    {
+      "id": "fav-c4807d9dbb4c",
+      "title": "麦恩莉",
+      "artist": "方大同",
+      "album": "回到未来",
+      "genre": "Mandopop",
+      "duration": 288,
+      "source": "ui-confirmed",
+      "year": 2012
+    },
+    {
+      "id": "fav-8d57fbd232f9",
+      "title": "Last Time I Saw You",
+      "artist": "Nicki Minaj",
+      "album": "Pink Friday 2 (Gag City PLUTO Edition)",
+      "genre": "Hip-Hop/Rap",
+      "duration": 216,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-9496b86f433b",
+      "title": "Bad Man (Smooth Criminal)",
+      "artist": "Polo G",
+      "album": "Hall of Fame 2.0",
+      "genre": "Hip-Hop/Rap",
+      "duration": 106,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-8b3a806fc0e7",
+      "title": "NEW DANCE",
+      "artist": "XG",
+      "album": "NEW DNA (Apple Music Edition) - EP",
+      "genre": "Pop",
+      "duration": 199,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-55b87f77eff8",
+      "title": "ExtraL",
+      "artist": "JENNIE & Doechii",
+      "album": "Ruby",
+      "genre": "Pop",
+      "duration": 168,
+      "source": "ui-confirmed",
+      "year": 2025
+    },
+    {
+      "id": "fav-17db252cb8fe",
+      "title": "odoriko",
+      "artist": "Vaundy",
+      "album": "odoriko - Single",
+      "genre": "Rock",
+      "duration": 230,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-47055f1e9a6a",
+      "title": "Friend or Foe",
+      "artist": "Jordan Rakei",
+      "album": "The Loop",
+      "genre": "R&B/Soul",
+      "duration": 251,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-e33e102cfa95",
+      "title": "luther",
+      "artist": "Kendrick Lamar",
+      "album": "GNX",
+      "genre": "Hip-Hop/Rap",
+      "duration": 178,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-08e232a5f8f1",
+      "title": "GONE, GONE / THANK YOU",
+      "artist": "Tyler, The Creator",
+      "album": "IGOR",
+      "genre": "Hip-Hop/Rap",
+      "duration": 375,
+      "source": "ui-confirmed",
+      "year": 2019
+    },
+    {
+      "id": "fav-8a45847a72bd",
+      "title": "Chanel",
+      "artist": "Frank Ocean",
+      "album": "Chanel - Single",
+      "genre": "Pop",
+      "duration": 210,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-400b09889902",
+      "title": "Super Shy",
+      "artist": "NewJeans",
+      "album": "NewJeans 'Super Shy' - Single",
+      "genre": "K-Pop",
+      "duration": 155,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-6483269900dd",
+      "title": "Last Christmas",
+      "artist": "Ariana Grande",
+      "album": "Christmas Kisses - EP",
+      "genre": "Holiday",
+      "duration": 205,
+      "source": "ui-confirmed",
+      "year": 2013
+    },
+    {
+      "id": "fav-ab134d0bede5",
+      "title": "4th Dimension (feat. Louis Prima)",
+      "artist": "KIDS SEE GHOSTS",
+      "album": "KIDS SEE GHOSTS",
+      "genre": "Hip-Hop/Rap",
+      "duration": 153,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-22cdd471d579",
+      "title": "Santa Tell Me",
+      "artist": "Ariana Grande",
+      "album": "Santa Tell Me - Single",
+      "genre": "Holiday",
+      "duration": 204,
+      "source": "ui-confirmed",
+      "year": 2013
+    },
+    {
+      "id": "fav-d285c9db440d",
+      "title": "See You Again (feat. Kali Uchis)",
+      "artist": "Tyler, The Creator",
+      "album": "Flower Boy",
+      "genre": "Hip-Hop/Rap",
+      "duration": 180,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-d1d1b7b9e404",
+      "title": "Banking On Me",
+      "artist": "Gunna",
+      "album": "Gunna: A Gift & A Curse Setlist",
+      "genre": "Hip-Hop/Rap",
+      "duration": 200,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-c870a5ae0827",
+      "title": "Don't Leave Me Now",
+      "artist": "Dastic & MÆDM",
+      "album": "Don't Leave Me Now - Single",
+      "genre": "Electronic",
+      "duration": 167,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-b2fd1c74157b",
+      "title": "Remember Me (from the series Arcane League of Legends)",
+      "artist": "d4vd, Arcane & League of Legends Music",
+      "album": "Arcane League of Legends: Season 2 Original Soundtrack (Extended Edition)",
+      "genre": "Pop",
+      "duration": 122,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-47d1f78a68a7",
+      "title": "Did It First (Instrumental)",
+      "artist": "Ice Spice",
+      "album": "Did It First (Versions) - EP",
+      "genre": "Hip-Hop/Rap",
+      "duration": 118,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-ddd8b2828ee6",
+      "title": "Renegade (We Never Run) [from the series Arcane League of Legends] [feat. Jarina De Marco]",
+      "artist": "Raja Kumari & Stefflon Don",
+      "album": "Arcane League of Legends: Season 2 Original Soundtrack (Extended Edition)",
+      "genre": "Pop",
+      "duration": 161,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-79e2b0a049bf",
+      "title": "Ma Meilleure Ennemie (from the series Arcane League of Legends)",
+      "artist": "Stromae & Pomme",
+      "album": "Arcane League of Legends: Season 2 Original Soundtrack (Extended Edition)",
+      "genre": "Pop",
+      "duration": 148,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-ffc44f4e15f9",
+      "title": "Father Stretch My Hands, Pt. 1",
+      "artist": "Kanye West",
+      "album": "The Life of Pablo",
+      "genre": "Hip-Hop/Rap",
+      "duration": 136,
+      "source": "ui-confirmed",
+      "year": 2016
+    },
+    {
+      "id": "fav-ef37fcb83a65",
+      "title": "Is It Just Me? (feat. Charlie Puth)",
+      "artist": "Sasha Alex Sloan",
+      "album": "Is It Just Me? (feat. Charlie Puth) - Single",
+      "genre": "Alternative",
+      "duration": 154,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-621ebb849153",
+      "title": "The Way I Am",
+      "artist": "Charlie Puth",
+      "album": "Voicenotes",
+      "genre": "Pop",
+      "duration": 186,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-ed0259b01c9c",
+      "title": "Lose My Breath (feat. Charlie Puth)",
+      "artist": "Stray Kids",
+      "album": "Lose My Breath (feat. Charlie Puth) - Single",
+      "genre": "K-Pop",
+      "duration": 167,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-e79f5b28db05",
+      "title": "Constellation",
+      "artist": "VØJ & Asketa",
+      "album": "Remember The Best",
+      "genre": "Electronic",
+      "duration": 149,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-6f532e952ec4",
+      "title": "My Gospel",
+      "artist": "Charlie Puth",
+      "album": "Nine Track Mind",
+      "genre": "Pop",
+      "duration": 211,
+      "source": "ui-confirmed",
+      "year": 2016
+    },
+    {
+      "id": "fav-c48c7a0dbf95",
+      "title": "Angel Pt. 2 (feat. JVKE, Charlie Puth & Muni Long)",
+      "artist": "Jimin & Fast & Furious: The Fast Saga",
+      "album": "Angel, Pt. 2 (feat. JVKE, Charlie Puth & Muni Long) - Single",
+      "genre": "Pop",
+      "duration": 176,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-5dffeff54808",
+      "title": "The Sower",
+      "artist": "Kevin Bean",
+      "album": "The Sower (Acoustic) - Single",
+      "genre": "New Age",
+      "duration": 173,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-65b6977a3f16",
+      "title": "A Welcoming",
+      "artist": "Jordan Critz",
+      "album": "Ocean Wild - EP",
+      "genre": "New Age",
+      "duration": 250,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-bb0e3d83e327",
+      "title": "Murmurations",
+      "artist": "Corre & Emlyn Anderson",
+      "album": "Rituals",
+      "genre": "Ambient",
+      "duration": 309,
+      "source": "ui-confirmed",
+      "year": 2019
+    },
+    {
+      "id": "fav-ea14f27872a3",
+      "title": "Holding the Heavens",
+      "artist": "Svvn",
+      "album": "Astronomica: Settled Space",
+      "genre": "New Age",
+      "duration": 237,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-f2b18ac66aa4",
+      "title": "The Making of a Paracosm",
+      "artist": "Kasbo",
+      "album": "The Making of a Paracosm",
+      "genre": "Electronic",
+      "duration": 266,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-ba60de6942f4",
+      "title": "I Am Wide Awake",
+      "artist": "Lucas Carlson",
+      "album": "I Am Wide Awake",
+      "genre": "New Age",
+      "duration": 262,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-911e47b22f3b",
+      "title": "When We Were Friends",
+      "artist": "Amaranth Cove",
+      "album": "Muted Rain - Single",
+      "genre": "Ambient",
+      "duration": 169,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-0763f41bc70c",
+      "title": "Love Like This",
+      "artist": "ZAYN",
+      "album": "Love Like This - Single",
+      "genre": "Pop",
+      "duration": 173,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-7808322c99ae",
+      "title": "一个",
+      "artist": "余佳运",
+      "album": "余佳运SINCE1994",
+      "genre": "R&B/Soul",
+      "duration": 239,
+      "source": "ui-confirmed",
+      "year": 2019
+    },
+    {
+      "id": "fav-c284c7aa2ac0",
+      "title": "卸妆",
+      "artist": "余佳运",
+      "album": "卸妆 - Single",
+      "genre": "Mandopop",
+      "duration": 210,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-18c767b03f2d",
+      "title": "Melody",
+      "artist": "陶喆",
+      "album": "黑色柳丁",
+      "genre": "Mandopop",
+      "duration": 269,
+      "source": "ui-confirmed",
+      "year": 2002
+    },
+    {
+      "id": "fav-bee680f29b84",
+      "title": "妈妈说",
+      "artist": "余佳运",
+      "album": "妈妈说 - Single",
+      "genre": "R&B/Soul",
+      "duration": 264,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-8ef8a09e20a1",
+      "title": "Kiss Goodbye",
+      "artist": "王力宏",
+      "album": "盖世英雄",
+      "genre": "Mandopop",
+      "duration": 262,
+      "source": "ui-confirmed",
+      "year": 2005
+    },
+    {
+      "id": "fav-44698c99e453",
+      "title": "普通朋友",
+      "artist": "陶喆",
+      "album": "I'm O.K.",
+      "genre": "Mandopop",
+      "duration": 255,
+      "source": "ui-confirmed",
+      "year": 1999
+    },
+    {
+      "id": "fav-92462700fd54",
+      "title": "Balance",
+      "artist": "Amaranth Cove",
+      "album": "Reconstruct - EP",
+      "genre": "Electronic",
+      "duration": 188,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-e98a2f10e44c",
+      "title": "All of This (Jorja Smith X GuiltyBeatz)",
+      "artist": "Jorja Smith",
+      "album": "All of This (Jorja Smith X GuiltyBeatz) - Single",
+      "genre": "Dance",
+      "duration": 314,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-583ac11324ec",
+      "title": "Friendship",
+      "artist": "wooll",
+      "album": "Friendship - Single",
+      "genre": "Downtempo",
+      "duration": 183,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-bc6f65eaf69f",
+      "title": "Coping",
+      "artist": "Rosie Darling",
+      "album": "Coping - EP",
+      "genre": "Indie Pop",
+      "duration": 190,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-f1458a87eb45",
+      "title": "Distant Echoes",
+      "artist": "VXLLAIN, VØJ & Narvent",
+      "album": "Distant Echoes - Single",
+      "genre": "Electronic",
+      "duration": 184,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-1d5d7956818e",
+      "title": "Lost Memory",
+      "artist": "VØJ & Narvent",
+      "album": "Lost Memory - Single",
+      "genre": "Electronic",
+      "duration": 158,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-4b3aea6d06a4",
+      "title": "Powerglide (feat. Juicy J) [From SR3MM]",
+      "artist": "Rae Sremmurd, Swae Lee & Slim Jxmmi",
+      "album": "SR3MM",
+      "genre": "Hip-Hop/Rap",
+      "duration": 332,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-be9fcb1b117d",
+      "title": "Power",
+      "artist": "Kanye West",
+      "album": "My Beautiful Dark Twisted Fantasy",
+      "genre": "Hip-Hop/Rap",
+      "duration": 292,
+      "source": "ui-confirmed",
+      "year": 2010
+    },
+    {
+      "id": "fav-9df4243f39c5",
+      "title": "All of the Lights",
+      "artist": "Kanye West",
+      "album": "My Beautiful Dark Twisted Fantasy",
+      "genre": "Hip-Hop/Rap",
+      "duration": 300,
+      "source": "ui-confirmed",
+      "year": 2010
+    },
+    {
+      "id": "fav-6258f22ce005",
+      "title": "Mantra",
+      "artist": "JENNIE",
+      "album": "Mantra - Single",
+      "genre": "Pop",
+      "duration": 137,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-b7c2cdf9afe0",
+      "title": "Follow Me",
+      "artist": "Warren & Revealed Recordings",
+      "album": "Follow Me - Single",
+      "genre": "Dance",
+      "duration": 218,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-8e9c5420f5ac",
+      "title": "What Do You Mean?",
+      "artist": "Justin Bieber",
+      "album": "Purpose (Deluxe)",
+      "genre": "Pop",
+      "duration": 206,
+      "source": "ui-confirmed",
+      "year": 2015
+    },
+    {
+      "id": "fav-f7621c33c698",
+      "title": "寂寞寂寞就好",
+      "artist": "田馥甄",
+      "album": "To Hebe",
+      "genre": "Mandopop",
+      "duration": 275,
+      "source": "ui-confirmed",
+      "year": 2010
+    },
+    {
+      "id": "fav-9cac03ca5e43",
+      "title": "如果可以 (电影\"月老\"主题曲)",
+      "artist": "韦礼安",
+      "album": "如果可以 (电影\"月老\"主题曲) - Single",
+      "genre": "Mandopop",
+      "duration": 274,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-cb75fadaa8fb",
+      "title": "Pink + White",
+      "artist": "Frank Ocean",
+      "album": "Blonde",
+      "genre": "Pop",
+      "duration": 185,
+      "source": "ui-confirmed",
+      "year": 2016
+    },
+    {
+      "id": "fav-5a8f9d9d0a88",
+      "title": "Them Changes (Sped Up)",
+      "artist": "Thundercat",
+      "album": "Them Changes (Sped Up) - Single",
+      "genre": "R&B/Soul",
+      "duration": 135,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-ca8b359e5b60",
+      "title": "Where Are Ü Now (with Justin Bieber) [feat. Justin Bieber]",
+      "artist": "Jack Ü, Skrillex & Diplo",
+      "album": "Skrillex and Diplo present Jack Ü",
+      "genre": "Dance",
+      "duration": 250,
+      "source": "ui-confirmed",
+      "year": 2015
+    },
+    {
+      "id": "fav-ecb4f8f8b05d",
+      "title": "Rain On Me",
+      "artist": "Lady Gaga & Ariana Grande",
+      "album": "Chromatica",
+      "genre": "Pop",
+      "duration": 182,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-f6639a33bd8a",
+      "title": "Ni**as in Paris",
+      "artist": "JAŸ-Z & Kanye West",
+      "album": "Watch the Throne (Deluxe)",
+      "genre": "Hip-Hop/Rap",
+      "duration": 219,
+      "source": "ui-confirmed",
+      "year": 2011
+    },
+    {
+      "id": "fav-3f4226242719",
+      "title": "Anywhere Tonight (feat. Linney)",
+      "artist": "Dastic, twoDB & Over Easy",
+      "album": "Anywhere Tonight (feat. Linney) - Single",
+      "genre": "Dance",
+      "duration": 191,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-217a5c370160",
+      "title": "I Wanna Fall in Love (feat. Raphaella)",
+      "artist": "Justin Mylo",
+      "album": "I Wanna Fall in Love (feat. Raphaella) - Single",
+      "genre": "Dance",
+      "duration": 211,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-6224ab5077fe",
+      "title": "Hurricane",
+      "artist": "Kanye West",
+      "album": "Donda (Deluxe)",
+      "genre": "Hip-Hop/Rap",
+      "duration": 243,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-6ac6c5eea7d6",
+      "title": "Closer (feat. Halsey)",
+      "artist": "The Chainsmokers",
+      "album": "Collage - EP",
+      "genre": "Dance",
+      "duration": 246,
+      "source": "ui-confirmed",
+      "year": 2016
+    },
+    {
+      "id": "fav-d2fa3be6df93",
+      "title": "We Don’t Talk Anymore (feat. Selena Gomez)",
+      "artist": "Charlie Puth",
+      "album": "Nine Track Mind",
+      "genre": "Pop",
+      "duration": 218,
+      "source": "ui-confirmed",
+      "year": 2016
+    },
+    {
+      "id": "fav-638a1e832e8e",
+      "title": "ETA (feat. Luciano)",
+      "artist": "Nemzzz",
+      "album": "DO NOT DISTURB (DELUXE)",
+      "genre": "Hip-Hop/Rap",
+      "duration": 160,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-a57c8eabae02",
+      "title": "PAID",
+      "artist": "¥$, Kanye West & Ty Dolla $ign",
+      "album": "VULTURES 1",
+      "genre": "Hip-Hop/Rap",
+      "duration": 195,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-bb700042cc6d",
+      "title": "Come to Life",
+      "artist": "Kanye West",
+      "album": "Donda",
+      "genre": "Hip-Hop/Rap",
+      "duration": 310,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-dd268546f405",
+      "title": "Healing",
+      "artist": "Clarx & Moe Aly",
+      "album": "Healing - Single",
+      "genre": "Electronic",
+      "duration": 182,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-c9afebd28786",
+      "title": "Make You Mine (feat. Moa Lisa)",
+      "artist": "Mike Williams",
+      "album": "Make You Mine (feat. Moa Lisa) - Single",
+      "genre": "Dance",
+      "duration": 213,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-08ccc3e4bc1a",
+      "title": "Baby",
+      "artist": "Bakermat",
+      "album": "Baby - Single",
+      "genre": "Dance",
+      "duration": 160,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-9b8adcd04b5e",
+      "title": "Maybe",
+      "artist": "BUNT. & GRAHAM",
+      "album": "Maybe - Single",
+      "genre": "Dance",
+      "duration": 170,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-dc88eac15abc",
+      "title": "Leave It All Behind",
+      "artist": "rad cat",
+      "album": "All I Need * - EP",
+      "genre": "Dance",
+      "duration": 196,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-bb39f93562ba",
+      "title": "Drifting",
+      "artist": "Tiësto & Poppy Baskcomb",
+      "album": "Drifting - Single",
+      "genre": "Dance",
+      "duration": 148,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-b343b038346e",
+      "title": "Algorhythm",
+      "artist": "ITZY",
+      "album": "Algorhythm - EP",
+      "genre": "J-Pop",
+      "duration": 187,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-e24c2a736958",
+      "title": "Sunflower (Spider-Man: Into the Spider-Verse)",
+      "artist": "Post Malone & Swae Lee",
+      "album": "The Diamond Collection (Deluxe)",
+      "genre": "Hip-Hop/Rap",
+      "duration": 158,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-2a567556155b",
+      "title": "Attachments (feat. Coi Leray)",
+      "artist": "Pressa",
+      "album": "Attachments (feat. Coi Leray) - Single",
+      "genre": "Hip-Hop/Rap",
+      "duration": 171,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-699fee53423c",
+      "title": "BAND4BAND",
+      "artist": "Central Cee & Lil Baby",
+      "album": "BAND4BAND - Single",
+      "genre": "Hip-Hop/Rap",
+      "duration": 141,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-641fd1dc5de4",
+      "title": "Rich Baby Daddy (feat. Sexyy Red & SZA)",
+      "artist": "Drake",
+      "album": "For All The Dogs",
+      "genre": "Hip-Hop/Rap",
+      "duration": 319,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-817e60ab794a",
+      "title": "Heartless",
+      "artist": "The Weeknd",
+      "album": "After Hours (Deluxe Video Album)",
+      "genre": "R&B/Soul",
+      "duration": 198,
+      "source": "ui-confirmed",
+      "year": 2019
+    },
+    {
+      "id": "fav-a77c8528639f",
+      "title": "Can't Feel My Face",
+      "artist": "Abel Tesfaye",
+      "album": "Beauty Behind the Madness",
+      "genre": "R&B/Soul",
+      "duration": 214,
+      "source": "ui-confirmed",
+      "year": 2015
+    },
+    {
+      "id": "fav-021ba806a44d",
+      "title": "LOVE. (feat. Zacari)",
+      "artist": "Kendrick Lamar",
+      "album": "DAMN.",
+      "genre": "Hip-Hop/Rap",
+      "duration": 213,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-70a41284fb09",
+      "title": "Best Man",
+      "artist": "HUNCHO JACK, Travis Scott & Quavo",
+      "album": "Huncho Jack, Jack Huncho",
+      "genre": "Hip-Hop/Rap",
+      "duration": 267,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-80965b2a01f2",
+      "title": "Illusion",
+      "artist": "Dua Lipa",
+      "album": "Radical Optimism",
+      "genre": "Pop",
+      "duration": 188,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-e8414db6e261",
+      "title": "Lose Control",
+      "artist": "Teddy Swims",
+      "album": "I've Tried Everything But Therapy (Part 1)",
+      "genre": "Pop",
+      "duration": 211,
+      "source": "ui-confirmed",
+      "year": 2005
+    },
+    {
+      "id": "fav-990ea60c4f4d",
+      "title": "Stronger",
+      "artist": "Kanye West",
+      "album": "Graduation",
+      "genre": "Hip-Hop/Rap",
+      "duration": 312,
+      "source": "ui-confirmed",
+      "year": 2007
+    },
+    {
+      "id": "fav-0636c88f230c",
+      "title": "Jimmy Cooks (feat. 21 Savage)",
+      "artist": "Drake",
+      "album": "Honestly, Nevermind",
+      "genre": "Dance",
+      "duration": 218,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-b8758d1eb929",
+      "title": "天天",
+      "artist": "陶喆",
+      "album": "I'm O.K.",
+      "genre": "Mandopop",
+      "duration": 255,
+      "source": "ui-confirmed",
+      "year": 1999
+    },
+    {
+      "id": "fav-a46e467d94ae",
+      "title": "SICKO MODE",
+      "artist": "Travis Scott",
+      "album": "ASTROWORLD",
+      "genre": "Hip-Hop/Rap",
+      "duration": 313,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-83cca75844f0",
+      "title": "YOSEMITE",
+      "artist": "Travis Scott",
+      "album": "ASTROWORLD",
+      "genre": "Hip-Hop/Rap",
+      "duration": 150,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-34c3dfb56250",
+      "title": "瘦子",
+      "artist": "丁世光",
+      "album": "瘦子 - Single",
+      "genre": "R&B/Soul",
+      "duration": 165,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-3c3f3e038de5",
+      "title": "Fortnight (feat. Post Malone)",
+      "artist": "Taylor Swift",
+      "album": "THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY",
+      "genre": "Pop",
+      "duration": 229,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-d0e1f5b008b6",
+      "title": "Bassthoven (feat. shawn wasabi)",
+      "artist": "Kyle Exum",
+      "album": "Bassthoven (feat. shawn wasabi) - Single",
+      "genre": "Hip-Hop/Rap",
+      "duration": 128,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-0033e775ccbc",
+      "title": "One Dance (feat. Wizkid & Kyla)",
+      "artist": "Drake",
+      "album": "Views",
+      "genre": "Hip-Hop/Rap",
+      "duration": 174,
+      "source": "ui-confirmed",
+      "year": 2016
+    },
+    {
+      "id": "fav-49944054223c",
+      "title": "镇海 (feat. EINK & 幼稚园杀手)",
+      "artist": "法老",
+      "album": "退潮",
+      "genre": "Chinese Hip-Hop",
+      "duration": 232,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-304323abe0ca",
+      "title": "The Worst",
+      "artist": "Jhené Aiko",
+      "album": "Sail Out - EP",
+      "genre": "R&B/Soul",
+      "duration": 255,
+      "source": "ui-confirmed",
+      "year": 2013
+    },
+    {
+      "id": "fav-653fba5a8547",
+      "title": "All Night",
+      "artist": "IVE & Saweetie",
+      "album": "All Night - Single",
+      "genre": "K-Pop",
+      "duration": 198,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-f6c3703e18b6",
+      "title": "Hotline Bling",
+      "artist": "Drake",
+      "album": "Views",
+      "genre": "Hip-Hop/Rap",
+      "duration": 267,
+      "source": "ui-confirmed",
+      "year": 2015
+    },
+    {
+      "id": "fav-a58def79f3e3",
+      "title": "no tears left to cry",
+      "artist": "Ariana Grande",
+      "album": "sweetener (Bonus Videos Edition)",
+      "genre": "Pop",
+      "duration": 206,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-58139736f1e3",
+      "title": "Starboy (feat. Daft Punk)",
+      "artist": "Abel Tesfaye",
+      "album": "Starboy",
+      "genre": "R&B/Soul",
+      "duration": 230,
+      "source": "ui-confirmed",
+      "year": 2016
+    },
+    {
+      "id": "fav-5aa38b09b0b4",
+      "title": "黑夜问白天",
+      "artist": "林俊杰",
+      "album": "伟大的渺小",
+      "genre": "Mandopop",
+      "duration": 292,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-c5a633a9257e",
+      "title": "雨下一整晩",
+      "artist": "周杰伦",
+      "album": "跨时代",
+      "genre": "Mandopop",
+      "duration": 257,
+      "source": "ui-confirmed",
+      "year": 2010
+    },
+    {
+      "id": "fav-302add2e85a3",
+      "title": "分裂",
+      "artist": "周杰伦",
+      "album": "八度空间",
+      "genre": "Mandopop",
+      "duration": 253,
+      "source": "ui-confirmed",
+      "year": 2002
+    },
+    {
+      "id": "fav-b289bf0feec4",
+      "title": "你不在",
+      "artist": "王力宏",
+      "album": "不可思议",
+      "genre": "Mandopop",
+      "duration": 274,
+      "source": "ui-confirmed",
+      "year": 2003
+    },
+    {
+      "id": "fav-e48aa6378a54",
+      "title": "连名带姓",
+      "artist": "张惠妹",
+      "album": "偷故事的人",
+      "genre": "Mandopop",
+      "duration": 334,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-f96c642e22f1",
+      "title": "一点点",
+      "artist": "周杰伦",
+      "album": "周杰伦的床边故事",
+      "genre": "Mandopop",
+      "duration": 222,
+      "source": "ui-confirmed",
+      "year": 2016
+    },
+    {
+      "id": "fav-215a8da05286",
+      "title": "唯一",
+      "artist": "王力宏",
+      "album": "唯一",
+      "genre": "Mandopop",
+      "duration": 263,
+      "source": "ui-confirmed",
+      "year": 2001
+    },
+    {
+      "id": "fav-f982ffb43937",
+      "title": "Popular (feat. Playboi Carti) [Music from the HBO Original Series The Idol]",
+      "artist": "Abel Tesfaye & Madonna",
+      "album": "Popular (feat. Playboi Carti) [Music from the HBO Original Series The Idol] - Single",
+      "genre": "Soundtrack",
+      "duration": 215,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-554e25e1ebc4",
+      "title": "她说",
+      "artist": "林俊杰",
+      "album": "她说",
+      "genre": "Mandopop",
+      "duration": 319,
+      "source": "ui-confirmed",
+      "year": 2010
+    },
+    {
+      "id": "fav-0b1ea242ebb5",
+      "title": "雪 Distance (feat. 罗言)",
+      "artist": "Capper",
+      "album": "Uniconfication",
+      "genre": "Chinese Hip-Hop",
+      "duration": 166,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-6039cf98b148",
+      "title": "Save Your Tears",
+      "artist": "Abel Tesfaye",
+      "album": "After Hours (Deluxe Video Album)",
+      "genre": "R&B/Soul",
+      "duration": 216,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-6b6f39b8a481",
+      "title": "以后别做朋友",
+      "artist": "周兴哲",
+      "album": "学着爱",
+      "genre": "Mandopop",
+      "duration": 258,
+      "source": "ui-confirmed",
+      "year": 2014
+    },
+    {
+      "id": "fav-7c4a4f1c1a17",
+      "title": "1 AM",
+      "artist": "THOME",
+      "album": "CASANOVA",
+      "genre": "Mandopop",
+      "duration": 187,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-6059d39529af",
+      "title": "Riptide",
+      "artist": "Connor Price & Nic D",
+      "album": "Riptide - Single",
+      "genre": "Hip-Hop/Rap",
+      "duration": 129,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-451ea5f0ac59",
+      "title": "Different Lives",
+      "artist": "Fly By Midnight",
+      "album": "Fictional Illustrations",
+      "genre": "Pop",
+      "duration": 201,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-b9799f690553",
+      "title": "某年某月某天",
+      "artist": "颜人中",
+      "album": "某年某月某天 - Single",
+      "genre": "Mandopop",
+      "duration": 315,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-cfc0d8440c6b",
+      "title": "I Will",
+      "artist": "Central Cee",
+      "album": "I Will - Single",
+      "genre": "Hip-Hop/Rap",
+      "duration": 150,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-f2c1b040c7d2",
+      "title": "Trust Me",
+      "artist": "宋秉勤",
+      "album": "Trust Me - Single",
+      "genre": "R&B/Soul",
+      "duration": 169,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-9e55fbbc7131",
+      "title": "我想",
+      "artist": "余佳运",
+      "album": "幸福三部曲 - Single",
+      "genre": "R&B/Soul",
+      "duration": 248,
+      "source": "ui-confirmed",
+      "year": 2016
+    },
+    {
+      "id": "fav-5fbf0a262e56",
+      "title": "this is what winter feels like",
+      "artist": "JVKE",
+      "album": "this is what winter feels like - Single",
+      "genre": "Pop",
+      "duration": 195,
+      "source": "ui-confirmed",
+      "year": 2024
+    },
+    {
+      "id": "fav-b63cb449b52e",
+      "title": "Die For You",
+      "artist": "The Weeknd",
+      "album": "Starboy (Deluxe)",
+      "genre": "R&B/Soul",
+      "duration": 260,
+      "source": "ui-confirmed",
+      "year": 2016
+    },
+    {
+      "id": "fav-56348b1b3a1a",
+      "title": "Mars",
+      "artist": "Alexander 23",
+      "album": "I'm Sorry I Love You - EP",
+      "genre": "Pop",
+      "duration": 153,
+      "source": "ui-confirmed",
+      "year": 2019
+    },
+    {
+      "id": "fav-5a22cc4eec33",
+      "title": "exes",
+      "artist": "Tate McRae",
+      "album": "exes - Single",
+      "genre": "Pop",
+      "duration": 159,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-361b9e233ad1",
+      "title": "Spark",
+      "artist": "MOTi & Fly By Midnight",
+      "album": "Spark - Single",
+      "genre": "Dance",
+      "duration": 164,
+      "source": "ui-confirmed",
+      "year": 2019
+    },
+    {
+      "id": "fav-77c21ab8a983",
+      "title": "God's Plan",
+      "artist": "Drake",
+      "album": "Scorpion",
+      "genre": "Hip-Hop/Rap",
+      "duration": 199,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-262bd6400e92",
+      "title": "TOO MUCH",
+      "artist": "The Kid LAROI, Jung Kook & Central Cee",
+      "album": "TOO MUCH - Single",
+      "genre": "Pop",
+      "duration": 204,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-605f647b2eee",
+      "title": "3D",
+      "artist": "Jung Kook & Jack Harlow",
+      "album": "GOLDEN",
+      "genre": "K-Pop",
+      "duration": 202,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-6597c9850758",
+      "title": "圣诞星 (feat. 杨瑞代)",
+      "artist": "周杰伦",
+      "album": "圣诞星 (feat. 杨瑞代) - Single",
+      "genre": "Mandopop",
+      "duration": 183,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-2497648f8fc6",
+      "title": "想再和你看烟花 (Last Christmas Ver.)",
+      "artist": "布志纶",
+      "album": "想再和你看烟花 (Last Christmas Ver.) - Single",
+      "genre": "Cantopop/HK-Pop",
+      "duration": 245,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-f4684cd92edd",
+      "title": "围墙倒下前 (Album Remastered Version)",
+      "artist": "蓝奕邦",
+      "album": "漂漂亮亮地死去活来",
+      "genre": "Cantopop/HK-Pop",
+      "duration": 232,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-77f2921445de",
+      "title": "I Gotta Feeling",
+      "artist": "Black Eyed Peas",
+      "album": "Torcida 2018 - Nacional E Internacional",
+      "genre": "Pop",
+      "duration": 289,
+      "source": "ui-confirmed",
+      "year": 2009
+    },
+    {
+      "id": "fav-fe86410483b1",
+      "title": "Moth To A Flame",
+      "artist": "Swedish House Mafia & The Weeknd",
+      "album": "Dawn FM (Alternate World)",
+      "genre": "Dance",
+      "duration": 234,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-a283a88a6166",
+      "title": "don't come back",
+      "artist": "Tate McRae",
+      "album": "i used to think i could fly",
+      "genre": "Pop",
+      "duration": 153,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-6e72b8f24950",
+      "title": "Cold (feat. Future)",
+      "artist": "Maroon 5",
+      "album": "Red Pill Blues (Deluxe)",
+      "genre": "Pop",
+      "duration": 234,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-1b345a9bf1cf",
+      "title": "TOO MUCH",
+      "artist": "The Kid LAROI, Jung Kook & Central Cee",
+      "album": "THE FIRST TIME",
+      "genre": "Pop",
+      "duration": 204,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-c9c51cbe3b14",
+      "title": "Over",
+      "artist": "CHVRCHES",
+      "album": "Over - Single",
+      "genre": "Alternative",
+      "duration": 217,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-68f91c457778",
+      "title": "狂恋",
+      "artist": "GALI & 万妮达",
+      "album": "黑怕盲盒Vol.1示爱系列 - EP",
+      "genre": "Mandopop",
+      "duration": 194,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-2922785afcf4",
+      "title": "Psycho (feat. Ty Dolla $ign)",
+      "artist": "Post Malone",
+      "album": "The Diamond Collection (Deluxe)",
+      "genre": "Hip-Hop/Rap",
+      "duration": 221,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-0ffbd4fd1138",
+      "title": "Love in My Pocket",
+      "artist": "Rich Brian",
+      "album": "1999",
+      "genre": "Hip-Hop/Rap",
+      "duration": 223,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-8a1f4686b338",
+      "title": "我知道",
+      "artist": "By2",
+      "album": "Twins",
+      "genre": "Mandopop",
+      "duration": 246,
+      "source": "ui-confirmed",
+      "year": 2009
+    },
+    {
+      "id": "fav-df3bbc535bd2",
+      "title": "别问很可怕",
+      "artist": "J.Sheon",
+      "album": "J.Sheon 同名专辑 街巷",
+      "genre": "Mandopop",
+      "duration": 247,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-97b554429406",
+      "title": "九月底",
+      "artist": "余佳运",
+      "album": "九月底 - Single",
+      "genre": "Mandopop",
+      "duration": 257,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-faeb520cf20b",
+      "title": "Toosie Slide",
+      "artist": "Drake",
+      "album": "Toosie Slide - Single",
+      "genre": "Hip-Hop/Rap",
+      "duration": 247,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-54e64ef75ebe",
+      "title": "Under the Influence",
+      "artist": "Chris Brown",
+      "album": "Indigo (Extended)",
+      "genre": "R&B/Soul",
+      "duration": 184,
+      "source": "ui-confirmed",
+      "year": 2019
+    },
+    {
+      "id": "fav-c412b380ec1d",
+      "title": "New Rules",
+      "artist": "Dua Lipa",
+      "album": "Dua Lipa (Complete Edition)",
+      "genre": "Pop",
+      "duration": 209,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-bc7d9df1288a",
+      "title": "You Proof",
+      "artist": "Morgan Wallen",
+      "album": "One Thing At A Time",
+      "genre": "Country",
+      "duration": 157,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-40c7734116ae",
+      "title": "Snooze",
+      "artist": "SZA",
+      "album": "SOS",
+      "genre": "R&B/Soul",
+      "duration": 202,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-802bb7827313",
+      "title": "Blow Your Mind (Mwah)",
+      "artist": "Dua Lipa",
+      "album": "Dua Lipa (Deluxe)",
+      "genre": "Pop",
+      "duration": 179,
+      "source": "ui-confirmed",
+      "year": 2016
+    },
+    {
+      "id": "fav-8d44a6503873",
+      "title": "Dance Hall",
+      "artist": "Mrs. GREEN APPLE",
+      "album": "Dance Hall - Single",
+      "genre": "Rock",
+      "duration": 203,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-671d687bdff2",
+      "title": "体面",
+      "artist": "于文文",
+      "album": "尚未界定",
+      "genre": "Mandopop",
+      "duration": 283,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-737545599cc4",
+      "title": "LMLY",
+      "artist": "Jackson Wang",
+      "album": "LMLY - Single",
+      "genre": "Mandopop",
+      "duration": 210,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-81c315032207",
+      "title": "Save Your Tears (Remix)",
+      "artist": "Abel Tesfaye & Ariana Grande",
+      "album": "Save Your Tears (Remix) - Single",
+      "genre": "R&B/Soul",
+      "duration": 191,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-21331ad100f7",
+      "title": "IDGAF",
+      "artist": "Dua Lipa",
+      "album": "Dua Lipa (Deluxe)",
+      "genre": "Pop",
+      "duration": 218,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-73a1729f6067",
+      "title": "Six Feet Under",
+      "artist": "The Weeknd",
+      "album": "Starboy (Deluxe)",
+      "genre": "R&B/Soul",
+      "duration": 238,
+      "source": "ui-confirmed",
+      "year": 2016
+    },
+    {
+      "id": "fav-3ccf71fb1447",
+      "title": "HAPPY",
+      "artist": "NF",
+      "album": "HOPE",
+      "genre": "Hip-Hop/Rap",
+      "duration": 243,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-e8abb4488ae0",
+      "title": "Runaway (feat. Pusha T)",
+      "artist": "Kanye West & Pusha T",
+      "album": "My Beautiful Dark Twisted Fantasy (Deluxe Edition)",
+      "genre": "Hip-Hop/Rap",
+      "duration": 548,
+      "source": "ui-confirmed",
+      "year": 2010
+    },
+    {
+      "id": "fav-7c81a69200c1",
+      "title": "爱我还是他",
+      "artist": "陶喆",
+      "album": "太平盛世",
+      "genre": "Mandopop",
+      "duration": 293,
+      "source": "ui-confirmed",
+      "year": 2005
+    },
+    {
+      "id": "fav-1c1fb0976001",
+      "title": "爱爱爱",
+      "artist": "方大同",
+      "album": "爱爱爱",
+      "genre": "Mandopop",
+      "duration": 213,
+      "source": "ui-confirmed",
+      "year": 2006
+    },
+    {
+      "id": "fav-7bbb7daf0208",
+      "title": "三人游",
+      "artist": "方大同",
+      "album": "橙月",
+      "genre": "Mandopop",
+      "duration": 237,
+      "source": "ui-confirmed",
+      "year": 2008
+    },
+    {
+      "id": "fav-64a9c328258b",
+      "title": "Love Song",
+      "artist": "方大同",
+      "album": "未来",
+      "genre": "Mandopop",
+      "duration": 269,
+      "source": "ui-confirmed",
+      "year": 2007
+    },
+    {
+      "id": "fav-9ac2a4d327df",
+      "title": "特别的人",
+      "artist": "方大同",
+      "album": "危險世界",
+      "genre": "Mandopop",
+      "duration": 259,
+      "source": "ui-confirmed",
+      "year": 2014
+    },
+    {
+      "id": "fav-f69043e1a1a1",
+      "title": "Chemical",
+      "artist": "Post Malone",
+      "album": "Chemical - Single",
+      "genre": "Pop",
+      "duration": 184,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-4bab115c9c4c",
+      "title": "I Like You (A Happier Song) [feat. Doja Cat]",
+      "artist": "Post Malone",
+      "album": "Twelve Carat Toothache",
+      "genre": "Hip-Hop/Rap",
+      "duration": 193,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-33a45fdbef01",
+      "title": "Sugar",
+      "artist": "Maroon 5",
+      "album": "V (Deluxe)",
+      "genre": "Pop",
+      "duration": 236,
+      "source": "ui-confirmed",
+      "year": 2014
+    },
+    {
+      "id": "fav-4c2ac4dee27e",
+      "title": "Stay With Me",
+      "artist": "Sam Smith",
+      "album": "In The Lonely Hour (Drowning Shadows Edition)",
+      "genre": "Pop",
+      "duration": 173,
+      "source": "ui-confirmed",
+      "year": 2014
+    },
+    {
+      "id": "fav-c8b67d291672",
+      "title": "Rush",
+      "artist": "Troye Sivan",
+      "album": "Something To Give Each Other",
+      "genre": "Pop",
+      "duration": 156,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-8288323c8606",
+      "title": "Charlie Be Quiet!",
+      "artist": "Charlie Puth",
+      "album": "CHARLIE",
+      "genre": "Pop",
+      "duration": 128,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-e0377a899283",
+      "title": "Love Story",
+      "artist": "Taylor Swift",
+      "album": "Fearless (Platinum Edition)",
+      "genre": "Pop",
+      "duration": 235,
+      "source": "ui-confirmed",
+      "year": 2008
+    },
+    {
+      "id": "fav-5885d023f344",
+      "title": "I Love You's",
+      "artist": "Hailee Steinfeld",
+      "album": "Half Written Story - EP",
+      "genre": "Pop",
+      "duration": 216,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-cdb83f8aadf9",
+      "title": "Shape of You",
+      "artist": "Ed Sheeran",
+      "album": "÷ (Deluxe)",
+      "genre": "Pop",
+      "duration": 234,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-cdb83f8aadf9-2",
+      "title": "Shape of You",
+      "artist": "Ed Sheeran",
+      "album": "÷ (Deluxe)",
+      "genre": "Pop",
+      "duration": 234,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-3c451fa02b4f",
+      "title": "You Owe Me",
+      "artist": "The Chainsmokers",
+      "album": "Sick Boy",
+      "genre": "Dance",
+      "duration": 190,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-b5d1ed909706",
+      "title": "Butter",
+      "artist": "防弹少年团",
+      "album": "Butter / Permission to Dance - EP",
+      "genre": "K-Pop",
+      "duration": 164,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-5e620632dfb9",
+      "title": "Maps",
+      "artist": "Maroon 5",
+      "album": "V (Deluxe)",
+      "genre": "Pop",
+      "duration": 190,
+      "source": "ui-confirmed",
+      "year": 2014
+    },
+    {
+      "id": "fav-6783fe0de5b0",
+      "title": "Hope (feat. Winona Oak)",
+      "artist": "The Chainsmokers",
+      "album": "Sick Boy",
+      "genre": "Dance",
+      "duration": 180,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-0ffbd4fd1138-2",
+      "title": "Love in My Pocket",
+      "artist": "Rich Brian",
+      "album": "1999",
+      "genre": "Hip-Hop/Rap",
+      "duration": 223,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-28a5a8fbb96a",
+      "title": "嘉宾",
+      "artist": "张远",
+      "album": "嘉宾 - Single",
+      "genre": "Mandopop",
+      "duration": 334,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-c8009b7b65b5",
+      "title": "Red Flags",
+      "artist": "Mimi Webb",
+      "album": "Amelia",
+      "genre": "Pop",
+      "duration": 142,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-750363804c01",
+      "title": "Why",
+      "artist": "朴宰范",
+      "album": "Why - Single",
+      "genre": "Dance",
+      "duration": 209,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-32a450eaa15e",
+      "title": "Tongue",
+      "artist": "MNEK",
+      "album": "Language",
+      "genre": "Pop",
+      "duration": 208,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-601edbd116ed",
+      "title": "Roar",
+      "artist": "Katy Perry",
+      "album": "PRISM (Deluxe Version)",
+      "genre": "Pop",
+      "duration": 224,
+      "source": "ui-confirmed",
+      "year": 2013
+    },
+    {
+      "id": "fav-e38fa5f26aa2",
+      "title": "All the Time",
+      "artist": "Zara Larsson",
+      "album": "All the Time - Single",
+      "genre": "Pop",
+      "duration": 228,
+      "source": "ui-confirmed",
+      "year": 2019
+    },
+    {
+      "id": "fav-8d48e4c2a546",
+      "title": "La La La (feat. Sam Smith)",
+      "artist": "Naughty Boy",
+      "album": "La La La (feat. Sam Smith) - EP",
+      "genre": "Pop",
+      "duration": 221,
+      "source": "ui-confirmed",
+      "year": 2013
+    },
+    {
+      "id": "fav-51ca5287d036",
+      "title": "Dancing With A Stranger",
+      "artist": "Sam Smith & Normani",
+      "album": "Dancing With A Stranger - Single",
+      "genre": "Pop",
+      "duration": 171,
+      "source": "ui-confirmed",
+      "year": 2019
+    },
+    {
+      "id": "fav-faa11bd8dfed",
+      "title": "你不知道的事",
+      "artist": "王力宏",
+      "album": "十八般武艺",
+      "genre": "Pop",
+      "duration": 279,
+      "source": "ui-confirmed",
+      "year": 2010
+    },
+    {
+      "id": "fav-b99155c9bec9",
+      "title": "PARANOIA (feat. tobi lou, ØZI & Cal Scruby)",
+      "artist": "HEARTSTEEL, League of Legends Music & 伯贤",
+      "album": "PARANOIA (feat. tobi lou, ØZI & Cal Scruby) - Single",
+      "genre": "Hip-Hop/Rap",
+      "duration": 199,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-a8270586c275",
+      "title": "After LIKE",
+      "artist": "IVE",
+      "album": "After LIKE - Single",
+      "genre": "Dance",
+      "duration": 177,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-8b3ee21ecdc0",
+      "title": "Like I Used To",
+      "artist": "Tinashe",
+      "album": "Like I Used To - Single",
+      "genre": "R&B/Soul",
+      "duration": 188,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-1702d76836f2",
+      "title": "Paint The Town Red",
+      "artist": "Doja Cat",
+      "album": "Paint The Town Red - Single",
+      "genre": "Rap",
+      "duration": 232,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-fd3784d81c80",
+      "title": "Dancing is Healing",
+      "artist": "Rudimental, Charlotte Plank & Vibe Chemistry",
+      "album": "InHer World",
+      "genre": "Dance",
+      "duration": 177,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-463984a6832e",
+      "title": "VILLAIN (feat. Kim Petras & League of Legends Music)",
+      "artist": "K/DA & Madison Beer",
+      "album": "ALL OUT - EP",
+      "genre": "K-Pop",
+      "duration": 199,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-3c030fd949ba",
+      "title": "Seven",
+      "artist": "Jung Kook & Latto",
+      "album": "Seven - Single",
+      "genre": "K-Pop",
+      "duration": 185,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-358e5c831c4c",
+      "title": "One Of Your Girls",
+      "artist": "Troye Sivan",
+      "album": "Something To Give Each Other",
+      "genre": "Pop",
+      "duration": 181,
+      "source": "ui-confirmed"
+    },
+    {
+      "id": "fav-68bf70b0adc1",
+      "title": "借口",
+      "artist": "周杰伦",
+      "album": "七里香",
+      "genre": "Mandopop",
+      "duration": 258,
+      "source": "ui-confirmed",
+      "year": 2004
+    },
+    {
+      "id": "fav-1c4b08f1c42f",
+      "title": "后来的我们",
+      "artist": "五月天",
+      "album": "自传",
+      "genre": "Mandopop",
+      "duration": 346,
+      "source": "ui-confirmed"
+    },
+    {
+      "id": "fav-3477fd45ac68",
+      "title": "Blueming",
+      "artist": "IU",
+      "album": "Love Poem - EP",
+      "genre": "K-Pop",
+      "duration": 217,
+      "source": "ui-confirmed",
+      "year": 2019
+    },
+    {
+      "id": "fav-48b9c3c54c94",
+      "title": "晴天",
+      "artist": "周杰伦",
+      "album": "叶惠美",
+      "genre": "Mandopop",
+      "duration": 270,
+      "source": "ui-confirmed",
+      "year": 2003
+    },
+    {
+      "id": "fav-f0042f89f1cf",
+      "title": "LOVE DIVE",
+      "artist": "IVE",
+      "album": "LOVE DIVE - Single",
+      "genre": "K-Pop",
+      "duration": 177,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-845414afc87a",
+      "title": "Ditto",
+      "artist": "NewJeans",
+      "album": "Ditto - Single",
+      "genre": "K-Pop",
+      "duration": 186,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-832e096ee09f",
+      "title": "Am I Dreaming",
+      "artist": "Metro Boomin, A$AP Rocky & Roisee",
+      "album": "METRO BOOMIN PRESENTS SPIDER-MAN: ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE / DELUXE EDITION)",
+      "genre": "Soundtrack",
+      "duration": 256,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-d516a78f06b6",
+      "title": "Sprinter (Mixed)",
+      "artist": "Central Cee & Dave",
+      "album": "Today's Hits: November 2023 (DJ Mix)",
+      "genre": "Dance",
+      "duration": 227,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-3a82398edf8d",
+      "title": "Dancing is Healing",
+      "artist": "Rudimental, Charlotte Plank & Vibe Chemistry",
+      "album": "Dancing is Healing - Single",
+      "genre": "Dance",
+      "duration": 177,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-09848377d6dd",
+      "title": "Doja",
+      "artist": "Central Cee",
+      "album": "Doja - Single",
+      "genre": "Hip-Hop/Rap",
+      "duration": 97,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-9d5625464391",
+      "title": "Godzilla (feat. Juice WRLD)",
+      "artist": "Eminem",
+      "album": "Music To Be Murdered By - Side B (Deluxe Edition)",
+      "genre": "Hip-Hop/Rap",
+      "duration": 211,
+      "source": "ui-confirmed"
+    },
+    {
+      "id": "fav-8059a86a1ec2",
+      "title": "I'LL SHOW YOU (feat. Annika Wells & League of Legends Music)",
+      "artist": "K/DA, TWICE & Bekuh Boom",
+      "album": "ALL OUT - EP",
+      "genre": "K-Pop",
+      "duration": 199,
+      "source": "ui-confirmed"
+    },
+    {
+      "id": "fav-7553acafd6f1",
+      "title": "Watermelon Sugar",
+      "artist": "Harry Styles",
+      "album": "Fine Line",
+      "genre": "Pop",
+      "duration": 174,
+      "source": "ui-confirmed"
+    },
+    {
+      "id": "fav-4863b34ac64f",
+      "title": "KICK BACK",
+      "artist": "米津玄师",
+      "album": "KICK BACK - Single",
+      "genre": "J-Pop",
+      "duration": 193,
+      "source": "ui-confirmed"
+    },
+    {
+      "id": "fav-d4a54b97ca11",
+      "title": "经济舱",
+      "artist": "刘聪 & Kafe.Hu",
+      "album": "经济舱 - Single",
+      "genre": "Pop",
+      "duration": 219,
+      "source": "ui-confirmed",
+      "year": 2020
+    },
+    {
+      "id": "fav-ae4421180c7b",
+      "title": "倒带",
+      "artist": "JOLIN蔡依林",
+      "album": "城堡",
+      "genre": "Mandopop",
+      "duration": 266,
+      "source": "ui-confirmed",
+      "year": 2004
+    },
+    {
+      "id": "fav-1488f7bd8f82",
+      "title": "LET GO",
+      "artist": "Central Cee",
+      "album": "LET GO - Single",
+      "genre": "Hip-Hop/Rap",
+      "duration": 174,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-d516a78f06b6-2",
+      "title": "Sprinter (Mixed)",
+      "artist": "Central Cee & Dave",
+      "album": "Today's Hits: November 2023 (DJ Mix)",
+      "genre": "Dance",
+      "duration": 227,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-61d27b34aa02",
+      "title": "镜花水月 (feat. 龙崎, Lil Jet & 泠风)",
+      "artist": "法老",
+      "album": "退潮",
+      "genre": "Chinese Hip-Hop",
+      "duration": 243,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-bda92a1c06b4",
+      "title": "不为谁而作的歌",
+      "artist": "林俊杰",
+      "album": "和自己对话 (实验专辑)",
+      "genre": "Mandopop",
+      "duration": 266,
+      "source": "ui-confirmed",
+      "year": 2015
+    },
+    {
+      "id": "fav-ec4e9289b666",
+      "title": "Scared to Be Lonely",
+      "artist": "Martin Garrix & Dua Lipa",
+      "album": "Scared To Be Lonely - Single",
+      "genre": "Dance",
+      "duration": 221,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-2e6fbb1da830",
+      "title": "Waiting for Tomorrow (feat. Mike Shinoda)",
+      "artist": "Martin Garrix & Pierce Fulton",
+      "album": "Bylaw - EP",
+      "genre": "Dance",
+      "duration": 248,
+      "source": "ui-confirmed",
+      "year": 2018
+    },
+    {
+      "id": "fav-96840223b8da",
+      "title": "There for You",
+      "artist": "Martin Garrix & Troye Sivan",
+      "album": "There for You - Single",
+      "genre": "Dance",
+      "duration": 222,
+      "source": "ui-confirmed",
+      "year": 2017
+    },
+    {
+      "id": "fav-4d1f045de575",
+      "title": "Loop",
+      "artist": "Martin Garrix, DallasK & Sasha Alex Sloan",
+      "album": "Loop - Single",
+      "genre": "Dance",
+      "duration": 191,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-982793141e76",
+      "title": "My Body",
+      "artist": "Skream",
+      "album": "Skreamizm 8",
+      "genre": "Dance",
+      "duration": 329,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-b34bb459d120",
+      "title": "Hide & Seek",
+      "artist": "Stormzy",
+      "album": "This Is What I Mean",
+      "genre": "Hip-Hop/Rap",
+      "duration": 208,
+      "source": "ui-confirmed",
+      "year": 2022
+    },
+    {
+      "id": "fav-8a0d5c04ef74",
+      "title": "MELTDOWN (feat. Drake)",
+      "artist": "Travis Scott",
+      "album": "UTOPIA",
+      "genre": "Hip-Hop/Rap",
+      "duration": 246,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-c1c7a9bbaeb7",
+      "title": "GIANTS (feat. JEON SOYEON, DUCKWRTH, Thutmose & League of Legends Music)",
+      "artist": "True Damage, Becky G & Keke Palmer",
+      "album": "GIANTS (feat. JEON SOYEON, DUCKWRTH, Thutmose & League of Legends Music) - Single",
+      "genre": "Hip-Hop/Rap",
+      "duration": 192,
+      "source": "ui-confirmed",
+      "year": 2019
+    },
+    {
+      "id": "fav-2af0700d16a6",
+      "title": "Die For You",
+      "artist": "VALORANT Music & Grabbitz",
+      "album": "Die For You - Single",
+      "genre": "Dance",
+      "duration": 213,
+      "source": "ui-confirmed",
+      "year": 2021
+    },
+    {
+      "id": "fav-ddced0b89efe",
+      "title": "Ticking Away",
+      "artist": "VALORANT Music, Grabbitz & bbno$",
+      "album": "Ticking Away - Single",
+      "genre": "Rock",
+      "duration": 205,
+      "source": "ui-confirmed",
+      "year": 2023
+    },
+    {
+      "id": "fav-d09e2e8ab694",
+      "title": "安静",
+      "artist": "周杰伦",
+      "album": "范特西",
+      "genre": "Mandopop",
+      "duration": 334,
+      "source": "ui-confirmed",
+      "year": 2001
+    },
+    {
+      "id": "fav-9c6a8af26354",
+      "title": "我是如此相信 (电影《天火》主题曲)",
+      "artist": "周杰伦",
+      "album": "我是如此相信 (电影《天火》主题曲) - Single",
+      "genre": "Mandopop",
+      "duration": 266,
+      "source": "ui-confirmed",
+      "year": 2019
+    }
+  ]
+}

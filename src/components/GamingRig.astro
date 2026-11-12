@@ -1,0 +1,25 @@
+---
+import '../styles/gaming-rig.css';
+const ranks = [
+  { game: 'APEX LEGENDS', rank: '大师', sub: 'MASTER', image: '/images/ranks/apex-master.png', className: 'apex', alt: 'APEX Legends 大师（Master）紫色段位徽章' },
+  { game: 'CS:GO', rank: '完美黄金 S', sub: 'PERFECT WORLD', image: '/images/ranks/perfect-world-gold-s.png', className: 'cs', alt: '完美世界竞技平台官方黄金 S 段位图标，经典版' },
+  { game: 'VALORANT', rank: '神话', sub: 'IMMORTAL', image: '/images/ranks/valorant-immortal.png', className: 'valorant', alt: 'VALORANT 神话（Immortal）通用段位徽章，不指定小段位' },
+];
+---
+<article class="gaming-rig" aria-labelledby="gaming-rig-title">
+  <div class="rig-topline mono"><span>PLAYER PROFILE</span><span aria-hidden="true">↗</span></div>
+  <div class="rig-heading"><h3 id="gaming-rig-title">PLAY<br /><span class="serif">to win.</span></h3><p lang="zh-CN">认真研究，<br />也认真上分。</p></div>
+  <ol class="rig-ranks" aria-label="我的游戏段位">{ranks.map(item => <li class={`rig-rank rig-rank-${item.className}`}>
+    <div class="rig-emblem"><span class="rig-orbit" aria-hidden="true"></span><img src={item.image} alt={item.alt} width="180" height="180" loading="lazy" /></div>
+    <h4>{item.game}</h4><p class="rig-rank-name" lang="zh-CN"><span>{item.rank}</span></p><p class="rig-rank-sub mono">{item.sub}</p>
+  </li>)}</ol>
+  <section class="rig-setup" aria-labelledby="rig-setup-title">
+    <div class="rig-setup-heading"><h4 id="rig-setup-title" class="mono">MY GEAR</h4><span class="mono">日常装备 / 02</span></div>
+    <div class="rig-equipment">
+      <figure class="rig-mouse"><div class="rig-gear-art"><span class="rig-product-shadow" aria-hidden="true"></span><span class="rig-product-object"><img class="rig-product-image" src="/images/gear/viper-v4-pro-official.png" alt="雷蛇官方展示的白色 Viper V4 Pro 鼠标实物产品图" width="500" height="500" loading="lazy" /></span></div><figcaption><span class="mono">01 / MOUSE</span><h5>Razer<br />Viper V4 Pro</h5><p lang="zh-CN">雷蛇毒蝰 V4 Pro</p></figcaption></figure>
+      <figure class="rig-keyboard"><div class="rig-gear-art"><span class="rig-product-shadow" aria-hidden="true"></span><span class="rig-product-object"><img class="rig-product-image" src="/images/gear/iqunix-ev63-official.jpg" alt="IQUNIX 官方拍摄的 EV63 键盘实物，黑色键帽与金属机身" width="1946" height="1460" loading="lazy" /></span></div><figcaption><span class="mono">02 / KEYBOARD</span><h5>IQUNIX<br />EV63</h5><p lang="zh-CN">我的键盘</p></figcaption></figure>
+    </div>
+    <p class="rig-gear-note mono">PRODUCT IMAGES / <a href="https://www.razer.com/gaming-mice/razer-viper-v4-pro" target="_blank" rel="noopener noreferrer">RAZER ↗</a> · <a href="https://iqunix.com/products/iqunix-ev63-hall-effect-keyboard" target="_blank" rel="noopener noreferrer">IQUNIX ↗</a></p>
+  </section>
+  <div class="rig-footer mono"><span>FOCUS. REACT. REPEAT.</span><span aria-hidden="true">+ + +</span></div>
+</article>

@@ -1,0 +1,122 @@
+/* Glass is confined to the shell. Project artwork and text stay opaque and crisp. */
+.work-orbit { --depth-base-x: -8deg; }
+.orbit-enabled .orbit-space {
+  transform: rotateX(calc(var(--depth-base-x) + var(--depth-tilt-x, 0deg))) rotateY(var(--depth-tilt-y, 0deg));
+  transition: transform .55s cubic-bezier(.2,.8,.2,1);
+}
+.orbit-enabled .orbit-stage[data-depth-active='true'] .orbit-space { transition-duration: .22s; }
+.orbit-enabled .orbit-core {
+  border: 1px solid #fff1;
+  background: linear-gradient(105deg, #34513e 0%, #14271c 16%, #09140e 55%, #1e3526 87%, #4b6650 100%);
+  box-shadow: inset 3px 0 5px #ffffff15, inset -3px 0 8px #000b, 18px 10px 60px #0009;
+}
+.orbit-enabled .orbit-core::before {
+  content: ''; position: absolute; inset: 4px; border-radius: inherit; pointer-events: none;
+  background: linear-gradient(102deg, #ffffff18, transparent 18%, transparent 77%, #ffffff0a);
+  border-left: 1px solid #ffffff15;
+}
+.orbit-enabled .orbit-core > span { text-shadow: 0 2px 0 #000, 0 0 25px #c6f36b10; }
+.orbit-card {
+  --glass-card-surface: #f2f3e9;
+  --glass-card-ink: #101b16;
+  position: relative;
+  padding: 4px;
+  background: linear-gradient(145deg, #ffffff72, #ffffff12 38%, #ffffff27 74%, #ffffff4d);
+  border: 1px solid #ffffff75;
+  border-radius: 12px;
+  color: var(--glass-card-ink);
+  box-shadow: inset 1px 1px 0 #ffffff75, inset -1px -1px 0 #ffffff24, 2px 3px 0 #0009, 10px 20px 36px #0005;
+  -webkit-backdrop-filter: blur(8px) saturate(1.15);
+  backdrop-filter: blur(8px) saturate(1.15);
+}
+.orbit-card-act { --glass-card-surface: #b6d8c5; }
+.orbit-card-demonstration { --glass-card-surface: #bfe9ed; }
+.orbit-card-remote { --glass-card-surface: #ffa9cf; }
+.orbit-card-observation { --glass-card-surface: #bdb5ff; }
+.orbit-card-authentication { --glass-card-surface: #15291e; --glass-card-ink: #f2f3e9; }
+.orbit-card-top, .orbit-card-copy, .orbit-card-bottom { background: var(--glass-card-surface); }
+.orbit-card-top { border-radius: 7px 7px 0 0; border-color: #101b1650; }
+.orbit-card-bottom { border-radius: 0 0 7px 7px; border-color: #101b1650; }
+.orbit-card-art { background: #101b16; }
+.orbit-card::before {
+  content: ''; position: absolute; inset: 0; z-index: 4; border-radius: inherit; pointer-events: none;
+  box-shadow: inset 1px 1px 0 #ffffff9c, inset -1px -1px 0 #ffffff28, inset 0 0 0 4px #ffffff08;
+}
+.orbit-card::after {
+  content: ''; position: absolute; inset: 0; z-index: 3; pointer-events: none; border-radius: inherit;
+  background: linear-gradient(132deg, #ffffff32 0%, #ffffff0d 20%, transparent 20.3%, transparent 68%, #ffffff08 68.3%, transparent 85%);
+  opacity: .3;
+  transition: opacity .4s;
+}
+.orbit-enabled .orbit-card {
+  box-shadow: inset 1px 1px 0 #ffffff7c, inset -1px -1px 0 #ffffff29, 2px 3px 0 #060806a6, 12px 24px 42px #0008;
+  transition: box-shadow .35s, border-color .35s;
+}
+.orbit-enabled .orbit-card[data-orbit-front='true'] {
+  border-color: #ffffffe0;
+  box-shadow: inset 1px 1px 0 #ffffffcf, inset -1px -1px 0 #ffffff45, 3px 5px 0 #070907ab, 14px 28px 42px #000a, 0 0 1px 1px #ffffff24;
+}
+.orbit-enabled .orbit-card[data-orbit-front='true']::after { opacity: .62; }
+.orbit-enabled .orbit-card[data-orbit-front='true']:hover {
+  box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #ffffff55, 3px 5px 0 #070907ab, 18px 32px 48px #000b, 0 0 1px 1px #ffffff52;
+}
+.orbit-enabled .orbit-card:focus-visible { outline: 3px solid #fff; outline-offset: 5px; }
+.orbit-enabled .orbit-controls button {
+  background: #ffffff09;
+  box-shadow: inset 0 1px 0 #ffffff24, 0 5px 14px #0002;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-header {
+    background: color-mix(in srgb, var(--red) 90%, transparent);
+    -webkit-backdrop-filter: blur(16px) saturate(1.25);
+    backdrop-filter: blur(16px) saturate(1.25);
+    box-shadow: inset 0 1px 0 #ffffff25, 0 5px 18px #0000000d;
+  }
+}
+/* Each badge sits inside a small glass display, with its own colored light. */
+.gaming-rig { --depth-light-x: 50%; --depth-light-y: 20%; }
+.rig-emblem {
+  border-radius: 16px;
+  border: 1px solid #ffffff24;
+  background: linear-gradient(138deg, #ffffff0e, #ffffff03 43%, #ffffff08), radial-gradient(ellipse at var(--depth-light-x) var(--depth-light-y), color-mix(in srgb, var(--badge) 14%, transparent), transparent 76%);
+  box-shadow: inset 1px 1px 0 #ffffff14, inset -1px -1px 0 #ffffff05, 0 9px 22px #0005;
+}
+.rig-emblem::after {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 2;
+  background: linear-gradient(140deg, #ffffff18 0%, #ffffff04 36%, transparent 36.5%, transparent 70%, #ffffff04 70.5%, transparent);
+}
+.rig-emblem img { filter: drop-shadow(1px 9px 9px #0009) drop-shadow(0 0 13px color-mix(in srgb, var(--badge) 19%, transparent)); }
+.rig-orbit { width: 75%; border-color: color-mix(in srgb, var(--badge) 25%, transparent); }
+.rig-gear-art {
+  border: 1px solid #ffffff1f;
+  border-radius: 13px;
+  background: linear-gradient(130deg, #ffffff09, #ffffff02 45%, #ffffff06);
+  box-shadow: inset 1px 1px 0 #ffffff13, 0 10px 24px #0003;
+}
+.rig-gear-art::before {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: radial-gradient(ellipse at var(--depth-light-x) var(--depth-light-y), #bfe9ed12, transparent 76%);
+}
+.rig-gear-art::after { top: 12px; right: 12px; }
+.rig-gear-art img { position: relative; z-index: 1; filter: drop-shadow(3px 11px 9px #000b); }
+.rig-keyboard .rig-gear-art img { width: 104%; max-width: 104%; }
+@media (min-width: 1100px) { .orbit-enabled .orbit-stage { perspective: 1100px; } }
+@media (max-width: 900px) {
+  .orbit-card { -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
+  .orbit-enabled .orbit-card { box-shadow: inset 1px 1px 0 #ffffff70, 2px 3px 0 #0009, 7px 15px 25px #0007; }
+}
+@media (max-width: 600px) {
+  .work-orbit { --depth-base-x: -7deg; }
+  .orbit-card { padding: 3px; border-radius: 9px; -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .orbit-card-top { border-radius: 5px 5px 0 0; }
+  .orbit-card-bottom { border-radius: 0 0 5px 5px; }
+  .orbit-card::after { opacity: .2; }
+  .orbit-enabled .orbit-card[data-orbit-front='true'] { box-shadow: inset 1px 1px 0 #ffffffb5, 2px 3px 0 #000a, 7px 16px 26px #0009; }
+  .site-header { -webkit-backdrop-filter: blur(7px); backdrop-filter: blur(7px); }
+  .rig-emblem { border-radius: 12px; }
+  .rig-gear-art { border-radius: 10px; }
+}
+html[data-motion='paused'] .orbit-space { transition: none !important; }
+@media (prefers-reduced-motion: reduce) { .orbit-enabled .orbit-space { transform: none; transition: none; } }

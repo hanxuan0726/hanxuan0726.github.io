@@ -1,0 +1,165 @@
+---
+import '../styles/music-player.css';
+import catalog from '../data/music-featured.json';
+import collection from '../data/music-favorites.json';
+const featured = catalog.tracks;
+const current = featured[0];
+const favorites = collection.tracks;
+const clean = (value: string) => value.normalize('NFKC').toLocaleLowerCase().replace(/[^\p{L}\p{N}]+/gu, '');
+const artistName = (artist: string) => clean(({ '防弹少年团': 'BTS', '朴宰范': 'Jay Park' } as Record<string,string>)[artist] || artist);
+const matchingTrack = (title: string, artist: string) => featured.find(t => clean(t.title) === clean(title) && (artistName(t.artist).includes(artistName(artist)) || artistName(artist).includes(artistName(t.artist))));
+const searchUrl = (title: string, artist: string) => `https://music.apple.com/us/search?term=${encodeURIComponent(`${title} ${artist}`)}`;
+---
+<article class="music-player" aria-labelledby="music-player-title" data-music-player>
+  <div class="mp-topline mono"><span>MY LISTENING ROOM</span><span aria-hidden="true">↗</span></div>
+  <div class="mp-heading"><h3 id="music-player-title">MY<br /><span class="serif">rotation.</span></h3><p lang="zh-CN">喜欢的歌，<br />再听一遍。</p></div>
+
+  <div class="mp-record-stage">
+    <span class="mp-stage-caption mono" aria-hidden="true">A LITTLE LOUDER. A LITTLE LIGHTER.</span>
+    <div class="mp-deck" aria-hidden="true">
+      <span class="mp-deck-light"></span>
+      <div class="mp-vinyl"><span class="mp-vinyl-label"><img data-music-artwork src={current.artwork} alt="" width="600" height="600" loading="lazy" decoding="async" /><span></span></span></div>
+      <div class="mp-sleeve"><img data-music-artwork src={current.artwork} alt="" width="600" height="600" loading="lazy" decoding="async" /><span class="mp-sleeve-edge"></span></div>
+      <span class="mp-tonearm"><i></i></span>
+      <span class="mp-deck-inscription mono">HANXUAN’S<br />LISTENING ROOM</span>
+      <span class="mp-deck-switch"></span>
+    </div>
+    <div class="mp-artwork-caption mono"><span data-music-caption>{current.artist.toUpperCase()}</span><span data-music-counter>RECORD 01 / {String(featured.length).padStart(2,'0')}</span></div>
+  </div>
+
+  <div class="mp-track" data-music-track>
+    <div class="mp-track-topline mono"><span>SELECTED FROM MY FAVORITES</span><span aria-hidden="true">♡</span></div>
+    <h4 data-music-title>{current.title}</h4><p class="mp-artist" data-music-artist>{current.artist}</p>
+    <p class="mp-release" data-music-album>{current.album}</p>
+  </div>
+
+  <div class="mp-listen-area">
+    <button class="mp-load-button" type="button" data-music-load aria-controls="apple-music-preview" aria-expanded="false" hidden><span class="mp-play-symbol" aria-hidden="true">▶</span><span><strong data-music-button-label>Listen here</strong><small>APPLE MUSIC PREVIEW / 试听</small></span><span class="mp-button-arrow" aria-hidden="true">↗</span></button>
+    <div id="apple-music-preview" class="mp-embed-host" data-music-embed hidden></div>
+    <p class="mp-player-status" data-music-status role="status" aria-live="polite"></p>
+    <a class="mp-apple-link" data-music-link href={current.appleMusicUrl} target="_blank" rel="noopener noreferrer"><span>Open in Apple Music</span><span aria-hidden="true">↗</span></a>
+    <p class="mp-preview-note" lang="zh-CN">官方试听 · 点击后加载播放器<br />完整播放由 Apple Music 提供。</p>
+  </div>
+
+  <section class="mp-records" aria-label="Featured records from my favorites">
+    <div class="mp-records-heading mono"><span>PICK A RECORD</span><span>{String(featured.length).padStart(2,'0')} / FAVORITES</span></div>
+    <ol class="mp-record-grid">{featured.map((track, index) => <li><a class="mp-record-choice" data-music-choice={track.id} aria-current={index === 0 ? 'true' : undefined} href={track.appleMusicUrl} target="_blank" rel="noopener noreferrer" aria-label={`Select ${track.title} by ${track.artist}`}><span class="mp-choice-cover"><img src={track.artwork} alt="" width="600" height="600" loading="lazy" decoding="async" /><span aria-hidden="true">{String(index + 1).padStart(2,'0')}</span></span><strong>{track.title}</strong><small>{track.artist}</small></a></li>)}</ol>
+  </section>
+
+  <details class="mp-library" data-music-library>
+    <summary><span><strong>Inside my library</strong><small>IMPORTED FROM MY APPLE MUSIC FAVORITES</small></span><span class="mp-library-count">{favorites.length}<span aria-hidden="true">＋</span></span></summary>
+    <div class="mp-library-body">
+      <label class="mp-search-label" data-music-search-wrap hidden><span>Search my favorites <span lang="zh-CN">搜索歌曲 / 歌手</span></span><input type="search" data-music-search autocomplete="off" placeholder="Song, artist, album…" aria-controls="music-favorites-list" /></label>
+      <p class="mp-search-count mono" data-music-results role="status" aria-live="polite">{favorites.length} imported favorites</p>
+      <ul id="music-favorites-list" class="mp-library-list">{favorites.map((track, index) => {
+        const match = matchingTrack(track.title, track.artist);
+        return <li data-music-library-row data-music-search-text={`${track.title} ${track.artist} ${track.album || ''}`}><span class="mp-library-index mono" aria-hidden="true">{String(index + 1).padStart(3,'0')}</span><a href={match?.appleMusicUrl || searchUrl(track.title,track.artist)} target="_blank" rel="noopener noreferrer" aria-label={`${match ? 'Open' : 'Find'} ${track.title} by ${track.artist} on Apple Music`}><strong>{track.title}</strong><span>{track.artist}</span></a><span class="mp-library-action" aria-hidden="true">{match ? 'OPEN' : 'FIND'} ↗</span></li>;
+      })}</ul>
+      <p class="mp-empty" data-music-empty hidden>No matching favorites. Try another song or artist.</p>
+      <p class="mp-import-note" lang="zh-CN">从我的 Apple Music 收藏导入 {favorites.length} 首。静态收藏快照，不会自动同步；列表中的 FIND 会在 Apple Music 搜索对应歌曲。</p>
+    </div>
+  </details>
+  <div class="mp-footer mono"><span>GOOD MUSIC. GOOD COMPANY.</span><a href="/images/music/SOURCES.md" target="_blank" rel="noopener noreferrer">ARTWORK &amp; CATALOG CREDITS ↗</a></div>
+  <script is:inline type="application/json" data-music-catalog set:html={JSON.stringify(featured).replace(/</g,'\\u003c')} />
+</article>
+
+<script>
+  interface RecordTrack { id: string; title: string; artist: string; album: string; appleMusicUrl: string; embedUrl: string; artwork: string }
+  document.querySelectorAll<HTMLElement>('[data-music-player]').forEach((player) => {
+    if (player.dataset.musicReady === 'true') return;
+    const loadButton = player.querySelector<HTMLButtonElement>('[data-music-load]');
+    const host = player.querySelector<HTMLElement>('[data-music-embed]');
+    const status = player.querySelector<HTMLElement>('[data-music-status]');
+    const label = player.querySelector<HTMLElement>('[data-music-button-label]');
+    const title = player.querySelector<HTMLElement>('[data-music-title]');
+    const artist = player.querySelector<HTMLElement>('[data-music-artist]');
+    const album = player.querySelector<HTMLElement>('[data-music-album]');
+    const caption = player.querySelector<HTMLElement>('[data-music-caption]');
+    const counter = player.querySelector<HTMLElement>('[data-music-counter]');
+    const link = player.querySelector<HTMLAnchorElement>('[data-music-link]');
+    const trackBox = player.querySelector<HTMLElement>('[data-music-track]');
+    const catalog = player.querySelector<HTMLScriptElement>('[data-music-catalog]');
+    if (!loadButton || !host || !status || !label || !title || !artist || !album || !caption || !counter || !link || !trackBox || !catalog) return;
+    let records: RecordTrack[];
+    try { records = JSON.parse(catalog.textContent || '[]'); } catch { return; }
+    if (!records.length) return;
+    let selected = records[0];
+    const choices = [...player.querySelectorAll<HTMLAnchorElement>('[data-music-choice]')];
+    const artworks = [...player.querySelectorAll<HTMLImageElement>('[data-music-artwork]')];
+    player.dataset.musicReady = 'true';
+    loadButton.hidden = false;
+
+    choices.forEach(choice => choice.addEventListener('click', (event) => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const next = records.find(record => record.id === choice.dataset.musicChoice);
+      if (!next) return;
+      event.preventDefault();
+      if (next.id === selected.id) return;
+      selected = next;
+      // Removing the previous iframe stops any old preview. A selection never starts playback.
+      host.replaceChildren();
+      host.hidden = true;
+      loadButton.setAttribute('aria-expanded','false');
+      loadButton.setAttribute('aria-label',`Load Apple Music preview for ${selected.title} by ${selected.artist}`);
+      label.textContent = 'Listen here';
+      title.textContent = selected.title;
+      artist.textContent = selected.artist;
+      album.textContent = selected.album;
+      caption.textContent = selected.artist.toUpperCase();
+      counter.textContent = `RECORD ${String(records.indexOf(selected)+1).padStart(2,'0')} / ${String(records.length).padStart(2,'0')}`;
+      link.href = selected.appleMusicUrl;
+      trackBox.dataset.longTitle = String(selected.title.length > 22);
+      artworks.forEach(artwork => { artwork.src = selected.artwork; });
+      choices.forEach(item => { if (item === choice) item.setAttribute('aria-current','true'); else item.removeAttribute('aria-current'); });
+      status.textContent = `Selected ${selected.title} by ${selected.artist}. Choose Listen here to load its preview.`;
+    }));
+
+    loadButton.addEventListener('click', () => {
+      const existing = host.querySelector('iframe');
+      if (existing) { existing.focus(); return; }
+      const iframe = document.createElement('iframe');
+      const track = selected;
+      iframe.title = `Apple Music official preview: ${track.title} by ${track.artist}`;
+      iframe.src = track.embedUrl;
+      iframe.allow = 'encrypted-media; clipboard-write';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.height = '175';
+      iframe.width = '100%';
+      iframe.tabIndex = 0;
+      status.textContent = 'Loading Apple Music…';
+      host.hidden = false;
+      loadButton.setAttribute('aria-expanded', 'true');
+      label.textContent = 'Player below';
+      loadButton.setAttribute('aria-label', `Focus the Apple Music preview player for ${track.title}`);
+      iframe.addEventListener('load', () => {
+        if (selected.id === track.id && iframe.isConnected) status.textContent = 'Press play in the Apple Music player to listen.';
+      }, { once: true });
+      iframe.addEventListener('error', () => {
+        if (selected.id === track.id && iframe.isConnected) status.textContent = 'Use the Apple Music link above if the player is unavailable.';
+      }, { once: true });
+      host.append(iframe);
+    });
+
+    const input = player.querySelector<HTMLInputElement>('[data-music-search]');
+    const searchWrap = player.querySelector<HTMLElement>('[data-music-search-wrap]');
+    const rows = [...player.querySelectorAll<HTMLElement>('[data-music-library-row]')];
+    const resultCount = player.querySelector<HTMLElement>('[data-music-results]');
+    const empty = player.querySelector<HTMLElement>('[data-music-empty]');
+    const normalize = (value: string) => value.normalize('NFKC').toLocaleLowerCase().trim();
+    if (input && searchWrap && resultCount && empty) {
+      searchWrap.hidden = false;
+      const searchTexts = rows.map(row => normalize(row.dataset.musicSearchText || ''));
+      input.addEventListener('input', () => {
+        const words = normalize(input.value).split(/\s+/).filter(Boolean);
+        let count = 0;
+        rows.forEach((row,index) => {
+          const visible = words.every(word => searchTexts[index].includes(word));
+          row.hidden = !visible;
+          if (visible) count++;
+        });
+        resultCount.textContent = words.length ? `${count} of ${rows.length} favorites` : `${rows.length} imported favorites`;
+        empty.hidden = count > 0;
+      });
+    }
+  });
+</script>

@@ -1,0 +1,36 @@
+---
+import { site } from '../data/site';
+import '../styles/contact-scene.css';
+const email = `mailto:${site.email}`;
+---
+<section id="contact" class="contact-scene" aria-labelledby="contact-title" data-contact-scene>
+  <div class="contact-scene-track">
+    <div class="contact-scene-stage">
+      <svg class="contact-warp-grid contact-grid-fallback" viewBox="0 0 1200 900" preserveAspectRatio="none" aria-hidden="true">
+        {Array.from({ length: 17 }, (_, i) => <path data-grid-axis="x" data-grid-index={i} d={`M${i * 75},0V900`} />)}
+        {Array.from({ length: 13 }, (_, i) => <path data-grid-axis="y" data-grid-index={i} d={`M0,${i * 75}H1200`} />)}
+      </svg>
+      <canvas class="contact-warp-grid contact-grid-canvas" aria-hidden="true"></canvas>
+      <div class="contact-scene-label mono"><span>07 / KEEP IN TOUCH</span><span>GOOD THINGS START WITH HELLO.</span></div>
+      <h2 id="contact-title" class="sr-only">Let’s connect.</h2>
+      <div class="contact-portal" aria-hidden="true">
+        <div class="contact-portal-surface"></div>
+        <div class="contact-portal-ring"></div>
+        <span class="contact-go">GO</span>
+        <div class="contact-type-scene">
+          <div class="contact-type-top"><span>LET’S</span></div>
+          <div class="contact-type-stack">{Array.from({length: 9},(_,i)=><span style={`--layer:${i}`}>CONNECT</span>)}</div>
+          <span class="contact-type-caption mono">FROM SHANGHAI, WITH CURIOSITY.</span>
+        </div>
+        <span class="contact-star contact-star-a">✦</span><span class="contact-star contact-star-b">✦</span><span class="contact-star contact-star-c">✦</span>
+      </div>
+      <p class="contact-scroll-cue mono">A SHARED CURIOSITY?<br /><span>SCROLL INTO THE NEXT CHAPTER ↓</span></p>
+      <div class="contact-scene-actions">
+        <a class="email-link" href={email}><span>{site.email}</span><span aria-hidden="true">↗</span></a>
+        <div class="contact-copy"><button id="copy-email" class="copy-email mono" data-email={site.email} type="button">COPY EMAIL <span aria-hidden="true">⧉</span></button><span id="copy-status" class="mono" role="status" aria-live="polite"></span></div>
+      </div>
+      <div class="contact-scene-progress" aria-hidden="true"><span></span></div>
+    </div>
+  </div>
+</section>
+<script>import '../scripts/contact-scene';</script>

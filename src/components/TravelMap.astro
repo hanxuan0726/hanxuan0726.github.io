@@ -1,0 +1,112 @@
+---
+import geography from '../../public/data/map-geography.json';
+import '../styles/travel-map.css';
+
+type Place = { id: string; name: string; zh: string; lon: number; lat: number; region?: string; roots?: boolean };
+const worldPlaces: Place[] = [
+  { id: 'thailand', name: 'Thailand', zh: '泰国', lon: 101, lat: 15 },
+  { id: 'usa', name: 'United States', zh: '美国', lon: -100, lat: 39 },
+  { id: 'canada', name: 'Canada', zh: '加拿大', lon: -106, lat: 57 },
+  { id: 'malaysia', name: 'Malaysia', zh: '马来西亚', lon: 102, lat: 4 },
+];
+const chinaPlaces: Place[] = [
+  { id: 'beijing', name: 'Beijing', zh: '北京', lon: 116.41, lat: 39.9, region: '北京市' },
+  { id: 'nanchang', name: 'Nanchang · roots', zh: '南昌 · 老家', lon: 115.86, lat: 28.68, region: '江西省', roots: true },
+  { id: 'tianjin', name: 'Tianjin', zh: '天津', lon: 117.2, lat: 39.13, region: '天津市' },
+  { id: 'liaoning', name: 'Liaoning', zh: '辽宁', lon: 122.5, lat: 41.5, region: '辽宁省' },
+  { id: 'hangzhou', name: 'Hangzhou', zh: '杭州', lon: 120.16, lat: 30.27, region: '浙江省' },
+  { id: 'jiangsu', name: 'Jiangsu', zh: '江苏', lon: 119.5, lat: 33, region: '江苏省' },
+  { id: 'xinjiang', name: 'Xinjiang', zh: '新疆', lon: 85.5, lat: 42, region: '新疆维吾尔自治区' },
+  { id: 'tibet', name: 'Tibet', zh: '西藏', lon: 88.5, lat: 31.5, region: '西藏自治区' },
+  { id: 'fujian', name: 'Fujian', zh: '福建', lon: 118, lat: 26, region: '福建省' },
+  { id: 'guangdong', name: 'Guangdong', zh: '广东', lon: 113.5, lat: 23.5, region: '广东省' },
+  { id: 'hainan', name: 'Hainan', zh: '海南', lon: 109.7, lat: 19.2, region: '海南省' },
+  { id: 'hong-kong', name: 'Hong Kong', zh: '香港', lon: 114.17, lat: 22.32, region: '香港特别行政区' },
+  { id: 'macao', name: 'Macao', zh: '澳门', lon: 113.54, lat: 22.2, region: '澳门特别行政区' },
+  { id: 'guangxi', name: 'Guangxi', zh: '广西', lon: 108.3, lat: 24, region: '广西壮族自治区' },
+  { id: 'hunan', name: 'Hunan', zh: '湖南', lon: 111.7, lat: 27.3, region: '湖南省' },
+  { id: 'yunnan', name: 'Yunnan', zh: '云南', lon: 101, lat: 24.5, region: '云南省' },
+  { id: 'sichuan', name: 'Sichuan', zh: '四川', lon: 102.7, lat: 30.6, region: '四川省' },
+  { id: 'shaanxi', name: 'Shaanxi', zh: '陕西', lon: 109, lat: 35.3, region: '陕西省' },
+  { id: 'gansu', name: 'Gansu', zh: '甘肃', lon: 103.5, lat: 37, region: '甘肃省' },
+  { id: 'qinghai', name: 'Qinghai', zh: '青海', lon: 96, lat: 35.5, region: '青海省' },
+  { id: 'inner-mongolia', name: 'Inner Mongolia', zh: '内蒙古', lon: 111, lat: 43, region: '内蒙古自治区' },
+  { id: 'shandong', name: 'Shandong', zh: '山东', lon: 118, lat: 36.4, region: '山东省' },
+];
+const project = (lon: number, lat: number, view: string) => view === 'world'
+  ? [40 + (lon + 180) * 1120 / 360, 42 + (84 - lat) * 3.5]
+  : [173 + (lon - 73) * 13.5, 40 + (54 - lat) * 13.5];
+const route = (place: Place, view: string) => {
+  const [sx, sy] = project(121.47, 31.23, view);
+  const [x, y] = project(place.lon, place.lat, view);
+  const lift = Math.min(170, Math.max(26, Math.hypot(sx - x, sy - y) * .22));
+  return `M${sx.toFixed(1)},${sy.toFixed(1)}Q${((sx+x)/2).toFixed(1)},${Math.max(32,Math.min(sy,y)-lift).toFixed(1)} ${x.toFixed(1)},${y.toFixed(1)}`;
+};
+const visitedRegions = new Set([...chinaPlaces.map(p => p.region), '上海市']);
+const visitedCountries = new Set(['CHN', 'USA', 'CAN', 'THA', 'MYS']);
+---
+<section id="travel" class="travel-map" aria-labelledby="travel-title" data-travel-map data-view="world">
+  <div class="travel-map-heading">
+    <div><p class="travel-map-eyebrow">04 / FOOTPRINTS</p><h2 id="travel-title">Shanghai.<br /><em>Always home.</em></h2></div>
+    <div class="travel-map-intro"><p lang="zh-CN">上海是家，也是每一次出发的原点。</p><p>Home in Shanghai. Roots in Nanchang.<br />Curiosity everywhere.</p></div>
+  </div>
+  <div class="travel-map-toolbar">
+    <button type="button" class="travel-home-control" data-map-home aria-label="Highlight Shanghai, my home" title="Shanghai is home — reset destination highlight"><span class="travel-origin-dot" aria-hidden="true"></span> HOME / SHANGHAI <span lang="zh-CN">上海 · 我的家</span></button>
+    <div class="travel-map-switch" role="group" aria-label="Map view">
+      <button type="button" data-map-view="world" aria-pressed="true" aria-controls="travel-map-stage">World <span>世界</span></button>
+      <button type="button" data-map-view="china" aria-pressed="false" aria-controls="travel-map-stage">China <span>中国</span> <span aria-hidden="true">↗</span></button>
+    </div>
+  </div>
+  <div id="travel-map-stage" class="travel-map-stage" aria-label="Travel destinations map">
+    {(['world', 'china'] as const).map(view => {
+      const places = view === 'world' ? worldPlaces : chinaPlaces;
+      const [sx, sy] = project(121.47, 31.23, view);
+      return <svg class="travel-map-svg" data-map-panel={view} viewBox="0 0 1200 600" role="group" aria-label={view === 'world' ? 'World map with routes from Shanghai, my home, to four visited countries' : 'China map: Shanghai is home; Nanchang is my hometown and roots'} data-map-hidden={String(view === 'china')} aria-hidden={view === 'china'}>
+        <defs><pattern id={`map-grid-${view}`} width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0V60" class="travel-map-grid-line" /></pattern></defs>
+        <rect width="1200" height="600" fill={`url(#map-grid-${view})`} />
+        <g class="travel-map-geography">
+          {geography[view].map(feature => <path d={feature.path} class:list={['travel-map-land', { 'is-visited': view === 'world' ? visitedCountries.has(feature.id) : visitedRegions.has(feature.name), 'is-border-line': feature.line, 'travel-china-target': view === 'world' && feature.id === 'CHN' }]}
+            data-china-target={view === 'world' && feature.id === 'CHN' ? '' : undefined}
+            role={view === 'world' && feature.id === 'CHN' ? 'button' : undefined}
+            tabindex={view === 'world' && feature.id === 'CHN' ? '0' : undefined}
+            aria-label={view === 'world' && feature.id === 'CHN' ? 'Explore China map' : undefined}
+            aria-hidden={!(view === 'world' && feature.id === 'CHN')}> 
+            <title>{feature.name}</title>
+          </path>)}
+        </g>
+        <g class="travel-map-routes" aria-hidden="true">{places.map((place, i) => <g data-route-for={place.id}>
+          <path d={route(place, view)} class:list={['travel-route', { 'travel-route-roots': place.roots }]} />
+          <path d={route(place, view)} class="travel-route-pulse" pathLength="100" style={`--route-delay: ${i * -.29}s`} />
+        </g>)}</g>
+        <g class="travel-map-points">{places.map(place => {
+          const [x, y] = project(place.lon, place.lat, view);
+          const showLabel = view === 'world' || ['nanchang','xinjiang','tibet','inner-mongolia'].includes(place.id);
+          return <g class:list={['travel-map-point', { 'is-roots': place.roots }]} transform={`translate(${x} ${y})`} data-map-place={place.id} data-place-label={`${place.name} / ${place.zh}`}>
+            <title>{place.name} / {place.zh}</title>
+            <circle r="13" class="travel-point-hit" /><circle r={place.roots ? 5 : 3.5} class="travel-point-dot" />
+            {place.roots && <circle r="10" class="travel-roots-ring" />}
+            {showLabel && <text x={place.roots ? -15 : 12} y={place.roots ? 23 : -10} text-anchor={place.roots ? 'end' : 'start'} class="travel-point-label">{place.roots ? 'NANCHANG / ROOTS' : place.name.toUpperCase()}</text>}
+          </g>;
+        })}</g>
+        <g transform={`translate(${sx} ${sy})`} class="travel-shanghai" aria-label="Shanghai, my home and the origin of every journey">
+          <title>SHANGHAI / HOME · 上海 · 我的家</title><circle r="31" class="travel-home-glow" /><circle r="26" class="travel-origin-ring" /><circle r="15" class="travel-home-orbit" /><circle r="10" class="travel-origin-core" />
+          <path d="M12-12l25-25h110" class="travel-origin-leader" /><text x="40" y="-45">SHANGHAI / HOME</text><text x="40" y="-26" class="travel-origin-sub">上海 · 我的家 / EVERY JOURNEY STARTS HERE</text>
+        </g>
+        {view === 'world' && <text x="840" y="200" class="travel-map-china-hint" aria-hidden="true">CHINA ↗</text>}
+        <text x="24" y="574" class="travel-map-coordinate" aria-hidden="true">{view === 'world' ? 'GLOBAL VIEW / CURIOUS BY NATURE' : 'CHINA / PLACES I’VE BEEN'}</text>
+      </svg>;
+    })}
+  </div>
+  <div class="travel-map-bottomline">
+    <p class="travel-map-readout" role="status" aria-live="polite" data-map-readout>HOME / SHANGHAI · 上海，我的家 → the world</p>
+    <p data-map-help>Hover over China to explore. Tap the controls on mobile.</p>
+  </div>
+  <div class="travel-map-places">
+    <div class="travel-place-group"><h3>Across borders <span>04</span></h3><ul>{worldPlaces.map(p => <li><button type="button" data-place-button={p.id} data-place-view="world" data-place-label={`${p.name} / ${p.zh}`}><span>{p.name}</span><span lang="zh-CN">{p.zh}</span></button></li>)}</ul></div>
+    <div class="travel-place-group travel-place-group-china"><h3>Around China <span>{String(chinaPlaces.length).padStart(2, '0')}</span></h3><ul>{chinaPlaces.map(p => <li><button type="button" class:list={{'is-roots':p.roots}} data-place-button={p.id} data-place-view="china" data-place-label={`${p.name} / ${p.zh}`}><span>{p.roots ? '↳ ' : ''}{p.name}</span><span lang="zh-CN">{p.zh}</span></button></li>)}</ul></div>
+  </div>
+  <footer class="travel-map-notes"><p>Routes connect Shanghai with visited places; they are not recorded flight paths. Countries and provinces use regional anchors, not exact visited cities. <span lang="zh-CN">上海是家，南昌是老家。</span></p><p>Map data: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a> · <a href="https://github.com/apache/echarts/blob/master/test/data/map/js/china.js" target="_blank" rel="noopener noreferrer">Apache ECharts</a></p></footer>
+</section>
+<script>
+  import '../scripts/travel-map';
+</script>

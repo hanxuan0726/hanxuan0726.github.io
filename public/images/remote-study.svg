@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850" fill="none">
+  <title>Secure remote robotic control — conceptual network study</title>
+  <desc>An original geometric illustration of observations and authenticated commands passing between a robot and remote inference. This conceptual diagram does not represent measured network performance.</desc>
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#f2f3e9" fill-opacity=".1"/></pattern>
+    <radialGradient id="sphere"><stop stop-color="#f2f3e9" stop-opacity=".02"/><stop offset=".7" stop-color="#f2f3e9" stop-opacity=".06"/><stop offset="1" stop-color="#f2f3e9" stop-opacity="0"/></radialGradient>
+    <linearGradient id="channel"><stop stop-color="#c6f36b" stop-opacity=".02"/><stop offset=".5" stop-color="#c6f36b" stop-opacity=".15"/><stop offset="1" stop-color="#c6f36b" stop-opacity=".02"/></linearGradient>
+  </defs>
+  <path fill="#101b16" d="M0 0h1200v850H0z"/>
+  <path fill="url(#dots)" d="M0 0h1200v850H0z"/>
+  <path d="M50 425h1100M600 100v650" stroke="#f2f3e9" stroke-opacity=".13" stroke-dasharray="3 9"/>
+  <!-- Wireframe information sphere. -->
+  <circle cx="600" cy="425" r="265" fill="url(#sphere)" stroke="#f2f3e9" stroke-opacity=".55"/>
+  <g stroke="#f2f3e9" stroke-opacity=".18" stroke-width="1">
+    <ellipse cx="600" cy="425" rx="217" ry="265"/>
+    <ellipse cx="600" cy="425" rx="134" ry="265"/>
+    <ellipse cx="600" cy="425" rx="43" ry="265"/>
+    <ellipse cx="600" cy="425" rx="265" ry="217"/>
+    <ellipse cx="600" cy="425" rx="265" ry="134"/>
+    <ellipse cx="600" cy="425" rx="265" ry="43"/>
+    <path d="M600 160v530M335 425h530"/>
+    <ellipse cx="600" cy="425" rx="318" ry="109" transform="rotate(-35 600 425)"/>
+    <ellipse cx="600" cy="425" rx="318" ry="109" transform="rotate(35 600 425)"/>
+  </g>
+  <path d="M354 603C478 714 849 493 882 304" stroke="#c6f36b" stroke-width="2"/>
+  <path d="M349 592l5 12 14-1M874 313l8-11 4 14" stroke="#c6f36b" stroke-width="2"/>
+  <!-- Two counter-directed streams cross the central network. -->
+  <path d="M239 386H953v79H239z" fill="url(#channel)"/>
+  <path d="M239 386h714M239 465h714" stroke="#c6f36b" stroke-opacity=".7"/>
+  <path d="M270 405h174m32 0h247m32 0h164M919 445H745m-32 0H466m-32 0H270" stroke="#f2f3e9" stroke-opacity=".7" stroke-dasharray="2 9"/>
+  <path d="M460 405l-9-5v10zM739 405l-9-5v10zM444 445l9-5v10zM723 445l9-5v10z" fill="#c6f36b"/>
+  <!-- Remote computation as a densely connected crystalline core. -->
+  <g stroke="#f2f3e9" stroke-width="1.5" stroke-linejoin="round">
+    <path d="M942 326l99 56v116l-99 56-99-56V382z" fill="#101b16"/>
+    <path d="M942 350l79 44v92l-79 44-79-44v-92z"/>
+    <path d="M863 394l79 45 79-45M942 439v91M942 350v89l-79 47M942 439l79 47" stroke-opacity=".45"/>
+    <path d="M888 408l54-31 54 31v62l-54 31-54-31z" stroke="#c6f36b"/>
+    <path d="M888 408l108 62M996 408l-108 62M942 377v124M888 439h108" stroke="#c6f36b" stroke-opacity=".5"/>
+    <path d="M904 356v-25M923 345v-25M961 345v-25M980 356v-25M1041 401h24M1041 420h24M1041 439h24M1041 458h24M1041 477h24M904 533v25M923 543v25M961 543v25M980 533v25" stroke-opacity=".55"/>
+    <g fill="#f2f3e9"><circle cx="942" cy="439" r="5"/><circle cx="942" cy="377" r="3"/><circle cx="888" cy="408" r="3"/><circle cx="996" cy="408" r="3"/><circle cx="888" cy="470" r="3"/><circle cx="996" cy="470" r="3"/><circle cx="942" cy="501" r="3"/></g>
+  </g>
+  <!-- Robot endpoint, with optical observation field. -->
+  <g stroke="#f2f3e9" stroke-width="2" stroke-linejoin="round">
+    <path d="M150 530l80-28 90 33-80 30z" fill="#25251d"/>
+    <path d="M150 530v17l90 34 80-31v-15M240 565v16"/>
+    <path d="M206 526v-42h54v43" fill="#101b16"/>
+    <ellipse cx="233" cy="484" rx="27" ry="11" fill="#101b16"/>
+    <path d="M214 475l-55-93 34-21 60 100z" fill="#25251d"/>
+    <path d="M170 368l86-65 27 33-86 66z" fill="#25251d"/>
+    <path d="M268 307l56 37-21 32-55-40z" fill="#25251d"/>
+    <circle cx="234" cy="472" r="24" fill="#101b16"/><circle cx="234" cy="472" r="12" stroke="#c6f36b"/>
+    <circle cx="180" cy="381" r="24" fill="#101b16"/><circle cx="180" cy="381" r="12" stroke="#c6f36b"/>
+    <circle cx="267" cy="320" r="23" fill="#101b16"/><circle cx="267" cy="320" r="11" stroke="#c6f36b"/>
+    <path d="M314 348l21 15-14 22-21-15z" fill="#101b16"/>
+    <path d="M330 374l14 10-17 26-7-5M313 385l13 9-17 26-7-5"/>
+    <path d="M132 459l26-15 26 15v26l-26 15-26-15z" fill="#101b16"/>
+    <circle cx="158" cy="471" r="9" stroke="#c6f36b"/>
+    <path d="M175 455l55-27M175 488l55 23" stroke="#c6f36b" stroke-opacity=".5" stroke-dasharray="3 5"/>
+  </g>
+  <!-- Authentication seal. -->
+  <g transform="translate(600 425)">
+    <circle r="58" fill="#101b16" stroke="#c6f36b" stroke-width="2"/>
+    <circle r="48" stroke="#c6f36b" stroke-opacity=".3" stroke-dasharray="2 5"/>
+    <path d="M-23-14L0-24l23 10V6c0 15-23 28-23 28S-23 21-23 6z" stroke="#f2f3e9" stroke-width="2"/>
+    <path d="M-11 2l8 9L13-7" stroke="#c6f36b" stroke-width="3"/>
+  </g>
+  <g fill="#101b16" stroke="#f2f3e9"><circle cx="432" cy="221" r="6"/><circle cx="795" cy="247" r="6"/><circle cx="393" cy="591" r="6"/><circle cx="748" cy="646" r="6"/></g>
+  <g stroke="#f2f3e9" stroke-opacity=".35"><path d="M432 221l-60-60H244M795 247l74-72h128M748 646l65 64h170"/><path d="M57 114h38M76 95v38M1106 754h38M1125 735v38"/></g>
+  <g fill="#f2f3e9" font-family="monospace" font-size="13" letter-spacing="2">
+    <text x="48" y="52">02 / DISTRIBUTED INTELLIGENCE</text>
+    <text x="1152" y="52" text-anchor="end" fill="#c6f36b">REMOTE CONTROL</text>
+    <text x="243" y="149" font-size="11" fill-opacity=".65">OBSERVATION</text>
+    <text x="868" y="163" font-size="11" fill-opacity=".65">INFERENCE</text>
+    <text x="818" y="732" font-size="11" fill-opacity=".65">CONTROL</text>
+    <text x="230" y="625" text-anchor="middle" font-size="12">ROBOT</text>
+    <text x="942" y="625" text-anchor="middle" font-size="12">REMOTE MODEL</text>
+    <text x="600" y="531" text-anchor="middle" font-size="10" fill="#c6f36b">AUTHENTICATED CHANNEL</text>
+    <text x="48" y="804" font-size="11" fill-opacity=".55">PERCEPTION → TRANSMISSION → ACTION</text>
+    <text x="1152" y="804" text-anchor="end" font-size="11" fill-opacity=".55">CONCEPT ILLUSTRATION</text>
+  </g>
+</svg>
